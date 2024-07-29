@@ -99,7 +99,7 @@
                             href="{{ route('getCategory', ['cat' => 'necklaces']) }}">
                             <div class="ratio" style="--c-oro-aspect-ratio: calc(184 / 258 * 100%)">
                                 <img src="{{ asset('images/orotime-images/necklace.jpg') }}"
-                                    class="hover-effect-target rounded" alt="Necklaces">
+                                    class="hover-effect-target rounded object-fit-cover" alt="Necklaces">
                             </div>
                         </a>
                     </div>
@@ -115,7 +115,7 @@
                             href="{{ route('getCategory', ['cat' => 'earrings']) }}">
                             <div class="ratio" style="--c-oro-aspect-ratio: calc(184 / 258 * 100%)">
                                 <img src="{{ asset('images/orotime-images/earring.jpg') }}"
-                                    class="hover-effect-target rounded" alt="Earrings">
+                                    class="hover-effect-target rounded object-fit-cover" alt="Earrings">
                             </div>
                         </a>
                     </div>
@@ -131,7 +131,7 @@
                             href="{{ route('getCategory', ['cat' => 'rings']) }}">
                             <div class="ratio" style="--c-oro-aspect-ratio: calc(184 / 258 * 100%)">
                                 <img src="{{ asset('images/orotime-images/ring.jpg') }}"
-                                    class="hover-effect-target rounded" alt="Rings">
+                                    class="hover-effect-target rounded object-fit-cover" alt="Rings">
                             </div>
                         </a>
                     </div>
@@ -161,8 +161,8 @@
                     <span id="mainTyped"></span>
                 </h2>
             </div>
-            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
-                @for ($i = 1; $i < 9; $i++)
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4">
+                @for ($i = 1; $i < 11; $i++)
                     <div class="col" data-aos="fade-up">
                         <div class="product-card animate-underline hover-effect-opacity bg-body">
                             <div class="position-relative">

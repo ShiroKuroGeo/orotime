@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    set();
     openAndSelectImages();
     previewImageToAdd();
     previewMoreImageToAdd();

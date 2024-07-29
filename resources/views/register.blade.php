@@ -16,23 +16,37 @@
                     </div>
                     <form>
 
-                        <div class="mb-3 text-start">
-                            <label class="form-label" for="name">Full Name</label>
-                            <input class="form-control" name="name" id="name" type="text" placeholder="Name" />
+                        <div class="mb-3">
+                            <label class="form-label ps-0" for="name">
+                                <i style="height: 15px; width: 15px" data-feather="user"></i>
+                                Full Name
+                            </label>
+                            <input class="form-control" name="fullname" id="fullname" type="text"
+                                placeholder="Name" />
                         </div>
 
                         <div class="mb-3 text-start">
-                            <label class="form-label" for="email">Email Address</label>
-                            <input class="form-control" name="email" id="email" type="email" placeholder="name@example.com" />
+                            <label class="form-label ps-0" for="email">
+                                <i style="height: 15px; width: 15px" data-feather="at-sign"></i>    
+                                Email Address
+                            </label>
+                            <input class="form-control" name="email" id="email" type="email"
+                                placeholder="name@example.com" />
                         </div>
 
                         <div class="mb-3 text-start">
-                            <label class="form-label" for="phNumber">Phone Number</label>
+                            <label class="form-label ps-0" for="phNumber">
+                                <i style="height: 15px; width: 15px" data-feather="phone"></i>
+                                Phone Number
+                            </label>
                             <input class="form-control" name="phNumber" id="phNumber" type="number" placeholder="+" />
                         </div>
 
                         <div class="mb-3 text-start">
-                            <label class="form-label" for="type">Type</label>
+                            <label class="form-label ps-0" for="type">
+                                <i style="height: 15px; width: 15px" data-feather="users"></i>
+                                Type
+                            </label>
                             <select name="type" id="type" class="form-select">
                                 <option selected hidden value="0">Select what you are? </option>
                                 <option value="1">Referral</option>
@@ -41,7 +55,9 @@
                         </div>
 
                         <div class="row g-3 mb-3">
-                            <div class="col-sm-6"><label class="form-label" for="password">Password</label>
+                            <div class="col-sm-6"><label class="form-label ps-0" for="password">
+                                <i style="height: 15px; width: 15px" data-feather="lock"></i>
+                                Password</label>
                                 <div class="position-relative" data-password="data-password"><input
                                         class="form-control form-icon-input pe-6" id="password" type="password"
                                         placeholder="Password" data-password-input="data-password-input" /><button
@@ -50,7 +66,9 @@
                                             class="uil uil-eye show"></span><span
                                             class="uil uil-eye-slash hide"></span></button></div>
                             </div>
-                            <div class="col-sm-6"><label class="form-label" for="confirmPassword">Confirm
+                            <div class="col-sm-6"><label class="form-label ps-0" for="confirmPassword">
+                                <i style="height: 15px; width: 15px" data-feather="lock"></i>
+                                Confirm
                                     Password</label>
                                 <div class="position-relative" data-password="data-password"><input
                                         class="form-control form-icon-input pe-6" id="confirmPassword" type="password"
@@ -62,17 +80,39 @@
                                             class="uil uil-eye-slash hide"></span></button></div>
                             </div>
                         </div>
-                        <div class="form-check mb-3"><input class="form-check-input" id="termsService"
-                                type="checkbox" /><label class="form-label fs-9 text-transform-none"
-                                for="termsService">I accept the <a href="#!">terms </a>and <a
-                                    href="#!">privacy policy</a></label></div><button
-                            class="btn btn-primary w-100 mb-3">Sign up</button>
-                        <div class="text-center"><a class="fs-9 fw-bold" href="{{ route('login') }}">Sign in to an
-                                existing
-                                account</a></div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" id="termsService" type="checkbox" />
+                            <label class="form-label fs-9 text-transform-none">I accept the
+                                <a href="#!">Terms </a>
+                                and
+                                <a href="#!">Privacy Policy</a>
+                            </label>
+                        </div>
+                        <button class="btn btn-primary w-100 mb-3" id="signup" disabled>Sign up</button>
+                        <div class="text-center">
+                            <a class="fs-9 fw-bold" href="{{ route('login') }}">
+                                Sign in to an existing account
+                            </a>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </main>
 </x-layout.admin>
+
+<script>
+    function set() {
+        $('#termsService').on('change', function() {
+            if ( $('#fullname').val() != null && $('#email').val() != null && $('#phNumber').val() != null && $('#type').val() != null && $('#confirmPassword').val() != null ) {
+                if ($(this).is(':checked')) {
+                    $('#signup').prop('disabled', false);
+                } else {
+                    $('#signup').prop('disabled', true);
+                }
+            } else {
+                $('#signup').prop('disabled', true);
+            }
+        });
+    }
+</script>

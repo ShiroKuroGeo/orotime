@@ -9314,6 +9314,26 @@ fieldset:disabled .btn {
   color: var(--c-oro-text-color);
 }
 
+.text-primary-lighter {
+  --c-oro-text-opacity: 1;
+  color: rgba(var(--oro-primary-lighter-rgb), var(--c-oro-text-opacity)) !important
+}
+
+.text-primary-light {
+  --c-oro-text-opacity: 1;
+  color: rgba(var(--oro-primary-light-rgb), var(--c-oro-text-opacity)) !important
+}
+
+.text-primary-dark {
+  --c-oro-text-opacity: 1;
+  color: rgba(var(--oro-primary-dark-rgb), var(--c-oro-text-opacity)) !important
+}
+
+.text-primary-darker {
+  --c-oro-text-opacity: 1;
+  color: rgba(var(--oro-primary-darker-rgb), var(--c-oro-text-opacity)) !important
+}
+
 .text-primary {
   --c-oro-text-opacity: 1;
   color: rgba(var(--c-oro-primary-rgb), var(--c-oro-text-opacity)) !important
@@ -17895,4 +17915,10 @@ span.flatpickr-weekday {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #a8bbbf;
+}
+
+.text-ellipsis-reviews {
+  overflow: hidden;
+  white-space: nowrap;
+
 }

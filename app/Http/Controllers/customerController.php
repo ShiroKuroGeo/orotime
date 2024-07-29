@@ -38,4 +38,12 @@ class customerController extends Controller
     public function personsInformation(){
         return view('users.customer.personInfo');
     }
+
+    public function personsCart(){
+        return view('users.customer.cart');
+    }
+
+    public function personsViewcart(){
+        return view('users.customer.viewcart');
+    }
 }

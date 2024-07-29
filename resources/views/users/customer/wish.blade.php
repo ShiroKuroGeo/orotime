@@ -1,5 +1,5 @@
 <x-layout.customerApp>
-    <div class="container my-lg-5 my-3">
+    <div class="container my-3">
         <div class="row pt-md-2 pt-lg-3 pb-sm-2 pb-md-3 pb-lg-4 pb-xl-5">
 
             <div class="col-lg-3">
@@ -10,7 +10,7 @@
                 <div class="ps-xl-0">
 
                     <div class="d-flex align-items-center justify-content-between pb-3 mb-1 mb-sm-2 mb-md-3">
-                        <h1 class="h2 me-3 mb-0">Wishlist</h1>
+                        <h1 class="h2 me-3 mb-0">Wishlist (21)</h1>
                         <div class="nav">
                             <a class="nav-link animate-underline px-0 py-1 py-ms-2" href="#wishlistModal"
                                 data-bs-toggle="modal">

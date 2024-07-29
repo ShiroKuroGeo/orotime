@@ -60,4 +60,6 @@ Route::prefix('customer/')->group(function (){
     Route::get('wishlist', [customerController::class,'personsWishlist'])->name('cus-wishlist');
     Route::get('review', [customerController::class,'personsReviews'])->name('cus-review');
     Route::get('information', [customerController::class,'personsInformation'])->name('cus-info');
+    Route::get('Cart', [customerController::class,'personsCart'])->name('cus-cart');
+    Route::get('cart/viewcart', [customerController::class,'personsViewcart'])->name('cus-viewcart');
 });
