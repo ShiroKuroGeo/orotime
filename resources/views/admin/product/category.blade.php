@@ -13,12 +13,8 @@
                 <h2 class="mb-0">Category<span class="fw-normal text-body-tertiary ms-3">(5)</span></h2>
             </div>
             <div class="col-auto">
-                <a class="btn btn-primary px-5" href="#!" data-bs-toggle="modal" data-bs-target="#addCategory">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-plus" viewBox="0 0 16 16">
-                        <path
-                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
-                    </svg>
+                <a class="btn btn-primary px-2" href="#!" data-bs-toggle="modal" data-bs-target="#addCategory">
+                    <i data-feather="plus" class="border fs-base"></i>
                     Add new Categoery</a>
             </div>
         </div>
@@ -28,11 +24,7 @@
                     <div class="search-box me-3">
                         <form class="position-relative"><input class="form-control search-input search" type="search"
                                 placeholder="Search projects" aria-label="Search" />
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-search search-box-icon" viewBox="0 0 16 16">
-                                <path
-                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                            </svg>
+                                <i class="search-box-icon fs-base pe-2" data-feather="search"></i>
                         </form>
                     </div>
                 </div>
@@ -51,11 +43,7 @@
                                     <a class="nav-link lh-1 pe-0" id="navbarDropdownUser" href="#navbarDropdownUser"
                                         role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
                                         aria-haspopup="true" aria-expanded="false">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
-                                            <path
-                                                d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
-                                        </svg>
+                                        <i class="fs-base pe-2" data-feather="more-horizontal"></i>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-end navbar-dropdown-caret py-0 dropdown-profile shadow border"
                                         aria-labelledby="navbarDropdownUser">
@@ -64,14 +52,7 @@
                                                 <ul class="nav d-flex flex-column my-2 pb-1">
                                                     <li class="nav-item"><a class="nav-link px-3 d-block"
                                                             href="#!">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                                height="16" fill="currentColor"
-                                                                class="bi bi-x-circle" viewBox="0 0 16 16">
-                                                                <path
-                                                                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-                                                                <path
-                                                                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
-                                                            </svg>
+                                                            <i class="fs-base pe-2" data-feather="x-circle"></i>
                                                             <span>Remove</span></a></li>
                                                 </ul>
                                             </div>

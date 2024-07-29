@@ -20,20 +20,12 @@
                         <div class="search-box">
                             <form class="position-relative"><input class="form-control search-input search"
                                     type="search" placeholder="Search products" aria-label="Search" />
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-search search-box-icon" viewBox="0 0 16 16">
-                                    <path
-                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                </svg>
+                                <i class="fs-base pe-2" data-feather="search"></i>
                             </form>
                         </div>
                         <div class="ms-xxl-auto">
                             <a class="btn btn-primary" id="addBtn" href="{{ route('product-add') }}">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-plus me-2" viewBox="0 0 16 16">
-                                    <path
-                                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
-                                </svg>
+                                <i class="fs-base pe-2" data-feather="plus"></i>
                                 Add product
                             </a>
                         </div>
@@ -101,12 +93,8 @@
                                                     type="button" data-bs-toggle="dropdown" data-boundary="window"
                                                     aria-haspopup="true" aria-expanded="false"
                                                     data-bs-reference="parent">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="10"
-                                                        height="10" fill="currentColor"
-                                                        class="bi bi-three-dots fs-10" viewBox="0 0 16 16">
-                                                        <path
-                                                            d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
-                                                    </svg></button>
+                                                    <i class="fs-base pe-2" data-feather="more-horizontal"></i>
+                                                </button>
                                                 <div class="dropdown-menu dropdown-menu-end py-2"><a
                                                         class="dropdown-item"
                                                         href="{{ route('product-details', ['pid' => $i]) }}">View</a>
@@ -151,12 +139,8 @@
                                                 type="button" data-bs-toggle="dropdown" data-boundary="window"
                                                 aria-haspopup="true" aria-expanded="false"
                                                 data-bs-reference="parent">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
-                                                    fill="currentColor" class="bi bi-three-dots fs-10"
-                                                    viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
-                                                </svg></button>
+                                               <i class="fs-base pe-2" data-feather="more-horizontal"></i>
+                                            </button>
                                             <div class="dropdown-menu dropdown-menu-end py-2"><a class="dropdown-item"
                                                     href="{{ route('product-details', ['pid' => '123']) }}">View</a>
                                                 <div class="dropdown-divider"></div><a

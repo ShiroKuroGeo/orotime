@@ -133,7 +133,7 @@
                                         </svg>
                                     </button>
                                 </div>
-                                <button type="button"
+                                <a type="button" href="{{ route('guestPurchaser' , ['pid' => Request::route('pid')]) }}"
                                     class="btn btn-lg btn-primary w-100 animate-slide-end order-sm-2 order-md-4 order-lg-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                         fill="currentColor" class="bi bi-bag-fill fs-base animate-target ms-n1 me-2"
@@ -142,7 +142,7 @@
                                             d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z" />
                                     </svg>
                                     Buy Product
-                                </button>
+                                </a>
                             </div>
                             <div class="col-12 mt-5" style="height: 30vh; overflow: auto">
                                 <ul class="nav nav-tabs rounded-0" id="myTab" role="tablist" style="position: sticky;top: 0">
@@ -166,7 +166,6 @@
                                 </ul>
                                 <div class="tab-content" id="myTabContent">
 
-                                    {{-- Tabs for Product Descriptions --}}
                                     <div class="tab-pane fade show active" id="description" role="tabpanel"
                                         aria-labelledby="description-tab">
                                         <div class="tab-content" id="ex1-content">

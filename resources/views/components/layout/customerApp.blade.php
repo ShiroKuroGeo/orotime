@@ -12,12 +12,13 @@
         crossorigin="anonymous">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <link rel="stylesheet" href="{{ asset('css/theme.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/theme.min.css') }}" id="theme-styles">
     <script src="{{ asset('js/customizer.min.js') }}"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
 <body>
-    {{-- <div class="bg-orotime">
+    <div class="bg-orotime">
         <div class="container-fluid ps-lg-5 ps-4 py-1">
             <span class="pe-2">
                 <a href="http://" class="text-decoration-none text-white">
@@ -138,7 +139,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link px-3 text-dark pb-3" href="{{ route('cus-dashboard', ['uid' => 1]) }}">
+                                    <a class="nav-link px-3 text-dark pb-3" href="{{ route('cus-order') }}">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor"
                                             class="bi bi-pie-chart-fill me-2 text-body align-bottom"
@@ -189,11 +190,10 @@
             </div>
         </div>
 
-    </header> --}}
-
+    </header>
     {{ $slot }}
 
-    {{-- <div class="container-fluid px-lg-5 px-4">
+    <div class="container px-5 pt-lg-5 pt-3">
         <footer class="py-3">
             <div class="row">
                 <div class="col-6 col-md-2 mb-3">
@@ -294,16 +294,12 @@
                 <p>&copy; 2024 Orotime Jewelry. All rights reserved. </p>
             </div>
         </footer>
-    </div> --}}
+    </div>
 </body>
-{{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-</script> --}}
 <script src="{{ asset('js/choices.min.js') }}"></script>
 <script src="{{ asset('js/theme.min.js') }}"></script>
 <script src="{{ asset('js/choices.min.css') }}"></script>
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-{{-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script> --}}
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script>
@@ -311,11 +307,6 @@
         strings: ['<i>Top Price</i>', '<i>High Quality</i>', '<i>High Value</i>', '<i>Shop Now</i>'],
         typeSpeed: 100,
         loop: true,
-    });
-
-    AOS.init({
-        easing: 'ease-out-back',
-        duration: 1000
     });
 </script>
 <script>
@@ -326,6 +317,16 @@
             scrollTop: $(window).height()
         }, 1200);
     });
+</script>
+<script>
+    AOS.init({
+        easing: 'ease-out-back',
+        duration: 1000
+    });
+</script>
+
+<script>
+    feather.replace();
 </script>
 
 </html>

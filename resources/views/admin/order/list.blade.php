@@ -2,7 +2,7 @@
     @section('title', 'Admin Order');
     @include('components.navtopstart')
     <div class="content">
-        <nav class="mb-3" aria-label="breadcrumb">
+        <nav class="mx-4" aria-label="breadcrumb">
             <ol class="breadcrumb mb-0">
                 <li class="breadcrumb-item"><a href="#!">Order</a></li>
                 <li class="breadcrumb-item active">List</li>
@@ -11,7 +11,7 @@
         <div class="mb-9">
             <div class="row g-3 mb-4">
                 <div class="col-auto">
-                    <h2 class="mb-0">Orders</h2>
+                    <h2 class="mb-0">Orderss</h2>
                 </div>
             </div>
             <ul class="nav nav-links mb-3 mb-lg-2 mx-n3">
@@ -29,11 +29,7 @@
                                 <form class="position-relative"><input class="form-control search-input search"
                                         type="search" placeholder="Search orders" aria-label="Search" />
                                     <span class="fas fa-search search-box-icon"></span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                        fill="currentColor" class="bi bi-search search-box-icon" viewBox="0 0 16 16">
-                                        <path
-                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                    </svg>
+                                    <i class="fs-base-pe-2 search-box-icon" data-feather="serch"></i>
                                 </form>
                             </div>
                         </div>
@@ -76,9 +72,8 @@
                                 class="btn btn-primary"><span class="fas fa-plus me-2"></span>Add order</button></div>
                     </div>
                 </div>
-                <div
-                    class="mx-n4 px-4 mx-lg-n6 px-lg-6 bg-body-emphasis border-top border-bottom border-translucent position-relative top-1">
-                    <div class="table-responsive scrollbar mx-n1 px-1">
+                <div class="mx-n4 px-4 mx-lg-n6 px-lg-6 bg-body-emphasis border-top border-bottom border-translucent position-relative top-1">
+                    <div class="table-responsive scrollbar mx-n1 px-1 border">
                         <table class="table table-hover table-sm fs-9 mb-0">
                             <thead>
                                 <tr>

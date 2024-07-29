@@ -6,33 +6,19 @@
             <div class="pb-5">
                 <div class="row g-4">
                     <div class="col-12 col-xxl-6">
-                        <div class="mb-8">
-                            <h2 class="mb-2 text-primary-darker">Orotime Dashboard</h2>
-                            <h5 class="text-body-tertiary fw-semibold">Explore our stunning jewelry collection.</h5>
-                        </div>
                         <div class="row align-items-center g-4">
                             <div class="col-12 col-md-auto">
                                 <div class="d-flex align-items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46"
-                                        fill="#F9CF70" class="bi bi-ui-checks" viewBox="0 0 16 16">
-                                        <path
-                                            d="M7 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zM2 1a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm0 8a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2zm.854-3.646a.5.5 0 0 1-.708 0l-1-1a.5.5 0 1 1 .708-.708l.646.647 1.646-1.647a.5.5 0 1 1 .708.708zm0 8a.5.5 0 0 1-.708 0l-1-1a.5.5 0 0 1 .708-.708l.646.647 1.646-1.647a.5.5 0 0 1 .708.708zM7 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm0-5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
-                                    </svg>
+                                    <i data-feather="check-square" class="fs-base"></i>
                                     <div class="ms-3">
-                                        <h4 class="mb-0" style="color: #">57 New Orders</h4>
+                                        <h4 class="mb-0">57 New Orders</h4>
                                         <p class="text-body-secondary fs-9 mb-0">For this day</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12 col-md-auto">
                                 <div class="d-flex align-items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46"
-                                        fill="#5470C6" class="bi bi-person-add" viewBox="0 0 16 16">
-                                        <path
-                                            d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
-                                        <path
-                                            d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z" />
-                                    </svg>
+                                    <i data-feather="user-plus" style="color: #5470C6" class="fs-base"></i>
                                     <div class="ms-3">
                                         <h4 class="mb-0" style="color: #5470C6">5 New Registred Customer</h4>
                                         <p class="text-body-secondary fs-9 mb-0">In a Week</p>
@@ -41,11 +27,7 @@
                             </div>
                             <div class="col-12 col-md-auto">
                                 <div class="d-flex align-items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46"
-                                        fill="#91CC75" class="bi bi-box-seam-fill" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd"
-                                            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.01-.003.268-.108a.75.75 0 0 1 .558 0l.269.108.01.003zM10.404 2 4.25 4.461 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339L8 5.961 5.596 5l6.154-2.461z" />
-                                    </svg>
+                                    <i data-feather="package" class="fs-base" style="color: #91CC75"></i>
                                     <div class="ms-3">
                                         <h4 class="mb-0" style="color: #91CC75">15 Products</h4>
                                         <p class="text-body-secondary fs-9 mb-0">Stock</p>
@@ -147,12 +129,7 @@
                                         <form class="position-relative"><input
                                                 class="form-control search-input search form-control-sm"
                                                 type="search" placeholder="Search" aria-label="Search" />
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                fill="currentColor" class="bi bi-search search-box-icon"
-                                                viewBox="0 0 16 16">
-                                                <path
-                                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                            </svg>
+                                                <i class="fs-base pe-2 search-box-icon" data-feather="search"></i>
                                         </form>
                                     </div>
                                 </div>
@@ -204,18 +181,8 @@
                                             </a></td>
                                         <td class="align-middle rating white-space-nowrap fs-10">
                                             @for ($i = 1; $i <= 5; $i++)
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-star-fill text-warning"
-                                                    viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                                                </svg>
+                                                <i data-feather="star" class="fs-base pe-2"></i> 
                                             @endfor
-                                            {{-- <span class="fa fa-star text-warning"></span>
-                                        <span class="fa fa-star text-warning"></span>
-                                        <span class="fa fa-star text-warning"></span>
-                                        <span class="fa fa-star text-warning"></span>
-                                        <span class="fa fa-star text-warning"></span> --}}
                                         </td>
                                         <td class="align-middle review" style="min-width:350px;">
                                             <p class="fs-9 fw-semibold text-body-highlight mb-0">This Fitbit is

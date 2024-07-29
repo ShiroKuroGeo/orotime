@@ -23,7 +23,19 @@ class customerController extends Controller
         return view('users.customer.category', ['cat'=> $cat]);
     }
 
-    public function personsDashboard($uid){
-        return view('users.customer.dashboard', ['uid' => $uid]);
+    public function personsWishlist(){
+        return view('users.customer.wish');
+    }
+
+    public function personsOrder(){
+        return view('users.customer.order');
+    }
+
+    public function personsReviews(){
+        return view('users.customer.reviews');
+    }
+
+    public function personsInformation(){
+        return view('users.customer.personInfo');
     }
 }

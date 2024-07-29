@@ -9,14 +9,9 @@
                             <div class="d-flex align-items-center">
                                 <div class="dropdown-indicator-icon-wrapper"><span
                                         class="fas fa-caret-right dropdown-indicator-icon"></span></div><span
-                                    class="nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                        height="16" fill="currentColor" class="bi bi-speedometer"
-                                        viewBox="0 0 16 16">
-                                        <path
-                                            d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2M3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707M2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8m9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5m.754-4.246a.39.39 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.39.39 0 0 0-.029-.518z" />
-                                        <path fill-rule="evenodd"
-                                            d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.95 11.95 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0" />
-                                    </svg></span><span class="nav-link-text">Dashboard</span>
+                                    class="nav-link-icon">
+                                    <i data-feather="bar-chart" class="fs-base pe-2"></i>
+                                </span><span class="nav-link-text">Dashboard</span>
                             </div>
                         </a>
                     </div>
@@ -31,11 +26,9 @@
                             <div class="d-flex align-items-center">
                                 <div class="dropdown-indicator-icon-wrapper"><span
                                         class="fas fa-caret-right dropdown-indicator-icon"></span></div><span
-                                    class="nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                        height="16" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z" />
-                                    </svg></span><span class="nav-link-text">Products</span>
+                                    class="nav-link-icon">
+                                <i data-feather="package" class="fs-base pe-2"></i>
+                                </span><span class="nav-link-text">Products</span>
                             </div>
                         </a>
                         <div class="parent-wrapper label-1">
@@ -75,14 +68,13 @@
                             href="#col-users" role="button" data-bs-toggle="collapse" aria-expanded="false"
                             aria-controls="col-users">
                             <div class="d-flex align-items-center">
-                                <div class="dropdown-indicator-icon-wrapper"><span
-                                        class="fas fa-caret-right dropdown-indicator-icon"></span></div><span
-                                    class="nav-link-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                        fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
-                                    </svg></span><span class="nav-link-text">Users</span>
+                                <div class="dropdown-indicator-icon-wrapper">
+                                    <span class="fas fa-caret-right dropdown-indicator-icon"></span>
+                                </div>
+                                <span class="nav-link-icon">
+                                    <i data-feather="user" class="fs-base pe-2"></i>
+                                </span>
+                                <span class="nav-link-text">Users</span>
                             </div>
                         </a>
                         <div class="parent-wrapper label-1">
@@ -136,11 +128,7 @@
                                     <span class="fas fa-caret-right dropdown-indicator-icon"></span>
                                 </div>
                                 <span class="nav-link-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                        fill="currentColor" class="bi bi-basket-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0z" />
-                                    </svg>
+                                    <i data-feather="shopping-bag" class="fs-base pe-2"></i>
                                 </span>
                                 <span class="nav-link-text">Orders</span>
                             </div>
@@ -172,11 +160,7 @@
             <form class="position-relative" data-bs-toggle="search" data-bs-display="static"><input
                     class="form-control search-input fuzzy-search rounded-pill form-control-sm" type="search"
                     placeholder="Search..." aria-label="Search" />
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-search search-box-icon" viewBox="0 0 16 16">
-                    <path
-                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                </svg>
+                <i data-feather="search" class="search-box-icon fs-base pe-2"></i>
             </form>
             <div class="btn-close position-absolute end-0 top-50 translate-middle cursor-pointer shadow-none"
                 data-bs-dismiss="search"><button class="btn btn-link p-0" aria-label="Close"></button></div>
@@ -186,12 +170,7 @@
                 <a class="nav-link" href="#" style="min-width: 2.25rem" role="button"
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                     data-bs-auto-close="outside">
-
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-bell-fill" viewBox="0 0 16 16">
-                        <path
-                            d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901" />
-                    </svg>
+                    <i data-feather="bell" class="fs-base pe-1"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end notification-dropdown-menu py-0 shadow border navbar-dropdown-caret"
                     id="navbarDropdownNotfication" aria-labelledby="navbarDropdownNotfication">

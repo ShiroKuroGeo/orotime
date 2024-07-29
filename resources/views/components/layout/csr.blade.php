@@ -9,6 +9,7 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="{{ asset('css/oro.min.css') }}" type="text/css">
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
 <body class="bg-lighter">
@@ -24,6 +25,9 @@
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
 <script src="{{ asset('js/dashboard.js') }}"></script>
 <script src="{{ asset('js/csrJuery.js') }}"></script>
+<script>
+    feather.replace();
+</script>
 </script>
 
 </html>

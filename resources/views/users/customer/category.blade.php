@@ -5,8 +5,8 @@
 
             <div class="row row-cols-1 row-cols-lg-3 row-cols-md-1 g-4 my-3">
                 <div class="col">
-                    <img src="{{ asset('images/orotime-images/product-image.jpg') }}" alt="{{ request()->route('cat') }}"
-                        class="img-fluid" data-aos="zoom-in">
+                    <img src="{{ asset('images/orotime-images/product-image.jpg') }}" 
+                        alt="{{ request()->route('cat') }}" class="img-fluid" data-aos="zoom-in">
                 </div>
                 <div class="col">
                     <img src="{{ asset('images/orotime-images/product-image.jpg') }}"

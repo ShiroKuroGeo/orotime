@@ -42457,3 +42457,7 @@ html:not(.navbar-vertical-collapsed) .navbar-vertical .firefox .chat-sidebar .na
 ::-webkit-scrollbar-thumb:hover {
     background-color: #a8bbbf;
 }
+
+.fs-base {
+    font-size: 1rem !important
+}

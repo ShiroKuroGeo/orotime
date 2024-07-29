@@ -56,5 +56,8 @@ Route::prefix('customer/')->group(function (){
     Route::get('order/product/{pid}', [customerController::class, 'buy'] )->name('getPurchase');
     Route::get('product/view/{pid}', [customerController::class, 'viewProduct'] )->name('getViewProduct');
     Route::get('product/category/{cat}', [customerController::class, 'category'] )->name('getCategory');
-    Route::get('dashboard/{uid}', [customerController::class,'personsDashboard'])->name('cus-dashboard');
+    Route::get('order', [customerController::class,'personsOrder'])->name('cus-order');
+    Route::get('wishlist', [customerController::class,'personsWishlist'])->name('cus-wishlist');
+    Route::get('review', [customerController::class,'personsReviews'])->name('cus-review');
+    Route::get('information', [customerController::class,'personsInformation'])->name('cus-info');
 });
