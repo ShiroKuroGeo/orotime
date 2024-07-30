@@ -15,7 +15,7 @@
                     <h2 class="mb-0 text-uppercase">{{ Request::route('type') }}</h2>
                 </div>
             </div>
-            <ul class="nav nav-links mb-3 mb-lg-2 mx-n3">
+            <ul class="nav nav-links mb-3 mb-lg-2">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">
                         <span>All</span>
@@ -23,7 +23,7 @@
                     </a>
                 </li>
                 @if (Request::route('type') == 'referral')
-                    <li class="nav-item">
+                    <li class="nav-item ms-3">
                         <a class="nav-link active" aria-current="page" href="#!">
                             <span>Total Earned of all user is </span>
                             <span class="text-body-tertiary fw-semibold">( {{ 10 * 8742 }} )</span>
@@ -40,11 +40,7 @@
                                 <form class="position-relative"><input class="form-control search-input search"
                                         type="search" placeholder="Search {{ Request::route('type') }} user"
                                         aria-label="Search" />
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                        fill="currentColor" class="bi bi-search search-box-icon" viewBox="0 0 16 16">
-                                        <path
-                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                                    </svg>
+                                    <i data-feather="search" class="fs-base p-1 search-box-icon"></i>
                                 </form>
                             </div>
                         </div>
@@ -66,7 +62,7 @@
                                         <div class="d-inline-flex flex-center">
                                             <div
                                                 class="d-flex align-items-center px-1 py-1 bg-success-subtle rounded me-2">
-                                                <span class="text-success-dark" data-feather="mail"></span>
+                                                <span class="text-success-dark fs-base p-1" data-feather="mail"></span>
                                             </div>
                                             <span>Email</span>
                                         </div>
@@ -76,7 +72,7 @@
                                         <div class="d-inline-flex flex-center">
                                             <div
                                                 class="d-flex align-items-center px-1 py-1 bg-primary-subtle rounded me-2">
-                                                <span class="text-primary-dark" data-feather="phone"></span>
+                                                <span class="text-primary-dark fs-base p-1" data-feather="phone"></span>
                                             </div>
                                             <span>Phone</span>
                                         </div>
@@ -86,7 +82,7 @@
                                         <div class="d-inline-flex flex-center">
                                             <div
                                                 class="d-flex align-items-center px-1 py-1 bg-info-subtle rounded me-2">
-                                                <span class="text-info-dark" data-feather="user"></span>
+                                                <span class="text-info-dark fs-base p-1" data-feather="user"></span>
                                             </div>
                                             <span>Deparment</span>
                                         </div>
@@ -96,7 +92,7 @@
                                         <div class="d-inline-flex flex-center">
                                             <div
                                                 class="d-flex align-items-center px-1 py-1 bg-warning-subtle rounded me-2">
-                                                <span class="text-warning-dark" data-feather="grid"></span>
+                                                <span class="text-warning-dark fs-base p-1" data-feather="grid"></span>
                                             </div>
                                             <span>Status</span>
                                         </div>

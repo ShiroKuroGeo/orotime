@@ -14,11 +14,23 @@
                     <h2 class="mb-0">Orders</h2>
                 </div>
             </div>
-            <ul class="nav nav-links mb-3 mb-lg-2 mx-n3">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#"><span>All
-                        </span><span class="text-body-tertiary fw-semibold">(123)</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><span>Completed</span><span
-                            class="text-body-tertiary fw-semibold">(6,810)</span></a></li>
+            <ul class="nav nav-links mb-3 mb-lg-2">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                        <span>All</span>
+                        <span class="text-body-tertiary fw-semibold">
+                            (123)
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-3" href="#">
+                        <span>Completed</span>
+                        <span class="text-body-tertiary fw-semibold">
+                            (6,810)
+                        </span>
+                    </a>
+                </li>
             </ul>
             <div id="orderTable"
                 data-list='{"valueNames":["order","total","customer","payment_status","fulfilment_status","delivery_type","date"],"page":10,"pagination":true}'>
@@ -71,9 +83,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-auto"><button class="btn btn-link text-body me-4 px-0"><span
-                                    class="fa-solid fa-file-export fs-9 me-2"></span>Export</button><button
-                                class="btn btn-primary"><span class="fas fa-plus me-2"></span>Add order</button></div>
+                        <div class="col-auto">
+                            <button class="btn btn-primary"><span class="fas fa-plus me-2"></span>Add order</button></div>
                     </div>
                 </div>
                 <div
@@ -109,9 +120,8 @@
                                                 href="#!">#2453</a></td>
                                         <td class="align-middle text-end fw-semibold text-body-highlight">$87</td>
                                         <td class="align-middle white-space-nowrap ps-8">
-                                            <a class="d-flex align-items-center text-body" 
-                                                type="button" data-bs-toggle="modal"
-                                                data-bs-target="#viewOrderModal">
+                                            <a class="d-flex align-items-center text-body" type="button"
+                                                data-bs-toggle="modal" data-bs-target="#viewOrderModal">
                                                 <div class="avatar avatar-m"><img class="rounded-circle"
                                                         src="{{ asset('images/customer-images/user_profile.jpg') }}"
                                                         alt="" /></div>
@@ -436,7 +446,9 @@
                                                                             <option value="card">Fulfilled</option>
                                                                             <option value="paypal">Pending</option>
                                                                         </select>
-                                                                        <button type="submit" class="btn btn-info mt-4 col-12">Update Status</button>
+                                                                        <button type="submit"
+                                                                            class="btn btn-info mt-4 col-12">Update
+                                                                            Status</button>
                                                                     </form>
                                                                 </div>
                                                             </div>

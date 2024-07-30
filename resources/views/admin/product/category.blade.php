@@ -8,14 +8,14 @@
                 <li class="breadcrumb-item active">Category</li>
             </ol>
         </nav>
-        <div class="row gx-6 gy-3 mb-4 align-items-center">
-            <div class="col-auto">
+        <div class="d-flex gy-3 mb-4 align-items-center justify-content-between">
+            <div class="">
                 <h2 class="mb-0">Category<span class="fw-normal text-body-tertiary ms-3">(5)</span></h2>
             </div>
-            <div class="col-auto">
-                <a class="btn btn-primary px-2" href="#!" data-bs-toggle="modal" data-bs-target="#addCategory">
-                    <i data-feather="plus" class="border fs-base"></i>
-                    Add new Categoery</a>
+            <div class="">
+                <a class="btn btn-primary px-3" href="#!" data-bs-toggle="modal" data-bs-target="#addCategory">
+                    <i data-feather="plus" class="fs-base p-1"></i>
+                    Add New Category</a>
             </div>
         </div>
         <div class="row justify-content-between align-items-end mb-4 g-3">
@@ -23,7 +23,7 @@
                 <div class="d-flex align-items-center">
                     <div class="search-box me-3">
                         <form class="position-relative"><input class="form-control search-input search" type="search"
-                                placeholder="Search projects" aria-label="Search" />
+                                placeholder="Search Category" aria-label="Search" />
                                 <i class="search-box-icon fs-base pe-2" data-feather="search"></i>
                         </form>
                     </div>
@@ -50,6 +50,10 @@
                                         <div class="position-relative border-0">
                                             <div class="overflow-auto border-top shadow-top g-5">
                                                 <ul class="nav d-flex flex-column my-2 pb-1">
+                                                    <li class="nav-item"><a class="nav-link px-3 d-block"
+                                                            href="#!">
+                                                            <i class="fs-base pe-2" data-feather="edit"></i>
+                                                            <span>Edit</span></a></li>
                                                     <li class="nav-item"><a class="nav-link px-3 d-block"
                                                             href="#!">
                                                             <i class="fs-base pe-2" data-feather="x-circle"></i>

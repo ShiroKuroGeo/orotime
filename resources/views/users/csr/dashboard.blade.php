@@ -5,26 +5,13 @@
         <div class="container">
             <div class="d-flex justify-content-between align-items-sm-center flex-column flex-sm-row mb-4">
                 <div class="me-4 mb-3 mb-sm-0">
-                    <h2 class="mb-0">Shiro Geo</h2>
+                    <h2 class="mb-0">Shiro George Alfeser</h2>
                     <div class="small">
                         <span class="fw-500 text-primary">
                             {{ Carbon\Carbon::now()->format('l') }}
                         </span>
                         . {{ Carbon\Carbon::now()->format('F j, Y') }}
                     </div>
-                </div>
-                <div class="search-box " data-list='{"valueNames":["title"]}' style="width:15rem;">
-                    <form class="position-relative" data-bs-toggle="search" data-bs-display="static">
-                        <input class="form-control search-input " type="date" placeholder="Search..."
-                            aria-label="Search" />
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-search search-box-icon" viewBox="0 0 16 16">
-                            <path
-                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                        </svg>
-                    </form>
-                    <div class="btn-close position-absolute end-0 top-50 translate-middle cursor-pointer shadow-none"
-                        data-bs-dismiss="search"><button class="btn btn-link p-0" aria-label="Close"></button></div>
                 </div>
             </div>
             <div class="card card-waves mb-4 mt-5">
@@ -120,7 +107,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row mb-4 row-cols-1 row-cols-lg-3">
+            <div class="row mb-4 row-cols-1 row-cols-lg-2">
 
                 <div class="col">
                     <div class="card mb-4">
@@ -252,74 +239,91 @@
                     </div>
                 </div>
 
-                <div class="col">
-                    <div class="card mb-4">
-                        <div class="card-header d-flex justify-content-between align-items-center">
-                            <div class="">
-                                <span class="text-primary-lighter fw-bold"> Transaction </span> <br>
-                            </div>
-                            <div class="p-0 d-none d-lg-block">
-                                <div style="width: 65px; height: 65px" class="m-0"></div>
-                            </div>
+            </div>
+            <div class="row gx-6">
+                <div class="col-12">
+                    <div data-list='{"valueNames":["country","users","transactions","revenue","conv-rate"],"page":5}'>
+                        <div class="mb-5 mt-7">
+                            <h3>History Transaction</h3>
+                            <p class="text-body-tertiary">Where you record of financial undertakings</p>
                         </div>
-                        <div class="list-group list-group-flush">
-                            <a class="list-group-item list-group-item-action" href="#!">
-                                <div class="d-flex align-items-center">
-                                    <img src="{{ asset('images/orotime-images/earring.jpg') }}" class="img-fluid border rounded-circle" style="width: 25px" alt="">
-                                    <div class="ms-2">
-                                        Pure Silver Earring 5grams <br>
-                                        <small>Inoc, Shiro George Alfeser</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="list-group-item list-group-item-action" href="#!">
-                                <div class="d-flex align-items-center">
-                                    <img src="{{ asset('images/orotime-images/earring.jpg') }}" class="img-fluid border rounded-circle" style="width: 25px" alt="">
-                                    <div class="ms-2">
-                                        Pure Silver Earring 5grams <br>
-                                        <small>Inoc, Shiro George Alfeser</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="list-group-item list-group-item-action" href="#!">
-                                <div class="d-flex align-items-center">
-                                    <img src="{{ asset('images/orotime-images/earring.jpg') }}" class="img-fluid border rounded-circle" style="width: 25px" alt="">
-                                    <div class="ms-2">
-                                        Pure Silver Earring 5grams <br>
-                                        <small>Inoc, Shiro George Alfeser</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="list-group-item list-group-item-action" href="#!">
-                                <div class="d-flex align-items-center">
-                                    <img src="{{ asset('images/orotime-images/earring.jpg') }}" class="img-fluid border rounded-circle" style="width: 25px" alt="">
-                                    <div class="ms-2">
-                                        Pure Silver Earring 5grams <br>
-                                        <small>Inoc, Shiro George Alfeser</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="list-group-item list-group-item-action" href="#!">
-                                <div class="d-flex align-items-center">
-                                    <img src="{{ asset('images/orotime-images/earring.jpg') }}" class="img-fluid border rounded-circle" style="width: 25px" alt="">
-                                    <div class="ms-2">
-                                        Pure Silver Earring 5grams <br>
-                                        <small>Inoc, Shiro George Alfeser</small>
-                                    </div>
-                                </div>
-                            </a>
+                        <div class="table-responsive scrollbar">
+                            <table class="table table-hover fs-10 mb-0">
+                                <thead>
+                                    <tr>
+                                        <th class="sort border-top border-translucent ps-0 align-middle"
+                                            style="width: 10%" scope="col" data-sort="country">Product</th>
+                                        <th class="sort border-top border-translucent align-middle" style="width: 10%"
+                                            scope="col" data-sort="users">Customer</th>
+                                        <th class="sort border-top border-translucent align-middle" style="width: 10%"
+                                            scope="col" data-sort="transactions">Type
+                                        </th>
+                                        <th class="sort border-top border-translucent align-middle" style="width: 10%"
+                                            scope="col" data-sort="revenue">Price</th>
+                                        <th class="sort border-top border-translucent pe-0 align-middle"
+                                            style="width: 10%" scope="col" data-sort="conv-rate">DATE</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="list" id="table-regions-by-revenue">
+                                    @for ($i = 1; $i <= 2; $i++)
+                                        <tr>
+                                            <td class="white-space-nowrap ps-0">
+                                                <div class="d-flex align-items-center">
+                                                    <h6 class="mb-0 me-3">1. </h6><a href="#!"
+                                                        class="list-group-item list-group-item-action">
+                                                        <div class="d-flex align-items-center"><img
+                                                                src="{{ asset('images/orotime-images/earring.jpg') }}"
+                                                                alt="" width="24" />
+                                                            <p class="mb-0 ps-3 text-primary fw-bold fs-9">
+                                                                Pure Silver Earring 5 grams <br>
+                                                                <small class="text-secondary">Hello world</small>
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                            <td class="align-middle users">
+                                                <h6 class="mb-0">
+                                                    Shiro George Alfeser
+                                                </h6>
+                                            </td>
+                                            <td class="align-middle transactions">
+                                                <h6 class="mb-0">
+                                                    Guest
+                                                </h6>
+                                            </td>
+                                            <td class="align-middle revenue">
+                                                <h6 class="mb-0">
+                                                    P 1589.00
+                                                </h6>
+                                            </td>
+                                            <td class="align-middle pe-0 conv-rate">
+                                                <h6>
+                                                    Nov 28
+                                                </h6>
+                                            </td>
+                                        </tr>
+                                    @endfor
+                                </tbody>
+                            </table>
                         </div>
-                        <div class="card-footer position-relative border-top-0">
-                            <a class="small" href="#!">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    View More Reports
-                                    <i data-feather="arrow-right" class="p-1"></i>
-                                </div>
-                            </a>
+                        <div class="row align-items-center py-1">
+                            <div class="pagination d-none"></div>
+                            <div class="col d-flex fs-9">
+                                <p class="mb-0 d-none d-sm-block me-3 fw-semibold text-body"
+                                    data-list-info="data-list-info"></p>
+                            </div>
+                            <div class="col-auto d-flex">
+                                <button class="btn btn-link px-1 me-1" type="button" title="Previous"
+                                    data-list-pagination="prev"><span
+                                        class="fas fa-chevron-left me-2"></span>Previous</button><button
+                                    class="btn btn-link px-1 ms-1" type="button" title="Next"
+                                    data-list-pagination="next">Next<span
+                                        class="fas fa-chevron-right ms-2"></span></button>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
 
             {{-- <div class="mx-n4 px-4 mx-lg-n6 px-lg-6 bg-body-emphasis pt-7 pb-3 border-y">

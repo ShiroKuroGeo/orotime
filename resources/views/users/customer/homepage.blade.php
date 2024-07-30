@@ -1,4 +1,5 @@
 <x-layout.customerApp>
+    @section('title', 'Orotime Home')
     <main class="container px-lg-5 px-4">
         <section class="position-relative">
             <div class="container pt-md-5 py-xl-0" data-aos="zoom-in">
@@ -7,59 +8,6 @@
                         <source src="{{ asset('video/jewelryvideo.mp4') }}" type="video/mp4" />
                     </video>
                 </div>
-            </div>
-        </section>
-        <section class="container my-lg-5 my-5 py-lg-3 py-2">
-            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-4 row-cols-lg-4 g-3">
-
-                <div class="col">
-                    <div class="d-flex flex-column flex-xxl-row align-items-center">
-                        <div class="rounded-circle p-4 mb-3 mb-xxl-0">
-                            <i style="width: 100px; height: 100px" data-feather="credit-card"></i>
-                        </div>
-                        <div class="text-center text-xxl-start ps-xxl-3">
-                            <h3 class="h6 mb-1 text-primary fw-bold">0% Layaways Interest</h3>
-                            <small class="fs-sm mb-0">Enjoy 0% Interest Layaways</small>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="d-flex flex-column flex-xxl-row align-items-center">
-                        <div class="rounded-circle p-4 mb-3 mb-xxl-0">
-                            <i style="width: 100px; height: 100px" data-feather="headphones"></i>
-                        </div>
-                        <div class="text-center text-xxl-start ps-xxl-3">
-                            <h3 class="h6 mb-1 text-primary fw-bold">Good Customer Services</h3>
-                            <small class="fs-sm mb-0">Experience Excellent Customer Service</small>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="d-flex flex-column flex-xxl-row align-items-center">
-                        <div class="rounded-circle p-4 mb-3 mb-xxl-0">
-                            <i style="width: 100px; height: 100px" data-feather="shield"></i>
-                        </div>
-                        <div class="text-center text-xxl-start ps-xxl-3">
-                            <h3 class="h6 mb-1 text-primary fw-bold">Secure Payment</h3>
-                            <small class="fs-sm mb-0">Secure Payment Guarantee Safe and Protected.</small>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="d-flex flex-column flex-xxl-row align-items-center">
-                        <div class="rounded-circle p-4 mb-3 mb-xxl-0">
-                            <i style="width: 100px; height: 100px" data-feather="globe"></i>
-                        </div>
-                        <div class="text-center text-xxl-start ps-xxl-3">
-                            <h3 class="h6 mb-1 text-primary fw-bold">Shipping World Wide</h3>
-                            <small class="fs-sm mb-0">Worldwide Shipping Available Across The Globe.</small>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </section>
         <section class="container my-lg-5 my-3 py-lg-3 py-2">
@@ -182,13 +130,13 @@
         </section>
         <section class="container my-lg-5 my-3 py-lg-3 py-2">
             <div class="container-lg text-center">
-                <h1 class="h1 fw-bold col-12 px-lg-5 mx-lg-5">
+                <h1 class="h1 fw-bold col-12 px-lg-5 mx-lg-5 py-5">
                     Explore our <span class="text-primary">stunning collection</span> of pure <span
                         class="text-primary text-capitalize">gold</span> and <span
                         class="text-primary text-capitalize">silver</span> jewelry.
                 </h1>
             </div>
-            <div class="row row-cols-2">
+            <div class="row row-cols-2 py-5">
                 <div class="col">
                     <img src="{{ asset('images/orotime-images/Flyer1.jpg') }}" class="img-fluid" alt="Flyers">
                 </div>
@@ -205,7 +153,7 @@
         </section>
         <section class="container my-lg-5 my-3 py-lg-3 py-2">
             <div class="d-flex justify-content-between align-items-between py-3">
-                <h1 class="fw-bold h1" style="font-size: 50px">
+                <h1 class="fw-bold h1 text-primary" style="font-size: 50px">
                     FLASH SALE
                 </h1>
                 <h1 class="badge bg-dark text-white fs-6 my-auto py-2 px-4 display-1">

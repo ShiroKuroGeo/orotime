@@ -20,7 +20,7 @@
                 <li class="nav-item my-2">
 
                     <div class="nav-item-wrapper">
-                        <a class="nav-link dropdown-indicator label-1 {{ Request::routeIs('product-details') || Request::routeIs('product-add') || Request::routeIs('product-list') || Request::routeIs('product-category') ? 'active' : '' }}"
+                        <a class="nav-link dropdown-indicator label-1 {{ Request::routeIs('product-details') || Request::routeIs('product-add') || Request::routeIs('admin-product-list') || Request::routeIs('product-category') ? 'active' : '' }}"
                             href="#col-products" role="button" data-bs-toggle="collapse" aria-expanded="false"
                             aria-controls="col-products">
                             <div class="d-flex align-items-center">
@@ -37,7 +37,7 @@
                                     <div class="parent-wrapper">
                                         <ul class="nav collapse parent show" data-bs-parent="#e-commerce"id="nv-admin">
                                             <li class="nav-item"><a class="nav-link"
-                                                    href="{{ route('product-list', ['cate' => 'all']) }}">
+                                                    href="{{ route('admin-product-list', ['cate' => 'all']) }}">
                                                     <div class="d-flex align-items-center"><span
                                                             class="nav-link-text">Products List</span></div>
                                                 </a>

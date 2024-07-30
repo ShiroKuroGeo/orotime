@@ -13,21 +13,21 @@ Route::get('/', function () {
 })->name('back');
 
 Route::prefix('auth')->group(function () {
-    Route::get('/login', [Controller::class, 'login'] )->name('login');
-    Route::get('/registration', [Controller::class, 'register'] )->name('register');
-    Route::get('/forgot-password', [Controller::class, 'forgotPassword'] )->name('forgotPassword');
+    Route::get('/login', [Controller::class, 'login'])->name('login');
+    Route::get('/registration', [Controller::class, 'register'])->name('register');
+    Route::get('/forgot-password', [Controller::class, 'forgotPassword'])->name('forgotPassword');
     Route::get('/logout', [Controller::class, 'logout'])->name('logout');
 });
 
 Route::prefix('guest/')->group(function () {
-    Route::get('order/product/{pid}', [guestController::class, 'buy'] )->name('guestPurchaser');
-    Route::get('product/view/{pid}', [guestController::class, 'viewProduct'] )->name('viewProduct');
-    Route::get('product/category/{cat}', [guestController::class, 'category'] )->name('CategoryProduct');
+    Route::get('order/product/{pid}', [guestController::class, 'buy'])->name('guestPurchaser');
+    Route::get('product/view/{pid}', [guestController::class, 'viewProduct'])->name('viewProduct');
+    Route::get('product/category/{cat}', [guestController::class, 'category'])->name('CategoryProduct');
 });
 
 Route::prefix('admin/orotime/')->group(function () {
     Route::get('dashboard', [adminController::class, 'dashboard'])->name('admin');
-    Route::get('product/list/{cate}', [adminController::class, 'list'])->name('product-list');
+    Route::get('product/list/{cate}', [adminController::class, 'list'])->name('admin-product-list');
     Route::get('product/add', [adminController::class, 'add'])->name('product-add');
     Route::get('product/category', [adminController::class, 'category'])->name('product-category');
     Route::get('product/details/{pid}', [adminController::class, 'details'])->name('product-details');
@@ -51,15 +51,15 @@ Route::prefix('referral')->group(function () {
     Route::get('product/referral', [referralController::class, 'ProductReferral'])->name('ref-product');
 });
 
-Route::prefix('customer/')->group(function (){
+Route::prefix('customer/')->group(function () {
     Route::get('home', [customerController::class, 'index'])->name('homepage');
-    Route::get('order/product/{pid}', [customerController::class, 'buy'] )->name('getPurchase');
-    Route::get('product/view/{pid}', [customerController::class, 'viewProduct'] )->name('getViewProduct');
-    Route::get('product/category/{cat}', [customerController::class, 'category'] )->name('getCategory');
-    Route::get('order', [customerController::class,'personsOrder'])->name('cus-order');
-    Route::get('wishlist', [customerController::class,'personsWishlist'])->name('cus-wishlist');
-    Route::get('review', [customerController::class,'personsReviews'])->name('cus-review');
-    Route::get('information', [customerController::class,'personsInformation'])->name('cus-info');
-    Route::get('Cart', [customerController::class,'personsCart'])->name('cus-cart');
-    Route::get('cart/viewcart', [customerController::class,'personsViewcart'])->name('cus-viewcart');
+    Route::get('order/product/{pid}', [customerController::class, 'buy'])->name('getPurchase');
+    Route::get('product/view/{pid}', [customerController::class, 'viewProduct'])->name('getViewProduct');
+    Route::get('product/category/{cat}', [customerController::class, 'category'])->name('getCategory');
+    Route::get('order', [customerController::class, 'personsOrder'])->name('cus-order');
+    Route::get('wishlist', [customerController::class, 'personsWishlist'])->name('cus-wishlist');
+    Route::get('review', [customerController::class, 'personsReviews'])->name('cus-review');
+    Route::get('information', [customerController::class, 'personsInformation'])->name('cus-info');
+    Route::get('Cart', [customerController::class, 'personsCart'])->name('cus-cart');
+    Route::get('cart/viewcart', [customerController::class, 'personsViewcart'])->name('cus-viewcart');
 });
