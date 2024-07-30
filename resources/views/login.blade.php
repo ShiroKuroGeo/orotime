@@ -36,7 +36,7 @@
                             </div>
                         </div>
                         <div class="col-auto">
-                            <a class="fs-9 fw-semibold" href="#">Forgot Password?</a>
+                            <a class="fs-9 fw-semibold" href="{{ route('forgotPassword') }}">Forgot Password?</a>
                         </div>
                     </div>
                     <button class="btn btn-primary w-100 mb-3">Sign In</button>

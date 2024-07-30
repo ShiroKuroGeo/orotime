@@ -13,6 +13,7 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="{{ asset('css/theme.min.css') }}" id="theme-styles">
+    <link rel="stylesheet" href="{{ asset('css/swiper.min.css') }}">
     <script src="{{ asset('js/customizer.min.js') }}"></script>
     <script src="https://unpkg.com/feather-icons"></script>
 </head>
@@ -68,25 +69,32 @@
                             <a class="nav-link text-primary" href="{{ route('homepage') }}">Home</a>
                         </li>
                         <li class="nav-item py-lg-2 me-lg-n2 me-xl-0">
-                            <a class="nav-link text-primary" href="{{ route('getCategory', ['cat' => 'New Arrival']) }}">New Arrival</a>
+                            <a class="nav-link text-primary"
+                                href="{{ route('getCategory', ['cat' => 'New Arrival']) }}">New Arrival</a>
                         </li>
                         <li class="nav-item py-lg-2 me-lg-n2 me-xl-0">
-                            <a class="nav-link text-primary" href="{{ route('getCategory', ['cat' => 'Best Seller']) }}">Best Seller</a>
+                            <a class="nav-link text-primary"
+                                href="{{ route('getCategory', ['cat' => 'Best Seller']) }}">Best Seller</a>
                         </li>
                         <li class="nav-item py-lg-2 me-lg-n2 me-xl-0">
-                            <a class="nav-link text-primary" href="{{ route('getCategory', ['cat' => 'Necklace']) }}">Necklace</a>
+                            <a class="nav-link text-primary"
+                                href="{{ route('getCategory', ['cat' => 'Necklace']) }}">Necklace</a>
                         </li>
                         <li class="nav-item py-lg-2 me-lg-n2 me-xl-0">
-                            <a class="nav-link text-primary" href="{{ route('getCategory', ['cat' => 'Earrings']) }}">Earrings</a>
+                            <a class="nav-link text-primary"
+                                href="{{ route('getCategory', ['cat' => 'Earrings']) }}">Earrings</a>
                         </li>
                         <li class="nav-item py-lg-2 me-lg-n2 me-xl-0">
-                            <a class="nav-link text-primary" href="{{ route('getCategory', ['cat' => 'Rings']) }}">Rings</a>
+                            <a class="nav-link text-primary"
+                                href="{{ route('getCategory', ['cat' => 'Rings']) }}">Rings</a>
                         </li>
                         <li class="nav-item py-lg-2 me-lg-n2 me-xl-0">
-                            <a class="nav-link text-primary" href="{{ route('getCategory', ['cat' => 'All Golds']) }}">All Golds</a>
+                            <a class="nav-link text-primary"
+                                href="{{ route('getCategory', ['cat' => 'All Golds']) }}">All Golds</a>
                         </li>
                         <li class="nav-item py-lg-2 me-lg-n2 me-xl-0">
-                            <a class="nav-link text-primary" href="{{ route('getCategory', ['cat' => 'All Silvers']) }}">All Silvers</a>
+                            <a class="nav-link text-primary"
+                                href="{{ route('getCategory', ['cat' => 'All Silvers']) }}">All Silvers</a>
                         </li>
                     </ul>
                 </div>
@@ -94,8 +102,7 @@
 
             <div class="nav-item dropdown d-flex gap-3 gap-sm-4 me-1 me-lg-5">
                 <a class="nav-link lh-1 pe-0" id="navbarDropdownUser" href="#navbarDropdownUser" role="button"
-                    data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true"
-                    aria-expanded="false">
+                    data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
                     <div class="avatar avatar-l ">
                         <img class="rounded-circle" style="width: 45px"
                             src="{{ asset('images/customer-images/user_profile.jpg') }}" alt="Admin" />
@@ -250,6 +257,7 @@
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 <script>
     var typed = new Typed('#mainTyped', {
         strings: ['<i>Top Price</i>', '<i>High Quality</i>', '<i>High Value</i>', '<i>Shop Now</i>'],
@@ -272,7 +280,23 @@
         duration: 1000
     });
 </script>
-
+{{-- <script>
+    var swiper = new Swiper('.mySwiper', {
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        spaceBetween: 30,
+        breakpoints: {
+            767: {
+                slidesPerView: 1,
+            },
+            992: {
+                slidesPerView: 3,
+            },
+        },
+    });
+</script> --}}
 <script>
     feather.replace();
 </script>

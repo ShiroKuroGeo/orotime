@@ -5,7 +5,7 @@
 
                 <div class="col-lg-8 col-xl-7 mb-5 mb-lg-0">
                     <div class="d-flex flex-column gap-5 pe-xl-0">
-                        {{-- Personal Contact --}}
+                        
                         <div class="d-flex align-items-start" id="pciguestCollapse">
                             <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle fs-sm fw-semibold lh-1 flex-shrink-0"
                                 style="width: 2rem; height: 2rem; margin-top: -.125rem">1</div>
@@ -46,51 +46,9 @@
                                     </button>
                                 </div>
 
-                                <div class="accordion-item d-flex align-items-start border-0 visually-hidden"
-                                    id="PCIInformation">
-                                    <div class="d-flex align-items-center justify-content-center bg-body-secondary text-dark-emphasis rounded-circle flex-shrink-0"
-                                        style="width: 2rem; height: 2rem; margin-top: -.125rem">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-file-person-fill text-primary"
-                                            viewBox="0 0 16 16">
-                                            <path
-                                                d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2m-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11" />
-                                        </svg>
-                                    </div>
-                                    <div class="w-100 ps-3 ps-md-4">
-                                        <div class="d-flex align-items-center">
-                                            <h2 class="accordion-header h5 mb-0 me-3" id="deliveryInfoHeading">
-                                                <span class="d-none d-lg-inline">Personal Contact Information</span>
-                                                <button type="button"
-                                                    class="accordion-button collapsed fs-5 d-lg-none py-1"
-                                                    data-bs-toggle="collapse" data-bs-target="#deliveryInfo"
-                                                    aria-expanded="false" aria-controls="deliveryInfo">
-                                                    <span class="me-2">Personal Contact Information</span>
-                                                </button>
-                                            </h2>
-                                            <div class="nav ms-auto">
-                                                <a class="nav-link text-decoration-underline p-0" href="#"
-                                                    id="inputPCIEdit">Edit</a>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-collapse collapse d-lg-block" id="deliveryInfo"
-                                            aria-labelledby="deliveryInfoHeading" data-bs-parent="#checkout">
-                                            <div class="accordion-body p-0 pt-3 pt-md-4">
-                                                <h3 class="fs-sm mb-2">Full Name</h3>
-                                                <p class="fs-sm" id="fullnameEntered"></p>
-                                                <h3 class="fs-sm mb-2">Email Address</h3>
-                                                <p class="fs-sm" id="emailAddressEntered"></p>
-                                                <h3 class="fs-sm mb-2">Phone Number</h3>
-                                                <p class="fs-sm" id="phoneEntered"></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
 
-                        {{-- Shipping Address --}}
                         <div class="d-flex align-items-start">
                             <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle fs-sm fw-semibold lh-1 flex-shrink-0"
                                 style="width: 2rem; height: 2rem; margin-top: -.125rem">2</div>
@@ -100,7 +58,6 @@
                                     <div class="row g-3 g-sm-4 mb-4">
                                         <div class="col-12">
                                             <label for="shipping-email" class="form-label">Country</label>
-                                            {{-- <textarea name="streetAddress" id="streetAddress" class="form-control" cols="10" rows="1"></textarea> --}}
                                             <input type="text" name="countryAddress" id="countryAddress"
                                                 class="form-control">
                                         </div>
@@ -140,7 +97,6 @@
                             </div>
                         </div>
 
-                        {{-- Payment Method --}}
                         <div class="d-flex align-items-start">
                             <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle fs-sm fw-semibold lh-1 flex-shrink-0"
                                 style="width: 2rem; height: 2rem; margin-top: -.125rem">3</div>

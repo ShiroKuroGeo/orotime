@@ -1,25 +1,16 @@
 <x-layout.admin>
+    @section('title', 'Orotime - Forgot Password')
     <main class="main" id="top">
-        <div class="container bg-body-tertiary dark__bg-gray-1200">
-            <div class="bg-holder bg-auth-card-overlay"
-                style="background-image:url({{ asset('images/orotime-images/flyer1.jpg') }});">
-            </div>
+        <div class="container">
             <div class="row flex-center position-relative min-vh-100 g-0 py-5">
                 <div class="col-11 col-sm-10 col-xl-8">
                     <div class="card border border-translucent auth-card">
                         <div class="card-body pe-md-0">
                             <div class="row align-items-center gx-0 gy-7">
-
                                 <div
                                     class="col-auto bg-body-highlight dark__bg-gray-1100 rounded-3 position-relative overflow-hidden auth-title-box me-3 order-md-2">
                                     <div class="bg-holder"
                                         style="background-image:url({{ asset('images/orotime-images/flyer1.jpg') }});">
-                                    </div>
-                                    <div
-                                        class="position-relative px-4 px-lg-7 pt-7 pb-7 pb-sm-5 text-center text-md-start pb-lg-7">
-                                        <h3 class="mb-3 text-body-emphasis fs-7">Forgot Password</h3>
-                                        <p class="text-body-tertiary">Give yourself some hassle-free development process
-                                            with the uniqueness of Orotime Jewelry!</p>
                                     </div>
                                     <div class="position-relative z-n1 mb-6 d-none d-md-block text-center mt-md-5">
                                         <img class="auth-title-box-img d-dark-none rounded mb-1"
@@ -41,12 +32,7 @@
                                                     placeholder="Email" />
                                                 <button class="btn btn-primary ms-2" id="sendEmail">
                                                     Send
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                        height="16" fill="currentColor"
-                                                        class="bi bi-chevron-right ms-2" viewBox="0 0 16 16">
-                                                        <path fill-rule="evenodd"
-                                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                                                    </svg>
+                                                    <i data-feather="chevron-right" class="ms-2" style="height: 15px; width: 15px"></i>
                                                 </button>
 
                                             </form>

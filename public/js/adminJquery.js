@@ -11,7 +11,7 @@ $(document).ready(function () {
 })
 
 
-function totalOrdersChartInit () {
+function totalOrdersChartInit() {
     var chartDom = document.getElementById('echart-total-orders');
     var myChart = echarts.init(chartDom);
     var option;
@@ -34,7 +34,7 @@ function totalOrdersChartInit () {
 
 };
 
-function totalRefundsChartInit () {
+function totalRefundsChartInit() {
 
     var chartDom = document.getElementById('echart-refunds');
     var myChart = echarts.init(chartDom);
@@ -58,7 +58,7 @@ function totalRefundsChartInit () {
 
 }
 
-function totalCategoryChartInit () {
+function totalCategoryChartInit() {
 
     var chartDom = document.getElementById('echart-category');
     var myChart = echarts.init(chartDom);
@@ -106,7 +106,7 @@ function totalCategoryChartInit () {
 
 }
 
-function totalUsersChartInit () {
+function totalUsersChartInit() {
 
     var chartDom = document.getElementById('echarts-customers');
     var myChart = echarts.init(chartDom);
@@ -168,7 +168,7 @@ function totalUsersChartInit () {
 
 }
 
-function totalSalesChartInit () {
+function totalSalesChartInit() {
 
     var chartDom = document.getElementById('chartMain');
     var myChart = echarts.init(chartDom);
@@ -294,4 +294,18 @@ function openAndSelectImages() {
         $('#addProductImage').click();
     })
 
+}
+
+function set() {
+    $('#termsService').on('change', function () {
+        if ($('#fullname').val() != null && $('#email').val() != null && $('#phNumber').val() != null && $('#type').val() != null && $('#confirmPassword').val() != null) {
+            if ($(this).is(':checked')) {
+                $('#signup').prop('disabled', false);
+            } else {
+                $('#signup').prop('disabled', true);
+            }
+        } else {
+            $('#signup').prop('disabled', true);
+        }
+    });
 }

@@ -34,16 +34,18 @@
                 href="{{ route('cus-wishlist') }}">
                 <i data-feather="heart" class="fs-base pe-2"></i>
                 Wishlist
+                <span class="badge bg-primary rounded-pill ms-auto">21</span>
             </a>
             <a class="list-group-item list-group-item-action d-flex align-items-center {{ Request::routeIs('cus-review') ? 'active pe-none' : '' }}"
                 href="{{ route('cus-review') }}">
                 <i data-feather="star" class="fs-base pe-2"></i>
                 My Reviews
+                <span class="badge bg-primary rounded-pill ms-auto">32</span>
             </a>
             <a class="list-group-item list-group-item-action d-flex align-items-center {{ Request::routeIs('cus-cart') ? 'active pe-none' : '' }}"
                 href="{{ route('cus-cart') }}">
                 <i data-feather="shopping-cart" class="fs-base pe-2"></i>
-                My Cart
+                My Cart                <span class="badge bg-primary rounded-pill ms-auto">10</span>
             </a>
         </nav>
         <h6 class="pt-4 ps-2 ms-1">Manage account</h6>
@@ -94,16 +96,19 @@
                 href="{{ route('cus-wishlist') }}">
                 <i data-feather="heart" class="fs-base pe-2"></i>
                 Wishlist
+                <span class="badge bg-primary rounded-pill ms-auto">21</span>
             </a>
             <a class="list-group-item list-group-item-action d-flex align-items-center {{ Request::routeIs('cus-review') ? 'active pe-none' : '' }}"
                 href="{{ route('cus-review') }}">
                 <i data-feather="star" class="fs-base pe-2"></i>
                 My reviews
+                <span class="badge bg-primary rounded-pill ms-auto">32</span>
             </a>
             <a class="list-group-item list-group-item-action d-flex align-items-center {{ Request::routeIs('cus-cart') ? 'active pe-none' : '' }}"
                 href="{{ route('cus-cart') }}">
                 <i data-feather="shopping-cart" class="fs-base pe-2"></i>
                 My Cart
+                <span class="badge bg-primary rounded-pill ms-auto">10</span>
             </a>
         </nav>
         <h6 class="pt-4 ps-2 ms-1">Manage account</h6>

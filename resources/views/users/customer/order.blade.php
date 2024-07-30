@@ -8,8 +8,7 @@
 
             <div class="col-lg-9">
                 <div class="ps-lg-3 ps-xl-0">
-
-                    <!-- Page title + Sorting selects -->
+                    
                     <div class="row align-items-center pb-3 pb-md-4 mb-md-1 mb-lg-2">
                         <div class="col-md-4 col-xl-6 mb-3 mb-md-0">
                             <h1 class="h2 me-3 mb-0">Orders</h1>
@@ -30,8 +29,7 @@
                         </div>
                     </div>
 
-                    <div
-                        data-filter-list="{&quot;listClass&quot;: &quot;orders-list&quot;, &quot;sortClass&quot;: &quot;orders-sort&quot;, &quot;valueNames&quot;: [&quot;date&quot;, &quot;total&quot;]}">
+                    <div class="vh-50 ">
                         <table class="table align-middle fs-sm text-nowrap">
                             <thead>
                                 <tr>

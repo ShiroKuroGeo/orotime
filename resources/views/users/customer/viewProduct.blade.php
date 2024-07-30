@@ -124,7 +124,7 @@
                                         </svg>
                                     </button>
                                     <input type="number" class="form-control form-control-lg" value="1"
-                                        min="1" max="5" readonly="">
+                                        min="1" max="9999" readonly="">
                                     <button type="button" class="btn btn-icon btn-lg" data-increment=""
                                         aria-label="Increment quantity">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -286,48 +286,9 @@
             </div>
         </section>
 
-        <section class="container pb-4 pb-md-5 mb-2 mb-sm-0 mb-lg-2 mb-xl-4">
+        
+        @include('components.cusrating')
 
-            <h2 class="h3 border-bottom pb-4 mb-0">Best Ratings</h2>
-
-
-            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4">
-
-                @for ($i = 1; $i < 6; $i++)
-                    <div class="col">
-                        <div class="product-card animate-underline hover-effect-opacity bg-body">
-                            <div class="position-relative">
-                                <a class="d-block rounded-top overflow-hidden"
-                                    href="{{ route('getViewProduct', ['pid' => $i]) }}">
-                                    <div class="ratio" style="--c-oro-aspect-ratio: calc(100 / 100 * 100%)">
-                                        <img src="{{ asset('images/orotime-images/product-image.jpg') }}"
-                                            alt="Ring">
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="w-100 min-w-0 p-1">
-                                <h3 class="pb-1 mb-2">
-                                    <a class="d-block fs-sm fw-medium text-truncate" href="#">
-                                        <span class="animate-target">Ring handmade 15k grams Japan</span>
-                                    </a>
-                                </h3>
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <div class="lh-1 mb-0">&#8369; 899.00</div>
-                                    <button type="button" class="btn btn-primary ms-2 p-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="white" class="bi bi-cart-fill" viewBox="0 0 16 16">
-                                            <path
-                                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                @endfor
-
-            </div>
-        </section>
     </main>
 
 

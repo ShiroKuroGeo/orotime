@@ -22,25 +22,13 @@
 
                     <div class="border-bottom"></div>
 
-                    <div class="nav align-items-center mb-4">
-                        <div class="form-checkl nav-link animate-underline fs-lg ps-0 pe-2 py-2 mt-n1 me-4">
-                            <input type="checkbox" class="form-check-input" id="wishlist-master" checked="">
-                            <label for="wishlist-master" class="form-check-label animate-target mt-1 ms-2">Unselect
-                                all</label>
-                        </div>
-                        <div class="d-flex flex-wrap" id="action-buttons">
-                            <a class="nav-link animate-underline px-0 pe-sm-2 py-2 me-4" href="#!">
-                                <i class="ci-shopping-cart fs-base me-2"></i>
-                                <span class="animate-target d-none d-md-inline">Add to cart</span>
-                            </a>
-                            <a class="nav-link animate-underline px-0 py-2" href="#!">
-                                <i class="ci-trash fs-base me-1"></i>
-                                <span class="animate-target d-none d-md-inline">Remove selected</span>
-                            </a>
-                        </div>
+                    <div class="nav mb-4">
+                        <a class="nav-link active" aria-current="page" href="#"> <input type="checkbox" class="me-1" name="selectWishItem" id="selectWishItem"> Select All || Unselect All</a>
+                        <a class="nav-link" href="#"><i data-feather="shopping-cart" class="p-1"></i>to Cart</a>
+                        <a class="nav-link" href="#"><i data-feather="x" class="p-1"></i> to Remove</a>
                     </div>
 
-                    <div class="row row-cols-2 row-cols-md-3 g-4" id="wishlistSelection">
+                    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4" id="wishlistSelection">
 
                         <div class="col">
                             <div class="product-card animate-underline hover-effect-opacity bg-body rounded">
@@ -76,15 +64,11 @@
                                         </a>
                                     </h3>
                                     <div class="d-flex align-items-center justify-content-between">
-                                        <div class="h5 lh-1 mb-0">$340.99</div>
+                                        <small class="h6 lh-1 mb-0">$340.99</small>
                                         <button type="button"
                                             class="product-card-button btn btn-icon btn-primary animate-slide-end ms-2"
                                             aria-label="Add to Cart">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
-                                            </svg>
+                                            <i data-feather="shopping-cart" class="p-1"></i>
                                         </button>
                                     </div>
                                 </div>

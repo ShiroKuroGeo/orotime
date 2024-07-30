@@ -13,6 +13,7 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="{{ asset('css/theme.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/swiper.min.css') }}">
     <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
@@ -200,6 +201,7 @@
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
 <script>
     AOS.init({

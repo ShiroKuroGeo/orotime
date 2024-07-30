@@ -1,5 +1,5 @@
 <x-layout.admin>
-    @section('title', 'Orotime - Login')
+    @section('title', 'Orotime - Registration')
     <main class="main" id="top">
         <div class="container">
             <div class="row flex-center min-vh-100 py-5">
@@ -100,19 +100,3 @@
         </div>
     </main>
 </x-layout.admin>
-
-<script>
-    function set() {
-        $('#termsService').on('change', function() {
-            if ( $('#fullname').val() != null && $('#email').val() != null && $('#phNumber').val() != null && $('#type').val() != null && $('#confirmPassword').val() != null ) {
-                if ($(this).is(':checked')) {
-                    $('#signup').prop('disabled', false);
-                } else {
-                    $('#signup').prop('disabled', true);
-                }
-            } else {
-                $('#signup').prop('disabled', true);
-            }
-        });
-    }
-</script>

@@ -15,11 +15,11 @@
                         <a href="{{ route('cus-viewcart') }}" class="btn btn-sm btn-primary">View Cart</a>
                     </div>
 
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
                         @for ($i = 0; $i < 10; $i++)
                             <div class="col">
                                 <div class="card">
-                                    <div class="ratio-1x1" style="--cz-aspect-ratio: calc(466 / 636 * 100%)">
+                                    <div class="ratio-1x1" style="--cz-aspect-ratio: calc(320 / 230 * 100%)">
                                         <img src="{{ asset('images/orotime-images/Flyer1.jpg') }}" class="card-img-top"
                                             alt="Image">
                                     </div>
