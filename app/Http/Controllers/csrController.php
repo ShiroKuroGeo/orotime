@@ -30,4 +30,8 @@ class csrController extends Controller
     public function orders($oid){
         return view('users.csr.order.list', ['oid' => $oid]);
     }
+
+    public function customerMail(){
+        return view('user.csr.concern');
+    }
 }

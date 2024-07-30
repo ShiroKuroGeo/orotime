@@ -115,7 +115,7 @@
                     </div>
                 </div>
             </div>
-            <div class="mx-n4 px-4 mx-lg-n6 px-lg-6 bg-body-emphasis pt-7 border-y">
+            {{-- <div class="mx-n4 px-4 mx-lg-n6 px-lg-6 bg-body-emphasis pt-7 border-y">
                 <div data-list='{"valueNames":["product","customer","rating","review","time"],"page":6}'>
                     <div class="row align-items-end justify-content-between pb-5 g-3">
                         <div class="col-auto">
@@ -206,7 +206,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <footer class="footer position-absolute">
                 <div class="row g-0 justify-content-between align-items-center h-100">
                     <div class="col-12 col-sm-auto text-center">

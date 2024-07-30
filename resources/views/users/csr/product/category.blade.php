@@ -1,5 +1,5 @@
 <x-layout.csr>
-    @section('title', 'csr Add Products');
+    @section('title', 'Category');
     @include('components.csrnavtopstart')
     <div class="content">
         <nav class="mb-3" aria-label="breadcrumb">
@@ -8,11 +8,11 @@
                 <li class="breadcrumb-item active">Category</li>
             </ol>
         </nav>
-        <div class="row gx-6 gy-3 mb-4 align-items-center">
-            <div class="col-auto">
+        <div class="d-flex align-items-between justify-content-between my-3">
+            <div class="">
                 <h2 class="mb-0">Category<span class="fw-normal text-body-tertiary ms-3">(5)</span></h2>
             </div>
-            <div class="col-auto">
+            <div class="">
                 <a class="btn btn-primary px-5" href="#!" data-bs-toggle="modal" data-bs-target="#addCategory">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-plus" viewBox="0 0 16 16">
@@ -27,7 +27,7 @@
                 <div class="d-flex align-items-center">
                     <div class="search-box me-3">
                         <form class="position-relative"><input class="form-control search-input search" type="search"
-                                placeholder="Search projects" aria-label="Search" />
+                                placeholder="Search Category" aria-label="Search" />
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-search search-box-icon" viewBox="0 0 16 16">
                                 <path
@@ -85,7 +85,7 @@
                             <img src="{{ asset('images/orotime-images/follow' . $i . '.jpg') }}"
                                 class="img-thumbnail border rounded" alt="">
 
-                            <span class="badge badge-oro fs-10 mb-4 badge-oro-success">completed</span>
+                            <span class="badge badge-oro fs-10 mb-4 badge-oro-success">Active</span>
 
                             <div class="progress bg-success-subtle">
                                 <div class="progress-bar rounded bg-success" role="progressbar"

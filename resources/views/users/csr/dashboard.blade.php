@@ -1,78 +1,328 @@
 <x-layout.csr>
-
-    @section('title', 'CSR Dashboard');
+    @section('title', 'Dashboard');
     @include('components.csrnavtopstart')
     <div class="content">
-        <div class="row gy-3 mb-6 justify-content-between">
-            <div class="col-md-9 col-auto">
-                <img src="{{ asset('images/customer-images/user_profile.jpg') }}" alt="" class="img-thumbnail mb-2"
-                    height="150" width="150">
-                <h2 class="mb-2 text-body-emphasis">CSR - Shiro Geo</h2>
-                <h5 class="text-body-tertiary fw-semibold">Customer Service Representative</h5>
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-sm-center flex-column flex-sm-row mb-4">
+                <div class="me-4 mb-3 mb-sm-0">
+                    <h2 class="mb-0">Shiro Geo</h2>
+                    <div class="small">
+                        <span class="fw-500 text-primary">
+                            {{ Carbon\Carbon::now()->format('l') }}
+                        </span>
+                        . {{ Carbon\Carbon::now()->format('F j, Y') }}
+                    </div>
+                </div>
+                <div class="search-box " data-list='{"valueNames":["title"]}' style="width:15rem;">
+                    <form class="position-relative" data-bs-toggle="search" data-bs-display="static">
+                        <input class="form-control search-input " type="date" placeholder="Search..."
+                            aria-label="Search" />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search search-box-icon" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                        </svg>
+                    </form>
+                    <div class="btn-close position-absolute end-0 top-50 translate-middle cursor-pointer shadow-none"
+                        data-bs-dismiss="search"><button class="btn btn-link p-0" aria-label="Close"></button></div>
+                </div>
             </div>
-        </div>
-        <div class="row mb-3 gy-6">
-            <div class="col-12 col-xxl-2">
-                <div class="row align-items-center g-3 g-xxl-0 h-100 ">
-                    <div class="col-12 col-sm-6 col-md-3 col-lg-6 col-xl-3 col-xxl-12">
-                        <div class="d-flex align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor"
-                                class="bi bi-bag-check-fill fs-4 lh-1text-primary-dark " viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0m-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z" />
-                            </svg>
-                            <div class="ms-2">
-                                <div class="d-flex align-items-end">
-                                    <h2 class="mb-0 me-2">32</h2><span class="fs-7 fw-semibold text-body">Total
-                                        Orders</span>
+            <div class="card card-waves mb-4 mt-5">
+                <div class="card-body p-5">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col">
+                            <h2 class="text-primary-light">Welcome back, Shiro George Alfeser!</h2>
+                            <p class="text-gray-700">Your dedication and excellence in your work have not gone
+                                unnoticed. Your commitment truly sets a standard of excellence for all of us.</p>
+                        </div>
+                        <div class="col d-none d-lg-block text-center">
+                            <img class="img-fluid px-xl-4" width="500"
+                                src="{{ asset('images/orotime-images/statistics-illustration.jpg') }}" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-start-lg border-start-primary h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-grow-1">
+                                    <div class="small fw-bold text-primary mb-1">Sales (monthly)</div>
+                                    <div class="h5">P 1500</div>
+                                    <div class="text-xs fw-bold text-success d-inline-flex align-items-center">
+                                        <i class="me-1" data-feather="trending-up"></i>
+                                        12%
+                                    </div>
                                 </div>
-                                <p class="text-body-secondary fs-9 mb-0">Orders Done</p>
+                                <div class="ms-2">
+                                    <i data-feather="dollar-sign"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-3 col-lg-6 col-xl-3 col-xxl-12">
-                        <div class="d-flex align-items-center">
-                            <div class="icon-together">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45"
-                                    fill="currentColor"
-                                    class="bi bi-box-seam-fill fs-4 lh-1 text-warning-dark position-relative"
-                                    viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.01-.003.268-.108a.75.75 0 0 1 .558 0l.269.108.01.003zM10.404 2 4.25 4.461 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339L8 5.961 5.596 5l6.154-2.461z" />
-                                </svg>
-                            </div>
-                            <div class="ms-2">
-                                <div class="d-flex align-items-end">
-                                    <h2 class="mb-0 me-2">94</h2><span class="fs-7 fw-semibold text-body">Pending
-                                        Order</span>
+                </div>
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-start-lg border-start-secondary h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-grow-1">
+                                    <div class="small fw-bold text-secondary mb-1">Customer Questions</div>
+                                    <div class="h5">12</div>
+                                    <div class="text-xs fw-bold text-danger d-inline-flex align-items-center">
+                                        <i class="me-1" data-feather="trending-down"></i>
+                                        3%
+                                    </div>
                                 </div>
-                                <p class="text-body-secondary fs-9 mb-0">Awaiting Process</p>
+                                <div class="ms-2">
+                                    <i data-feather="help-circle"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-3 col-lg-6 col-xl-3 col-xxl-12">
-                        <div class="d-flex align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor"
-                                class="fs-4 lh-1 bi bi-file-earmark-text-fill text-info-dark" viewBox="0 0 16 16">
-                                <path
-                                    d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1z" />
-                            </svg>
-                            <div class="ms-2">
-                                <div class="d-flex align-items-end">
-                                    <h2 class="mb-0 me-2">23</h2><span
-                                        class="fs-7 fw-semibold text-body">Invoices</span>
+                </div>
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-start-lg border-start-success h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-grow-1">
+                                    <div class="small fw-bold text-success mb-1">Orders</div>
+                                    <div class="h5">11</div>
+                                    <div class="text-xs fw-bold text-success d-inline-flex align-items-center">
+                                        <i class="me-1" data-feather="trending-up"></i>
+                                        12%
+                                    </div>
                                 </div>
-                                <p class="text-body-secondary fs-9 mb-0">Soon to be cleared</p>
+                                <div class="ms-2">
+                                    <i data-feather="shopping-cart"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-start-lg border-start-info h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-grow-1">
+                                    <div class="small fw-bold text-info mb-1">Total Invoices</div>
+                                    <div class="h5">5</div>
+                                    <div class="text-xs fw-bold text-danger d-inline-flex align-items-center">
+                                        <i class="me-1" data-feather="trending-down"></i>
+                                        1%
+                                    </div>
+                                </div>
+                                <div class="ms-2">
+                                    <i data-feather="file-text"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-xl-10 col-xxl-10">
-                <div id="cs-chart-main" style="min-height: 40vh; min-width: 100%"></div>
+            <div class="row mb-4 row-cols-1 row-cols-lg-3">
+
+                <div class="col">
+                    <div class="card mb-4">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <div class="">
+                                <span class="text-primary-lighter fw-bold"> Order Statistics </span> <br>
+                                <small>
+                                    There are 10k Total Order Statistics
+                                </small>
+                            </div>
+                            <div class="p-0 d-none d-lg-block">
+                                <div id="orderStatistics" style="width: 130px; height: 130px" class="m-0"></div>
+                            </div>
+                        </div>
+                        <div class="list-group list-group-flush">
+                            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                                href="#!">
+                                <div class="p-0">
+                                    <span class=""> Necklaces </span> <br>
+                                    <span class=" pt-0 mt-0 small">Jewelry you wear around your neck.</span>
+                                </div>
+                                <div class="text-secondary small ">
+                                    152
+                                </div>
+                            </a>
+                            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                                href="#!">
+                                <div class="">
+                                    Bracelets <br>
+                                    <small>Jewelry you wear around your wrist.</small>
+                                </div>
+                                <div class="text-secondary small ">
+                                    152
+                                </div>
+                            </a>
+                            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                                href="#!">
+                                <div class="">
+                                    Earrings <br>
+                                    <small>Jewelry you wear around your ear.</small>
+                                </div>
+                                <div class="text-secondary small ">
+                                    152
+                                </div>
+                            </a>
+                            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                                href="#!">
+                                <div class="">
+                                    Rings <br>
+                                    <small>Jewelry you wear around your finger.</small>
+                                </div>
+                                <div class="text-secondary small ">
+                                    152
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-footer position-relative border-top-0">
+                            <a class="small" href="#!">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    View More Order Statistics
+                                    <i data-feather="arrow-right" class="p-1"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card mb-4">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <div class="">
+                                <span class="text-primary-lighter fw-bold"> Affiliate Reports</span> <br>
+                            </div>
+                            <div class="p-0 d-none d-lg-block">
+                                <div id="affiliateChart" style="width: 130px; height: 130px" class="m-0"></div>
+                            </div>
+                        </div>
+                        <div class="list-group list-group-flush">
+                            <a class="list-group-item list-group-item-action" href="#!">
+                                <div class="d-flex align-items-center">
+                                    <i data-feather="dollar-sign" class="p-1"></i>
+                                    <div class="ms-2">
+                                        Earnings Reports <br>
+                                        <small>Total earns as of this week</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="list-group-item list-group-item-action" href="#!">
+                                <div class="d-flex align-items-center">
+                                    <i data-feather="users" class="p-1"></i>
+                                    <div class="ms-2">
+                                        Customer Users Reports <br>
+                                        <small>Total Registered Customer as of this month of <span
+                                                class="text-primary">{{ Carbon\Carbon::now()->format('F') }}</span></small>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="list-group-item list-group-item-action" href="#!">
+                                <div class="d-flex align-items-center">
+                                    <i data-feather="star" class="p-1"></i>
+                                    <div class="ms-2">
+                                        Product Reviews <br>
+                                        <small>Customer Product Reviews as of this month of <span
+                                                class="text-primary">{{ Carbon\Carbon::now()->format('F') }}</span></small>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="list-group-item list-group-item-action" href="#!">
+                                <div class="d-flex align-items-center">
+                                    <i data-feather="message-circle" class="p-1"></i>
+                                    <div class="ms-2">
+                                        Conversion Rate <br>
+                                        <small>Customer active asking about products and Reviews as of this <span
+                                                class="text-primary">{{ Carbon\Carbon::now()->format('F') }}</span></small>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="list-group-item list-group-item-action" href="#!">
+                                <div class="d-flex align-items-center">
+                                    <i data-feather="users" class="p-1"></i>
+                                    <div class="ms-2">
+                                        Referral Users Reports <br>
+                                        <small>Number of people being referred to the product as this <span
+                                                class="text-primary">{{ Carbon\Carbon::now()->format('F') }}</span></small>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card mb-4">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <div class="">
+                                <span class="text-primary-lighter fw-bold"> Transaction </span> <br>
+                            </div>
+                            <div class="p-0 d-none d-lg-block">
+                                <div style="width: 65px; height: 65px" class="m-0"></div>
+                            </div>
+                        </div>
+                        <div class="list-group list-group-flush">
+                            <a class="list-group-item list-group-item-action" href="#!">
+                                <div class="d-flex align-items-center">
+                                    <img src="{{ asset('images/orotime-images/earring.jpg') }}" class="img-fluid border rounded-circle" style="width: 25px" alt="">
+                                    <div class="ms-2">
+                                        Pure Silver Earring 5grams <br>
+                                        <small>Inoc, Shiro George Alfeser</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="list-group-item list-group-item-action" href="#!">
+                                <div class="d-flex align-items-center">
+                                    <img src="{{ asset('images/orotime-images/earring.jpg') }}" class="img-fluid border rounded-circle" style="width: 25px" alt="">
+                                    <div class="ms-2">
+                                        Pure Silver Earring 5grams <br>
+                                        <small>Inoc, Shiro George Alfeser</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="list-group-item list-group-item-action" href="#!">
+                                <div class="d-flex align-items-center">
+                                    <img src="{{ asset('images/orotime-images/earring.jpg') }}" class="img-fluid border rounded-circle" style="width: 25px" alt="">
+                                    <div class="ms-2">
+                                        Pure Silver Earring 5grams <br>
+                                        <small>Inoc, Shiro George Alfeser</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="list-group-item list-group-item-action" href="#!">
+                                <div class="d-flex align-items-center">
+                                    <img src="{{ asset('images/orotime-images/earring.jpg') }}" class="img-fluid border rounded-circle" style="width: 25px" alt="">
+                                    <div class="ms-2">
+                                        Pure Silver Earring 5grams <br>
+                                        <small>Inoc, Shiro George Alfeser</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="list-group-item list-group-item-action" href="#!">
+                                <div class="d-flex align-items-center">
+                                    <img src="{{ asset('images/orotime-images/earring.jpg') }}" class="img-fluid border rounded-circle" style="width: 25px" alt="">
+                                    <div class="ms-2">
+                                        Pure Silver Earring 5grams <br>
+                                        <small>Inoc, Shiro George Alfeser</small>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-footer position-relative border-top-0">
+                            <a class="small" href="#!">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    View More Reports
+                                    <i data-feather="arrow-right" class="p-1"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </div>
-        <div class="mx-n4 px-4 mx-lg-n6 px-lg-6 bg-body-emphasis pt-7 pb-3 border-y">
+
+            {{-- <div class="mx-n4 px-4 mx-lg-n6 px-lg-6 bg-body-emphasis pt-7 pb-3 border-y">
             <div class="row">
                 <div class="col-12 col-xl-7 col-xxl-6">
                     <div class="row g-3 mb-3">
@@ -289,11 +539,6 @@
                                                             d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                                                     </svg>
                                                 @endfor
-                                                {{-- <span class="fa fa-star text-warning"></span>
-                                            <span class="fa fa-star text-warning"></span>
-                                            <span class="fa fa-star text-warning"></span>
-                                            <span class="fa fa-star text-warning"></span>
-                                            <span class="fa fa-star text-warning"></span> --}}
                                             </td>
                                             <td class="align-middle review" style="min-width:350px;">
                                                 <p class="fs-9 fw-semibold text-body-highlight mb-0">This Fitbit is
@@ -320,7 +565,106 @@
                     <p class="mb-0 text-body-tertiary text-opacity-85">v1.0.0</p>
                 </div>
             </div>
-        </footer>
-    </div>
+        </footer> --}}
+        </div>
 
 </x-layout.csr>
+<script>
+    orderStatisticsChart();
+    affiliateReportsChart();
+
+    function orderStatisticsChart() {
+        var chartDom = document.getElementById('orderStatistics');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        option = {
+            tooltip: {
+                trigger: 'item'
+            },
+            series: [{
+                name: 'Access From',
+                type: 'pie',
+                radius: ['40%', '70%'],
+                avoidLabelOverlap: false,
+                label: {
+                    show: false,
+                    position: 'center'
+                },
+                labelLine: {
+                    show: false
+                },
+                data: [{
+                        value: 1048,
+                        name: 'Search Engine'
+                    },
+                    {
+                        value: 735,
+                        name: 'Direct'
+                    },
+                    {
+                        value: 580,
+                        name: 'Email'
+                    },
+                    {
+                        value: 484,
+                        name: 'Union Ads'
+                    },
+                    {
+                        value: 300,
+                        name: 'Video Ads'
+                    }
+                ]
+            }]
+        };
+        option && myChart.setOption(option);
+    }
+
+
+    function affiliateReportsChart() {
+        var chartDom = document.getElementById('affiliateChart');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        option = {
+            tooltip: {
+                trigger: 'item'
+            },
+            series: [{
+                name: 'Access From',
+                type: 'pie',
+                radius: ['40%', '70%'],
+                avoidLabelOverlap: false,
+                label: {
+                    show: false,
+                    position: 'center'
+                },
+                labelLine: {
+                    show: false
+                },
+                data: [{
+                        value: 1048,
+                        name: 'Search Engine'
+                    },
+                    {
+                        value: 735,
+                        name: 'Direct'
+                    },
+                    {
+                        value: 580,
+                        name: 'Email'
+                    },
+                    {
+                        value: 484,
+                        name: 'Union Ads'
+                    },
+                    {
+                        value: 300,
+                        name: 'Video Ads'
+                    }
+                ]
+            }]
+        };
+        option && myChart.setOption(option);
+    }
+</script>
