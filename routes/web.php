@@ -44,7 +44,6 @@ Route::prefix('csr/')->group(function () {
     Route::get('products/add', [csrController::class, 'addView'])->name('product-csr-add');
     Route::get('details/{pid}', [csrController::class, 'view'])->name('product-csr-details');
     Route::get('order/{oid}', [csrController::class, 'orders'])->name('csr-order');
-    Route::get('mail/inbox', [csrController::class, 'customerMail'])->name('csr-mail');
 });
 
 Route::prefix('referral')->group(function () {
