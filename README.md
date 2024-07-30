@@ -64,3 +64,22 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+## How to clone this
+
+## First Step
+
+open command prompt and paste the link of this github link
+
+## Seconda Step 
+
+In command prompt enter "COMPOSER INSTALL"
+
+## Third Step
+
+In command prompt enter "NPM INSTALL"
+
+## Fourth Step
+
+Copy env by "cp .env.example.env"
