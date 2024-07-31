@@ -1,6 +1,6 @@
 <x-layout.app>
     @section('title', 'Orotime Jewelry')
-    <main class="container px-lg-5 px-4">
+    <main class="container">
         <section class="position-relative">
             <div class="container pt-md-5 py-xl-0" data-aos="zoom-in">
                 <div class="row align-items-center">
@@ -10,8 +10,8 @@
                 </div>
             </div>
         </section>
-        <section class="container my-5 py-lg-5 py-2">
-            <div class="row row-cols-2 row-cols-md-4 g-3">
+        <section class="container">
+            <div class="row row-cols-2 row-cols-md-3 g-3">
 
                 <div class="col">
                     <div class="d-flex flex-column flex-xxl-row align-items-center">
@@ -22,19 +22,6 @@
                             <h3 class="h6 mb-1 text-primary fw-bold">0% Layaways Interest</h3>
                             <p class="fs-sm mb-0">Enjoy 0% Interest Layaways: Shop now, pay later with no additional
                                 charges!</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="d-flex flex-column flex-xxl-row align-items-center">
-                        <div class="rounded-circle p-4 mb-3 mb-xxl-0">
-                            <i style="width: 100px; height: 100px" data-feather="headphones"></i>
-                        </div>
-                        <div class="text-center text-xxl-start ps-xxl-3">
-                            <h3 class="h6 mb-1 text-primary fw-bold">Good Customer Services</h3>
-                            <p class="fs-sm mb-0">Experience Excellent Customer Service: We're here to assist you every
-                                step of the way.</p>
                         </div>
                     </div>
                 </div>

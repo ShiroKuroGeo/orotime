@@ -107,7 +107,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row mb-4 row-cols-1 row-cols-lg-2">
+            <div class="row mb-4 row-cols-1 row-cols-lg-3">
 
                 <div class="col">
                     <div class="card mb-4">
@@ -236,6 +236,20 @@
                                 </div>
                             </a>
                         </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card mb-4">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <div class="">
+                                <span class="text-primary-lighter fw-bold"> Sales and Traffic </span> <br>
+                            </div>
+                            <div class="p-0 d-none d-lg-block">
+                                <div id="affiliateChart" style="width: 130px; height: 130px" class="m-0"></div>
+                            </div>
+                        </div>
+                        <div id="salesAndTraffic" style="height: 320px; width: 100%"></div>
                     </div>
                 </div>
 
@@ -576,6 +590,7 @@
 <script>
     orderStatisticsChart();
     affiliateReportsChart();
+    salesAndTrafficChart();
 
     function orderStatisticsChart() {
         var chartDom = document.getElementById('orderStatistics');
@@ -669,6 +684,91 @@
                 ]
             }]
         };
+        option && myChart.setOption(option);
+    }
+
+    function salesAndTrafficChart() {
+        var chartDom = document.getElementById('salesAndTraffic');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        option = {
+            toolbox: {
+                show: true,
+                feature: {
+                    dataView: {
+                        show: true,
+                        readOnly: false
+                    },
+                    restore: {
+                        show: true
+                    },
+                    saveAsImage: {
+                        show: true
+                    }
+                }
+            },
+            calculable: true,
+            xAxis: [{
+                type: 'category',
+                data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            }],
+            yAxis: [{
+                type: 'value'
+            }],
+            series: [{
+                    type: 'bar',
+                    data: [
+                        2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3
+                    ],
+                    markPoint: {
+                        data: [{
+                                type: 'max',
+                                name: 'Max'
+                            },
+                            {
+                                type: 'min',
+                                name: 'Min'
+                            }
+                        ]
+                    },
+                    markLine: {
+                        data: [{
+                            type: 'average',
+                            name: 'Avg'
+                        }]
+                    }
+                },
+                {
+                    type: 'bar',
+                    data: [
+                        2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3
+                    ],
+                    markPoint: {
+                        data: [{
+                                name: 'Max',
+                                value: 182.2,
+                                xAxis: 7,
+                                yAxis: 183
+                            },
+                            {
+                                name: 'Min',
+                                value: 2.3,
+                                xAxis: 11,
+                                yAxis: 3
+                            }
+                        ]
+                    },
+                    markLine: {
+                        data: [{
+                            type: 'average',
+                            name: 'Avg'
+                        }]
+                    }
+                }
+            ]
+        };
+
         option && myChart.setOption(option);
     }
 </script>

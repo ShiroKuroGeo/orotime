@@ -83,7 +83,7 @@
                             </div>
 
                             <img src="{{ asset('images/orotime-images/follow' . $i . '.jpg') }}"
-                                class="img-thumbnail border rounded" alt="">
+                                class="img-fluid rounded" alt="">
 
                             <span class="badge badge-oro fs-10 mb-4 badge-oro-success">Active</span>
 

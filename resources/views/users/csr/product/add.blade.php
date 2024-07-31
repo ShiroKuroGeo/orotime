@@ -35,7 +35,7 @@
                                     <h4>Product Description</h4>
                                     <small>Recommended Description: 100 character or more.</small>
                                 </label>
-                                <textarea class="form-control" rows="10" cols="3" name="content"></textarea>
+                                <textarea class="form-control" id="editor" rows="10" cols="3" name="content">Not Verified API</textarea>
                             </div>
                             <h4 class="mb-3">Inventory</h4>
                             <div class="row g-0 border-top border-bottom">
@@ -43,21 +43,21 @@
                                     <div class="nav flex-sm-column border-bottom border-bottom-sm-0 border-end-sm fs-9 vertical-tab h-100 justify-content-between"
                                         role="tablist" aria-orientation="vertical">
 
-                                        <a class="nav-link border-end border-end-sm-0 border-bottom-sm text-center text-sm-start cursor-pointer outline-none d-sm-flex align-items-sm-center active"
+                                        <a class="nav-link text-center text-sm-start cursor-pointer outline-none d-sm-flex align-items-sm-center active"
                                             id="pricingTab" data-bs-toggle="tab" data-bs-target="#pricingTabContent"
                                             role="tab" aria-controls="pricingTabContent" aria-selected="true">
                                             <span class="me-sm-2 fs-4 nav-icons" data-feather="tag"></span>
                                             <span class="d-none d-sm-inline">Pricing</span>
                                         </a>
 
-                                        <a class="nav-link border-end border-end-sm-0 border-bottom-sm text-center text-sm-start cursor-pointer outline-none d-sm-flex align-items-sm-center"
+                                        <a class="nav-link text-center text-sm-start cursor-pointer outline-none d-sm-flex align-items-sm-center"
                                             id="QuantityTab" data-bs-toggle="tab" data-bs-target="#QuantityTabContent"
                                             role="tab" aria-controls="QuantityTabContent" aria-selected="false">
                                             <span class="me-sm-2 fs-4 nav-icons" data-feather="package"></span>
                                             <span class="d-none d-sm-inline">Quantity</span>
                                         </a>
 
-                                        <a class="nav-link border-end border-end-sm-0 border-bottom-sm text-center text-sm-start cursor-pointer outline-none d-sm-flex align-items-sm-center"
+                                        <a class="nav-link text-center text-sm-start cursor-pointer outline-none d-sm-flex align-items-sm-center"
                                             id="SizeTab" data-bs-toggle="tab" data-bs-target="#SizeTabContent"
                                             role="tab" aria-controls="SizeTabContent" aria-selected="false">
                                             <span class="me-sm-2 fs-4 nav-icons" data-feather="package"></span>
@@ -134,7 +134,8 @@
                                             <div class="mb-4">
                                                 <div class="d-flex flex-wrap mb-2">
                                                     <h5 class="mb-0 text-body-highlight me-2">Category</h5>
-                                                    <a class="fw-bold text-primary-light fs-9" href="#!">Add new category</a>
+                                                    <a class="fw-bold text-primary-light fs-9" href="#!">Add new
+                                                        category</a>
                                                 </div>
                                                 <select class="form-select mb-3" name="category"
                                                     aria-label="category">
@@ -147,7 +148,8 @@
                                             <div class="mb-4">
                                                 <div class="d-flex flex-wrap mb-2">
                                                     <h5 class="mb-0 text-body-highlight me-2">Category Variants</h5>
-                                                    <a class="fw-bold text-primary-light fs-9" href="#!">Add new category
+                                                    <a class="fw-bold text-primary-light fs-9" href="#!">Add new
+                                                        category
                                                         colors</a>
                                                 </div>
                                                 <select class="form-select mb-3" name="variantCategory"
@@ -185,13 +187,10 @@
                                         </div>
 
                                         <small>Main Picture</small>
-                                        <div class="dz-preview row" id="previewSelectedImage">
-
-                                        </div>
+                                        <div class="dz-preview row" id="previewSelectedImage"></div>
 
                                         <small>More Picture</small>
-                                        <div class="dz-preview row" id="previewMoreSelectedImage">
-                                        </div>
+                                        <div class="dz-preview row" id="previewMoreSelectedImage"></div>
 
                                     </div>
                                 </div>
@@ -204,7 +203,8 @@
         <footer class="footer position-absolute">
             <div class="row g-0 justify-content-between align-items-center h-100">
                 <div class="col-12 col-sm-auto text-center">
-                    <br class="d-sm-none" />2024 &copy;<a class="mx-1 text-primary-light" href="#!">Orotime</a></p>
+                    <br class="d-sm-none" />2024 &copy;<a class="mx-1 text-primary-light" href="#!">Orotime</a>
+                    </p>
                 </div>
                 <div class="col-12 col-sm-auto text-center">
                     <p class="mb-0 text-body-tertiary text-opacity-85">v1.0.0</p>

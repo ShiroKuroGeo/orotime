@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    listTableOrderInit();
+    listTableProductInit();
     totalOrderChartInitCsr();
     totalMainChartInitCsr();
 })
@@ -113,4 +115,35 @@ function totalMainChartInitCsr() {
 
     option && myChart.setOption(option);
 
+}
+
+function listTableProductInit() {
+
+    var options = {
+        valueNames: ['name', 'price', 'category', 'poster', 'date'],
+        page: 10,
+        pagination: true
+    };
+
+    var userList = new List('productTableInCSR', options);
+
+    $('#search-product-csr').on('keyup', function () {
+        userList.search($(this).val());
+    })
+
+}
+
+function listTableOrderInit() {
+
+    var options = {
+        valueNames: ["order","total","customer","payment_method","payment_status","delivery_type","date"],
+        page: 10,
+        pagination: true
+    };
+
+    var orderList = new List('orderTableInCSR', options);
+
+    $('#search-order-csr').on('keyup', function () {
+        orderList.search($(this).val());
+    })
 }

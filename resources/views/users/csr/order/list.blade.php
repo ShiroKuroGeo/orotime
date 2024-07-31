@@ -32,8 +32,7 @@
                     </a>
                 </li>
             </ul>
-            <div id="orderTable"
-                data-list='{"valueNames":["order","total","customer","payment_status","fulfilment_status","delivery_type","date"],"page":10,"pagination":true}'>
+            <div id="orderTable">
                 <div class="mb-4">
                     <div class="row g-3">
                         <div class="col-auto">
@@ -84,11 +83,80 @@
                             </div>
                         </div>
                         <div class="col-auto">
-                            <button class="btn btn-primary"><span class="fas fa-plus me-2"></span>Add order</button></div>
+                            <button class="btn btn-primary"><span class="fas fa-plus me-2"></span>Add order</button>
+                        </div>
                     </div>
                 </div>
-                <div
-                    class="mx-n4 px-4 mx-lg-n6 px-lg-6 bg-body-emphasis border-top border-bottom border-translucent position-relative top-1">
+
+                <div class="px-4 px-lg-6 position-relative bg-body-emphasis rounded" id="orderTableInCSR"
+                    data-list='{"valueNames":["name","price","category","poster","date"],"page":10,"pagination":true}'>
+                    <div class="table-responsive scrollbar p-5 my-3">
+                        <table class="table table-responsive table-hover table-stripe fs-9 mb-0 display">
+                            <thead>
+                                <tr>
+                                    <th class="white-space-nowrap fs-9 align-middle ps-0" style="width:26px;">
+                                    </th>
+                                    <th class="sort white-space-nowrap align-middle pe-3" scope="col"
+                                        data-sort="order" style="width:5%;">ORDER</th>
+                                    <th class="sort align-middle text-end" scope="col" data-sort="total"
+                                        style="width:6%;">TOTAL</th>
+                                    <th class="sort align-middle ps-8" scope="col" data-sort="customer"
+                                        style="width:28%; min-width: 250px;">CUSTOMER</th>
+                                    <th class="sort align-middle pe-3" scope="col" data-sort="payment_method"
+                                        style="width:10%;">PAYMENT METHOD</th>
+                                    <th class="sort align-middle text-start pe-3" scope="col"
+                                        data-sort="payment_status" style="width:12%; min-width: 200px;">PAYMENT
+                                        STATUS</th>
+                                    <th class="sort align-middle text-start" scope="col" data-sort="delivery_type"
+                                        style="width:%;">DELIVERY TYPE</th>
+                                    <th class="sort align-middle pe-0" scope="col" data-sort="date">DATE</th>
+                                </tr>
+                            </thead>
+                            <tbody class="list" id="products-table-body">
+                                @for ($i = 1; $i <= 150; $i++)
+                                    <tr class="hover-actions-trigger btn-reveal-trigger position-static">
+                                        <td class="fs-9 align-middle px-0 py-3"></td>
+                                        <td class="align-middle white-space-nowrap py-3 py-0"><a class="fw-semibold"
+                                                href="#!">#2453</a></td>
+                                        <td class="align-middle text-end fw-semibold text-body-highlight">$87</td>
+                                        <td class="align-middle white-space-nowrap ps-8">
+                                            <a class="d-flex align-items-center text-body" type="button"
+                                                data-bs-toggle="modal" data-bs-target="#viewOrderModal">
+                                                <div class="avatar avatar-m"><img class="rounded-circle"
+                                                        src="{{ asset('images/customer-images/user_profile.jpg') }}"
+                                                        alt="" /></div>
+                                                <h6 class="mb-0 ms-3 text-body">
+                                                    Carry Anna <br>
+                                                    <small style="color: #dedede">Customer / Guest</small>
+                                                </h6>
+                                            </a>
+                                        </td>
+                                        <td
+                                            class="align-middle white-space-nowrap text-start fw-bold text-body-tertiary">
+                                            Flexi Pay
+                                        </td>
+                                        <td
+                                            class="align-middle white-space-nowrap text-start fw-bold text-body-tertiary">
+                                            <span class="badge badge-oro fs-10 badge-oro-primary"><span
+                                                    class="badge-label">Fully Paid</span><span class="ms-1"
+                                                    data-feather="x"
+                                                    style="height:12.8px;width:12.8px;"></span></span>
+                                        </td>
+                                        <td class="align-middle white-space-nowrap text-body fs-9 text-start">
+                                            Cash on Fully Paid</td>
+                                        <td class="align-middle white-space-nowrap text-body-tertiary fs-9">
+                                            Dec 12, 12:56 PM</td>
+                                    </tr>
+                                @endfor
+                            </tbody>
+                        </table>
+                        <div class="d-flex justify-content-end align-items-end pt-3">
+                            <div class="pagination"></div>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- <div class="mx-n4 px-4 mx-lg-n6 px-lg-6 bg-body-emphasis border-top border-bottom border-translucent position-relative top-1">
                     <div class="table-responsive scrollbar mx-n1 px-1">
                         <table class="table table-hover table-sm fs-9 mb-0">
                             <thead>
@@ -483,7 +551,10 @@
                                 data-list-pagination="next"><span class="fas fa-chevron-right"></span></button>
                         </div>
                     </div>
-                </div>
+                </div> --}}
+
+
+
             </div>
         </div>
         <footer class="footer position-absolute">

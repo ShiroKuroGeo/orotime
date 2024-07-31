@@ -1,239 +1,298 @@
 <x-layout.customerApp>
     <main class="content-wrapper">
-        <div class="container py-5">
-            <div class="row pt-1 pt-sm-3 pt-lg-4 pb-2 pb-md-3 pb-lg-4 pb-xl-5">
+        <section class="pt-5 pb-9">
+            <div class="container">
+                <h1 class="mb-5 fw-bolder">Check out</h1>
+                <div class="row justify-content-between">
+                    <div class="col-lg-7 col-xl-7">
+                        <form>
+                            <div class="d-flex align-items-end">
+                                <h3 class="mb-0 me-3">Shipping Details</h3>
+                                <a class="btn btn-link p-0" href="{{ route('cus-info') }}">Edit</a>
+                            </div>
 
-                <div class="col-lg-8 col-xl-7 mb-5 mb-lg-0">
-                    <div class="d-flex flex-column gap-5 pe-xl-0">
-                        
-                        <div class="d-flex align-items-start" id="pciguestCollapse">
-                            <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle fs-sm fw-semibold lh-1 flex-shrink-0"
-                                style="width: 2rem; height: 2rem; margin-top: -.125rem">1</div>
-                            <div class="flex-grow-0 flex-shrink-0 ps-3 ps-md-4" style="width: calc(100% - 2rem)">
+                            <table class="table table-borderless mt-4">
+                                <tbody>
+                                    <tr>
+                                        <td class="py-2 ps-0 ">
+                                            <div class="d-flex">
+                                                <span class="fs-10 me-2" data-feather="user"> </span>
+                                                <h6 class="me-4">Full Name</h6>
+                                            </div>
+                                        </td>
+                                        <td class="py-2 fw-bold lh-sm">:</td>
+                                        <td class="py-2 px-3">
+                                            <h5 class="fw-normal text-body-secondary">Shiro George Alfeser</h5>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 ps-0">
+                                            <div class="d-flex">
+                                                <span class="fs-10 me-2" data-feather="home"> </span>
+                                                <h6 class="me-4">Address</h6>
+                                            </div>
+                                        </td>
+                                        <td class="py-2 fw-bold lh-sm">:</td>
+                                        <td class="py-2 px-3">
+                                            <h5 class="fw-normal text-body-secondary">Atabay Caumbay Poblacion, <br>
+                                                Cordova, Cebu </h5>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 ps-0">
+                                            <div class="d-flex">
+                                                <span class="fs-10 me-2" data-feather="phone"> </span>
+                                                <h6 class="me-4">Phone</h6>
+                                            </div>
+                                        </td>
+                                        <td class="py-2 fw-bold lh-sm">: </td>
+                                        <td class="py-2 px-3">
+                                            <h5 class="fw-normal text-body-secondary">+63 912 3456 789</h5>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
-                                <div class="ms-n5 ms-sm-0" id="inputPCI">
-                                    <p class="fs-sm mb-2">Enter your personal contact information for delivery purposes.
-                                        Thank you!</p>
-                                    <h3 class="h6 pb-4 mb-0">Personal Contact Information</h3>
+                            <hr class="my-6">
 
-                                    <div class="mb-lg-4 " id="shippingMethod" role="list">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="purchaseFullname"
-                                                placeholder="fullname">
-                                            <label for="floatingfullname">Full Name</label>
+                            <h3 class="mb-3">Delivery Type</h3>
+
+                            <div class="row gy-6">
+                                <div class="col-12 col-md-6 mb-3">
+                                    <div class="d-flex flex-wrap align-items-center mb-1">
+                                        <div class="form-check mb-0"><input class="form-check-input" type="radio"
+                                                name="shippingRadio" id="free_shipping" /><label
+                                                class="form-check-label fs-8 text-body" for="free_shipping">
+                                                Free Shipping</label></div><span
+                                            class="d-inline-block text-body-emphasis fw-bold ms-2">$0.00 </span>
+                                        <span class="badge bg-info ms-2 ms-lg-4 ms-xl-2">Available</span>
+                                    </div>
+                                    <div class="ps-4">
+                                        <h6 class="text-info lh-base mb-0">Get Free Shipped products in Time!</h6>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <div class="d-flex flex-wrap align-items-center mb-1">
+                                        <div class="form-check mb-0"><input class="form-check-input" type="radio"
+                                                name="shippingRadio" id="two_days_shipping" /><label
+                                                class="form-check-label fs-8 text-body" for="two_days_shipping">Two days
+                                                Shipping</label></div><span
+                                            class="d-inline-block text-body-emphasis fw-bold ms-2">$20.00</span>
+                                    </div>
+                                    <div class="ps-4">
+                                        <h6 class="text-info lh-base mb-0">Everything faster with minimum shipping fee.
+                                        </h6>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <div class="d-flex flex-wrap align-items-center mb-1">
+                                        <div class="form-check mb-0"><input class="form-check-input" type="radio"
+                                                name="shippingRadio" id="standard_shipping" /><label
+                                                class="form-check-label fs-8 text-body" for="standard_shipping">Standard
+                                                Shipping</label></div><span
+                                            class="d-inline-block text-body-emphasis fw-bold ms-2">$10.00</span>
+                                    </div>
+                                    <div class="ps-4">
+                                        <h6 class="text-info lh-base mb-0">Get timely delivery with economy shipping.
+                                        </h6>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <div class="d-flex flex-wrap align-items-center mb-1">
+                                        <div class="form-check mb-0"><input class="form-check-input" type="radio"
+                                                name="shippingRadio" checked="checked" id="one_day_shipping" /><label
+                                                class="form-check-label fs-8 text-body" for="one_day_shipping">One day
+                                                Shipping</label></div><span
+                                            class="d-inline-block text-body-emphasis fw-bold ms-2">$30.00</span>
+                                        <span class="badge bg-warning ms-2 ms-lg-4 ms-xl-2">Popular</span>
+                                    </div>
+                                    <div class="ps-4">
+                                        <h6 class="text-info lh-base mb-0">Highest priority shipping at the lowest
+                                            cost.</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="my-6">
+                            <h3 class="mb-5">Payment Method</h3>
+                            <div class="row g-4 mb-7">
+                                <div class="col-12">
+                                    <div class="row gx-lg-11">
+                                        <div class="col-md-auto">
+                                            <div class="form-check">
+                                                <input class="form-check-input" id="creditCard" type="radio"
+                                                    name="paymentMethod" checked="checked"/>
+                                                    Cash On Delivery
+                                            </div>
                                         </div>
-                                        <div class="form-floating mt-3">
-                                            <input type="email" class="form-control" id="purchaseemail"
-                                                placeholder="email">
-                                            <label for="floatingemail">Email Address</label>
-                                        </div>
-                                        <div class="form-floating mt-3">
-                                            <input type="number" class="form-control" id="purchaseNumber"
-                                                placeholder="number">
-                                            <label for="floatingNumber">(+63) </label>
+                                        <div class="col-md-auto">
+                                            <div class="form-check">
+                                                <input class="form-check-input" id="creditCard" type="radio"
+                                                    name="paymentMethod" checked="checked"/>
+                                                <label class="form-check-label fs-8 text-body text-nowrap d-flex gap-2"
+                                                    for="creditCard">
+                                                    Credit card
+                                                    <img class="h-100"
+                                                        src="{{ asset('images/orotime-images/visa.png') }}"
+                                                        alt="visa" />
+                                                    <img class="h-100"
+                                                        src="{{ asset('images/orotime-images/discover.png') }}"
+                                                        alt="discover" />
+                                                    <img class="h-100"
+                                                        src="{{ asset('images/orotime-images/mastercard.png') }}"
+                                                        alt="mastercard" />
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
-
-                                    <button class="btn btn-lg btn-primary w-100 mt-3" disabled id="btnPCI"
-                                        data-bs-toggle="collapse" href="#shippingCollapse" role="button"
-                                        aria-expanded="false" aria-controls="shippingCollapse" type="button">
-                                        Continue
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                                        </svg>
-                                    </button>
                                 </div>
 
+                                <div class="col-md-6">
+                                    <label class="form-label fs-8 text-body-highlight ps-0 text-transform-none"
+                                        for="selectCard">Select card</label>
+                                    <select class="form-select text-body-emphasis" id="selectCard">
+                                        <option selected="selected">Select a card</option>
+                                        <option value="visa">Visa</option>
+                                        <option value="discover">Discover</option>
+                                        <option value="mastercard">Mastercard</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6"><label
+                                        class="form-label fs-8 text-body-highlight ps-0 text-transform-none"
+                                        for="inputCardNumber">Card number</label><input class="form-control"
+                                        id="inputCardNumber" type="number" placeholder="Enter card number"
+                                        aria-label="Card number" /></div>
+                                <div class="col-12"><label
+                                        class="form-label fs-8 text-body-highlight ps-0 text-transform-none"
+                                        for="inputName">Full name</label><input class="form-control" id="inputName"
+                                        type="text" placeholder="Juan Dela Cruz" aria-label="Full name" /></div>
+                                <div class="col-md-6"><label
+                                        class="form-label fs-8 text-body-highlight ps-0 text-transform-none">Expires
+                                        on</label>
+                                    <div class="d-flex"><select class="form-select text-body-emphasis me-3">
+                                            <option selected="selected">Month</option>
+                                            <option>January</option>
+                                            <option>February</option>
+                                            <option>March</option>
+                                        </select>
+                                        <select class="form-select text-body-emphasis">
+                                            <option selected="selected">Year</option>
+                                            <option value="1990">1990</option>
+                                            <option value="1991">1991</option>
+                                            <option value="1992">1992</option>
+                                            <option value="1993">1993</option>
+                                            <option value="1994">1994</option>
+                                            <option value="1995">1995</option>
+                                            <option value="1996">1996</option>
+                                            <option value="1997">1997</option>
+                                            <option value="1998">1998</option>
+                                            <option value="1999">1999</option>
+                                            <option value="2000">2000</option>
+                                            <option value="2001">2001</option>
+                                            <option value="2002">2002</option>
+                                            <option value="2003">2003</option>
+                                            <option value="2004">2004</option>
+                                            <option value="2005">2005</option>
+                                            <option value="2006">2006</option>
+                                            <option value="2007">2007</option>
+                                            <option value="2008">2008</option>
+                                            <option value="2009">2009</option>
+                                            <option value="2010">2010</option>
+                                            <option value="2011">2011</option>
+                                            <option value="2012">2012</option>
+                                            <option value="2013">2013</option>
+                                            <option value="2014">2014</option>
+                                            <option value="2015">2015</option>
+                                            <option value="2016">2016</option>
+                                            <option value="2017">2017</option>
+                                            <option value="2018">2018</option>
+                                            <option value="2019">2019</option>
+                                            <option value="2020">2020</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6"><label
+                                        class="form-label fs-8 text-body-highlight ps-0 text-transform-none"
+                                        for="inputCardCVC">CVC</label><input class="form-control" id="inputCardCVC"
+                                        type="number" placeholder="Enter a valid CVC" aria-label="CVC" /></div>
+                            </div>
+                            <div class="row g-2 my-3 mb-lg-0">
+                                <div class="col-md-8 col-lg-9 d-grid"><button class="btn btn-primary"
+                                        type="submit">Pay $695.20</button></div>
+                                <div class="col-md-4 col-lg-3 d-grid"><button class="btn btn text-nowrap"
+                                        type="submit">Save Order and
+                                        Exit</button></div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-lg-5 col-xl-4">
+                        <div class="card mt-3 mt-lg-0">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h3 class="mb-0 fw-bold">Summary</h3>
+                                    <a class="pe-0 text-decoration-none" href="{{ route('cus-cart') }}">Edit</a>
+                                </div>
+                                <div class="border-dashed border-bottom border-translucent mt-4">
+                                    <div class="ms-n2">
+                                        <div class="row align-items-center mb-2 g-3">
+                                            <div class="col-8 col-md-7 col-lg-8">
+                                                <div class="d-flex align-items-center">
+                                                    <img class="me-2 ms-1"
+                                                        src="{{ asset('images/orotime-images/Flyer1.jpg') }}"
+                                                        width="40" alt="" />
+                                                    <h6 class="text-body-highlight lh-base text-truncate">Pure Silver
+                                                        Ring 5 Grams</h6>
+                                                </div>
+                                            </div>
+                                            <div class="col-2 col-md-3 col-lg-2">
+                                                <h6 class="mb-0">x1</h6>
+                                            </div>
+                                            <div class="col-2 ps-0">
+                                                <h5 class="mb-0 text-end small">$398</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border-dashed border-bottom border-translucent mt-4">
+                                    <div class="d-flex justify-content-between m-0 p-0">
+                                        <h6 class="text-body">Items subtotal: </h6>
+                                        <h6 class="text-body">$691</h6>
+                                    </div>
+                                    <div class="d-flex justify-content-between m-0 p-0">
+                                        <h6 class="text-body">Shipping Fee: </h6>
+                                        <h6 class="text-body">$691</h6>
+                                    </div>
+                                    <div class="d-flex justify-content-between m-0 p-0">
+                                        <h6 class="text-body">Discount: </h6>
+                                        <h6 class="text-body">$50</h6>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between border-dashed-y pt-3">
+                                    <h5 class="mb-0 fw-bold">Total :</h5>
+                                    <h5 class="mb-0 fw-bold">{{ 691 + 691 - 50 }}</h5>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="d-flex align-items-start">
-                            <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle fs-sm fw-semibold lh-1 flex-shrink-0"
-                                style="width: 2rem; height: 2rem; margin-top: -.125rem">2</div>
-                            <div class="w-100 ps-3 ps-md-4 collapse" id="shippingCollapse">
-                                <h1 class="h5 mb-md-4">Shipping address</h1>
-                                <form class="needs-validation" novalidate="">
-                                    <div class="row g-3 g-sm-4 mb-4">
-                                        <div class="col-12">
-                                            <label for="shipping-email" class="form-label">Country</label>
-                                            <input type="text" name="countryAddress" id="countryAddress"
-                                                class="form-control">
-                                        </div>
-                                        <div class="col">
-                                            <label for="shipping-mobile" class="form-label">Province</label>
-                                            <input type="text" class="form-control form-control-lg"
-                                                id="shipping-mobile">
-                                        </div>
-                                        <div class="col">
-                                            <label for="shipping-mobile" class="form-label">City</label>
-                                            <input type="text" class="form-control form-control-lg"
-                                                id="shipping-mobile">
-                                        </div>
-                                        <div class="col">
-                                            <label for="shipping-postcode" class="form-label">Postcode</label>
-                                            <input type="text" class="form-control form-control-lg"
-                                                id="shipping-postcode" required="">
-                                        </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="shipping-address" class="form-label">House / apartment number and
-                                            street address <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control form-control-lg"
-                                            id="shipping-address" required="">
-                                    </div>
-                                    <button class="btn btn-lg btn-primary w-100" type="button"
-                                        data-bs-toggle="collapse" href="#paymentCollapse" role="button"
-                                        aria-expanded="false" aria-controls="paymentCollapse" type="button">
-                                        Continue
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                                        </svg>
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-
-                        <div class="d-flex align-items-start">
-                            <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle fs-sm fw-semibold lh-1 flex-shrink-0"
-                                style="width: 2rem; height: 2rem; margin-top: -.125rem">3</div>
-                            <div class="w-100 ps-3 ps-md-4 collapse" id="paymentCollapse">
-                                <h2 class="h5 mb-0">Payment</h2>
-                                <div class="mb-4" id="paymentMethod" role="list">
-
-                                    <div class="mt-4">
-                                        <div class="form-check mb-0">
-                                            <label class="form-check-label w-100 text-dark-emphasis fw-semibold">
-                                                <input type="radio" class="form-check-input fs-base me-2 me-sm-3"
-                                                    name="payment-method">
-                                                Cash on delivery
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                    <div class="mt-4">
-                                        <div class="form-check mb-0" role="listitem" data-bs-toggle="collapse"
-                                            data-bs-target="#card" aria-expanded="true" aria-controls="card">
-                                            <label
-                                                class="form-check-label d-flex align-items-center text-dark-emphasis fw-semibold">
-                                                <input type="radio" class="form-check-input fs-base me-2 me-sm-3"
-                                                    name="payment-method" checked="">
-                                                Credit or debit card
-                                                <span class="d-none d-sm-flex gap-2 ms-3">
-                                                    <img src="{{ asset('images/orotime-images/amex.svg') }}"
-                                                        class="d-block rounded-1" width="36" alt="Amex">
-                                                    <img src="{{ asset('images/orotime-images/mastercard.svg') }}"
-                                                        class="d-block rounded-1" width="36" alt="Master Card">
-                                                    <img src="{{ asset('images/orotime-images/visa.svg') }}"
-                                                        class="d-block rounded-1" width="36" alt="Visa">
-                                                </span>
-                                            </label>
-                                        </div>
-                                        <div class="collapse show" id="card" data-bs-parent="#paymentMethod">
-
-                                            <div class="position-relative mb-3 mb-sm-4">
-                                                <select name="cardselect" id="cardselect"
-                                                    class="form-select form-control-lg">
-                                                    <option selected hidden>Select Card</option>
-                                                    <option value="Amex">Amex</option>
-                                                    <option value="Master Card">Master Card</option>
-                                                    <option value="Visa">Visa</option>
-                                                </select>
-                                                <input type="text"
-                                                    class="form-control form-control-lg form-icon-end mt-3"
-                                                    placeholder="Card number" required="">
-                                            </div>
-
-                                            <div class="row row-cols-1 row-cols-sm-2 g-3 g-sm-4">
-                                                <div class="col">
-                                                    <input type="text" class="form-control form-control-lg"
-                                                        placeholder="MM/YY">
-                                                </div>
-                                                <div class="col">
-                                                    <input type="text" class="form-control form-control-lg"
-                                                        maxlength="4" placeholder="CVC">
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <select name="paymentMethod" id="paymentMethod">
-                                    <option value="">Flexi Pay</option>
-                                    <option value=""></option>
-                                </select>
-
-                                <textarea class="form-control form-control-lg mb-4" rows="3" placeholder="Additional comments"></textarea>
-
-                                <div class="form-check mb-lg-4">
-                                    <input type="checkbox" class="form-check-input" id="accept-terms">
-                                    <label for="accept-terms" class="form-check-label nav align-items-center">
-                                        I accept the
-                                        <a class="nav-link text-decoration-underline fw-normal ms-1 p-0"
-                                            href="terms-and-conditions.html" target="_blank">Terms and Conditions</a>
-                                    </label>
-                                </div>
-
-                                <button class="btn btn-lg btn-primary w-100 d-none d-lg-flex">Pay P2,406.90</button>
-                            </div>
+                        <div class="py-4">
+                            Another way to buy product?
+                            <a href="#" class="text-decoration-none">Click Here!</a>
                         </div>
                     </div>
                 </div>
-
-                <aside class="col-lg-4 offset-xl-1" style="margin-top: -100px">
-                    <div class="position-sticky top-0" style="padding-top: 100px">
-                        <div class="bg-body-tertiary rounded-5 p-4 mb-3">
-                            <div class="p-sm-2 p-lg-0 p-xl-2">
-                                <div class="border-bottom pb-4 mb-4">
-                                    <div class="d-flex align-items-center justify-content-between mb-4">
-                                        <h5 class="mb-0">Order summary</h5>
-                                    </div>
-                                    <a class="d-flex align-items-center gap-2 text-decoration-none"
-                                        href="#orderPreview" data-bs-toggle="offcanvas">
-                                        <div class="ratio ratio-1x1" style="max-width: 64px">
-                                            <img src="{{ asset('images/orotime-images/product-image.jpg') }}"
-                                                class="d-block p-1" alt="iPhone">
-                                        </div>
-                                        <i class="ci-chevron-right text-body fs-xl p-0 ms-auto"></i>
-                                    </a>
-                                </div>
-                                <ul class="list-unstyled fs-sm gap-3 mb-0">
-                                    <li class="d-flex justify-content-between">
-                                        Subtotal :
-                                        <span class="text-dark-emphasis fw-medium">$2,427.00</span>
-                                    </li>
-                                    <li class="d-flex justify-content-between">
-                                        Shipping:
-                                        <span class="text-dark-emphasis fw-medium">$16.50</span>
-                                    </li>
-                                </ul>
-                                <div class="border-top pt-4 mt-4">
-                                    <div class="d-flex justify-content-between mb-3">
-                                        <span class="fs-sm">Estimated total:</span>
-                                        <span class="h5 mb-0">$2,406.90</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
-
             </div>
-        </div>
+        </section>
     </main>
 
 </x-layout.customerApp>
 <script>
-    
     $(document).ready(function() {
         enPnReady();
+        wayOfPayment();
     })
 
-    const enPnReady = () => {
+    function enPnReady() {
         $('#purchaseFullname').on('keyup keydown', function() {
             $('#purchaseNumber').on('keyup keydown', function() {
                 if ($('#purchaseFullname').val() != '' && $('#purchaseNumber').val() != '') {
@@ -243,5 +302,18 @@
                 }
             })
         })
+    }
+
+    function wayOfPayment() {
+        const paymentMethod = $('#wayMethod');
+        const flexpay = $('#flexpay');
+
+        paymentMethod.on('change', function() {
+            if ($(this).val() === '1') {
+                flexpay.removeClass('d-none');
+            } else {
+                flexpay.addClass('d-none');
+            }
+        });
     }
 </script>

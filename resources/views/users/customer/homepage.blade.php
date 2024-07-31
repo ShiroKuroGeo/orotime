@@ -1,6 +1,6 @@
 <x-layout.customerApp>
     @section('title', 'Orotime Home')
-    <main class="container px-lg-5 px-4">
+    <main class="container">
         <section class="position-relative">
             <div class="container pt-md-5 py-xl-0" data-aos="zoom-in">
                 <div class="row align-items-center">
@@ -10,8 +10,52 @@
                 </div>
             </div>
         </section>
-        <section class="container my-lg-5 my-3 py-lg-3 py-2">
-            <div class="text-center my-5">
+        <section class="container">
+            <div class="row row-cols-2 row-cols-md-3 g-3">
+
+                <div class="col">
+                    <div class="d-flex flex-column flex-xxl-row align-items-center">
+                        <div class="rounded-circle p-4 mb-3 mb-xxl-0">
+                            <i style="width: 100px; height: 100px" data-feather="credit-card"></i>
+                        </div>
+                        <div class="text-center text-xxl-start ps-xxl-3">
+                            <h3 class="h6 mb-1 text-primary fw-bold">0% Layaways Interest</h3>
+                            <p class="fs-sm mb-0">Enjoy 0% Interest Layaways: Shop now, pay later with no additional
+                                charges!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="d-flex flex-column flex-xxl-row align-items-center">
+                        <div class="rounded-circle p-4 mb-3 mb-xxl-0">
+                            <i style="width: 100px; height: 100px" data-feather="shield"></i>
+                        </div>
+                        <div class="text-center text-xxl-start ps-xxl-3">
+                            <h3 class="h6 mb-1 text-primary fw-bold">Secure Payment</h3>
+                            <p class="fs-sm mb-0">Secure Payment Guaranteed: Shop with confidence knowing your
+                                transactions are safe and protected.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="d-flex flex-column flex-xxl-row align-items-center">
+                        <div class="rounded-circle p-4 mb-3 mb-xxl-0">
+                            <i style="width: 100px; height: 100px" data-feather="globe"></i>
+                        </div>
+                        <div class="text-center text-xxl-start ps-xxl-3">
+                            <h3 class="h6 mb-1 text-primary fw-bold">Shipping World Wide</h3>
+                            <p class="fs-sm mb-0">Worldwide Shipping Available: Get your favorite items delivered
+                                anywhere across the globe.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="container my-5 py-5">
+            <div class="text-center mt-4 mb-3">
                 <h2 class="h2 w-100 fw-bold pb-2 mb-1 text-primary">
                     View Collections
                 </h2>
@@ -87,13 +131,13 @@
 
             </div>
         </section>
-        <section class="container my-lg-5 my-3 py-lg-3 py-2 border-top">
+        <section class="container my-5 py-5">
             <div class="row my-5">
                 <h2 class="h1 w-100 fw-bold pb-2 mb-1 text-primary">
                     <span id="mainTyped"></span>
                 </h2>
             </div>
-            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4">
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4">
                 @for ($i = 1; $i < 11; $i++)
                     <div class="col" data-aos="fade-up">
                         <div class="product-card animate-underline hover-effect-opacity bg-body">
@@ -128,7 +172,7 @@
                 @endfor
             </div>
         </section>
-        <section class="container my-lg-5 my-3 py-lg-3 py-2">
+        <section class="container my-5 py-5">
             <div class="container-lg text-center">
                 <h1 class="h1 fw-bold col-12 px-lg-5 mx-lg-5 py-5">
                     Explore our <span class="text-primary">stunning collection</span> of pure <span
@@ -151,7 +195,7 @@
                 </a>
             </div>
         </section>
-        <section class="container my-lg-5 my-3 py-lg-3 py-2">
+        <section class="container my-5 py-5">
             <div class="d-flex justify-content-between align-items-between py-3">
                 <h1 class="fw-bold h1 text-primary" style="font-size: 50px">
                     FLASH SALE
@@ -162,7 +206,7 @@
             </div>
             <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="30"
                 slides-per-view="2"
-                breakpoints='{"320": {"slidesPerView": 1}, "768": {"slidesPerView": 2}, "1024": {"slidesPerView": 4}}'>
+                breakpoints='{"320": {"slidesPerView": 1}, "768": {"slidesPerView": 2}, "1024": {"slidesPerView": 5}}'>
                 @for ($i = 1; $i <= 10; $i++)
                     <swiper-slide>
                         <div class="col">

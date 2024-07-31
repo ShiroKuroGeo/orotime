@@ -5,8 +5,8 @@
 
             <div class="row row-cols-1 row-cols-lg-3 row-cols-md-1 g-4 my-3">
                 <div class="col">
-                    <img src="{{ asset('images/orotime-images/product-image.jpg') }}" 
-                        alt="{{ request()->route('cat') }}" class="img-fluid" data-aos="zoom-in">
+                    <img src="{{ asset('images/orotime-images/product-image.jpg') }}" alt="{{ request()->route('cat') }}"
+                        class="img-fluid" data-aos="zoom-in">
                 </div>
                 <div class="col">
                     <img src="{{ asset('images/orotime-images/product-image.jpg') }}"
@@ -29,7 +29,7 @@
                                     <div class="position-relative d-flex min-w-0 align-items-center">
                                         <div class="min-w-0 ps-3">
                                             <a class="nav-link animate-underline stretched-link fs-base fw-semibold p-0 mb-1"
-                                                href="{{ route('getCategory', ['cat' => 'All Collection' ]) }}">
+                                                href="{{ route('getCategory', ['cat' => 'All Collection']) }}">
                                                 <span class="animate-target text-truncate">All Collection</span>
                                             </a>
                                         </div>
@@ -39,7 +39,7 @@
                                     <div class="position-relative d-flex min-w-0 align-items-center">
                                         <div class="min-w-0 ps-3">
                                             <a class="nav-link animate-underline stretched-link fs-base fw-semibold p-0 mb-1"
-                                                href="{{ route('getCategory', ['cat' => 'All Gold' ]) }}">
+                                                href="{{ route('getCategory', ['cat' => 'All Gold']) }}">
                                                 <span class="animate-target text-truncate">All Gold</span>
                                             </a>
                                         </div>
@@ -49,7 +49,7 @@
                                     <div class="position-relative d-flex min-w-0 align-items-center">
                                         <div class="min-w-0 ps-3">
                                             <a class="nav-link animate-underline stretched-link fs-base fw-semibold p-0 mb-1"
-                                                href="{{ route('getCategory', ['cat' => 'All Silver' ]) }}">
+                                                href="{{ route('getCategory', ['cat' => 'All Silver']) }}">
                                                 <span class="animate-target text-truncate">All Silver</span>
                                             </a>
                                         </div>
@@ -59,7 +59,7 @@
                                     <div class="position-relative d-flex min-w-0 align-items-center">
                                         <div class="min-w-0 ps-3">
                                             <a class="nav-link animate-underline stretched-link fs-base fw-semibold p-0 mb-1"
-                                                href="{{ route('getCategory', ['cat' => 'Best Seller' ]) }}">
+                                                href="{{ route('getCategory', ['cat' => 'Best Seller']) }}">
                                                 <span class="animate-target text-truncate">Best Seller</span>
                                             </a>
                                         </div>
@@ -69,8 +69,8 @@
                                     <div class="position-relative d-flex min-w-0 align-items-center">
                                         <div class="min-w-0 ps-3">
                                             <a class="nav-link animate-underline stretched-link fs-base fw-semibold p-0 mb-1"
-                                                href="{{ route('getCategory', ['cat' => 'Best Reviews' ]) }}">
-                                                <span class="animate-target text-truncate">Best Reviews</span>
+                                                href="{{ route('getCategory', ['cat' => 'Best Reviews']) }}">
+                                                <span class="animate-target text-truncate">Best Review</span>
                                             </a>
                                         </div>
                                     </div>
@@ -79,7 +79,7 @@
                                     <div class="position-relative d-flex min-w-0 align-items-center">
                                         <div class="min-w-0 ps-3">
                                             <a class="nav-link animate-underline stretched-link fs-base fw-semibold p-0 mb-1"
-                                                href="{{ route('getCategory', ['cat' => 'Bracelets' ]) }}">
+                                                href="{{ route('getCategory', ['cat' => 'Bracelets']) }}">
                                                 <span class="animate-target text-truncate">Bracelets</span>
                                             </a>
                                         </div>
@@ -89,7 +89,7 @@
                                     <div class="position-relative d-flex min-w-0 align-items-center">
                                         <div class="min-w-0 ps-3">
                                             <a class="nav-link animate-underline stretched-link fs-base fw-semibold p-0 mb-1"
-                                                href="{{ route('getCategory', ['cat' => 'Earrings' ]) }}">
+                                                href="{{ route('getCategory', ['cat' => 'Earrings']) }}">
                                                 <span class="animate-target text-truncate">Earrings</span>
                                             </a>
                                         </div>
@@ -99,7 +99,7 @@
                                     <div class="position-relative d-flex min-w-0 align-items-center">
                                         <div class="min-w-0 ps-3">
                                             <a class="nav-link animate-underline stretched-link fs-base fw-semibold p-0 mb-1"
-                                                href="{{ route('getCategory', ['cat' => 'Rings' ]) }}">
+                                                href="{{ route('getCategory', ['cat' => 'Rings']) }}">
                                                 <span class="animate-target text-truncate">Rings</span>
                                             </a>
                                         </div>
@@ -109,12 +109,21 @@
                                     <div class="position-relative d-flex min-w-0 align-items-center">
                                         <div class="min-w-0 ps-3">
                                             <a class="nav-link animate-underline stretched-link fs-base fw-semibold p-0 mb-1"
-                                                href="{{ route('getCategory', ['cat' => 'Necklace' ]) }}">
+                                                href="{{ route('getCategory', ['cat' => 'Necklace']) }}">
                                                 <span class="animate-target text-truncate">Necklace</span>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="d-flex mx-2">
+                                    <input class="form-control form-control-sm" type="number" name="minimun"
+                                        id="minimun" placeholder="Min">
+                                    <input class="form-control form-control-sm" type="number" name="maximum"
+                                        id="maximum" placeholder="Max">
+                                    <button class="btn btn-sm">Go</button>
+                                </div>
+
                             </div>
                         </div>
 
@@ -132,7 +141,6 @@
                                 </div>
                             </div>
 
-                            <!-- Products grid -->
                             <div class="row row-cols-2 row-cols-sm-1 row-cols-md-4 row-cols-lg-3 row-cols-xl-4 g-4">
 
 
@@ -140,7 +148,8 @@
                                     <div class="col">
                                         <div class="card product-card h-100 bg-transparent border-0 shadow-none">
                                             <div class="position-relative z-2">
-                                                <a class="d-block p-2 p-lg-3" href="{{ route('getPurchase', ['pid' => $i]) }}">
+                                                <a class="d-block p-2 p-lg-3"
+                                                    href="{{ route('getPurchase', ['pid' => $i]) }}">
                                                     <img src="{{ asset('images/orotime-images/follow1.jpg') }}"
                                                         alt="Image" class="img-fluid w-100 h-100">
                                                 </a>
@@ -160,8 +169,6 @@
                                 @endfor
 
                             </div>
-
-                            <!-- Products grid -->
 
                             <div class="row row-cols-2 row-cols-sm-1 row-cols-md-4 row-cols-lg-3 row-cols-xl-4 g-4 collapse"
                                 id="collapseViewMore">
