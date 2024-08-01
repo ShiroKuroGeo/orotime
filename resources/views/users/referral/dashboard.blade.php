@@ -19,8 +19,35 @@
                         </a>
                     </div>
                 </div>
-                <div class="row g-3 mb-3">
-                    <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-4">
+                <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-3 g-3 mb-3">
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex d-sm-block justify-content-between">
+                                    <div class="border-bottom-sm border-translucent mb-sm-4">
+                                        <div class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center icon-wrapper-sm shadow-primary-100"
+                                                style="transform: rotate(-7.45deg);">
+                                                <i data-feather="sunrise" class="text-primary fs-7 z-1 ms-2"></i>
+                                            </div>
+                                            <p class="text-body-tertiary fs-9 mb-0 ms-2 mt-3">Today's Earning</p>
+                                        </div>
+                                        <p class="text-primary mt-2 fs-6 fw-bold mb-0 mb-sm-4">
+                                            &#8369; 1153.00
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="d-flex flex-column justify-content-center flex-between-end d-sm-block text-end text-sm-start">
+                                        <span class="badge badge-oro badge-oro-success fs-10 mb-2">+24.5%</span>
+                                        <p class="mb-0 fs-9 text-body-tertiary">This Week</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
                         <div class="card h-100">
                             <div class="card-body">
                                 <div class="d-flex d-sm-block justify-content-between">
@@ -51,7 +78,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-4 col-xl-3 col-xxl-4">
+                    
+                    <div class="col">
                         <div class="card h-100">
                             <div class="card-body">
                                 <div class="d-flex d-sm-block justify-content-between">
@@ -83,35 +111,6 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4 col-xl-6 col-xxl-4 gy-5 gy-md-3">
-                        <div class="border-bottom border-translucent">
-                            <h5 class="pb-4 border-bottom border-translucent">History Short</h5>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item bg-transparent list-group-crm fw-bold text-body fs-9 py-2">
-                                    <div class="d-flex justify-content-between"><span class="fw-normal fs-9 mx-1">
-                                            <span class="fw-bold">1. </span>Approved</span></div>
-                                </li>
-                                <li class="list-group-item bg-transparent list-group-crm fw-bold text-body fs-9 py-2">
-                                    <div class="d-flex justify-content-between"><span class="fw-normal mx-1"><span
-                                                class="fw-bold">2. </span>Decline</span></div>
-                                </li>
-                                <li class="list-group-item bg-transparent list-group-crm fw-bold text-body fs-9 py-2">
-                                    <div class="d-flex justify-content-between"><span
-                                            class="fw-normal fs-9 mx-1"><span class="fw-bold">3.</span>
-                                            Approved</span></div>
-                                </li>
-                                <li class="list-group-item bg-transparent list-group-crm fw-bold text-body fs-9 py-2">
-                                    <div class="d-flex justify-content-between"><span
-                                            class="fw-normal fs-9 mx-1"><span class="fw-bold">4.</span> Seminar
-                                            Approve</span></div>
-                                </li>
-                                <li class="list-group-item bg-transparent list-group-crm fw-bold text-body fs-9 py-2">
-                                    <div class="d-flex justify-content-between"><span class="fw-normal fs-9 mx-1">
-                                            <span class="fw-bold">5.</span> Pending</span></div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="col-xxl-6 mb-6">
@@ -203,7 +202,7 @@
                     <div class="col-md-12 mb-2 mb-sm-0">
                         <div class="d-flex align-items-center"><span class="me-2 text-info" data-feather="users"
                                 style="min-height:24px; width:24px"></span>
-                            <h4 class="text-body-tertiary mb-0">Referred User whole week
+                            <h4 class="text-body-tertiary mb-0">Referred User for the Whole Week
                             </h4><span
                                 class="badge badge-oro fs-10 badge-oro-success d-inline-flex align-items-center ms-2"><span
                                     class="badge-label d-inline-block lh-base">+24.5%</span><span

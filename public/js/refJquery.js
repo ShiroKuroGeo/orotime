@@ -1,7 +1,7 @@
 $(document).ready(function () {
+    totalReferredLeadChart();
     totalCommessionChart();
     totalProductOnListChart();
-    totalReferredLeadChart();
 });
 
 function totalCommessionChart() {
@@ -108,9 +108,6 @@ function totalReferredLeadChart() {
 
 }
 
-function copyReferralCode(){
+function copyReferralCode() {
     $('#changeText').text("Hello world!");
 }
-// $('#copyReferralCode').click(function () {
-//     alert(2123546879);
-// })
