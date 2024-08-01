@@ -45,7 +45,7 @@
             <a class="list-group-item list-group-item-action d-flex align-items-center {{ Request::routeIs('cus-cart') ? 'active pe-none' : '' }}"
                 href="{{ route('cus-cart') }}">
                 <i data-feather="shopping-cart" class="fs-base pe-2"></i>
-                My Cart                <span class="badge bg-primary rounded-pill ms-auto">10</span>
+                My Cart <span class="badge bg-primary rounded-pill ms-auto">10</span>
             </a>
         </nav>
         <h6 class="pt-4 ps-2 ms-1">Manage account</h6>

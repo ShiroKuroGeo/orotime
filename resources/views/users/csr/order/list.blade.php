@@ -37,8 +37,8 @@
                     <div class="row g-3">
                         <div class="col-auto">
                             <div class="search-box">
-                                <form class="position-relative"><input class="form-control search-input search"
-                                        type="search" placeholder="Search orders" aria-label="Search" />
+                                <form class="position-relative">
+                                    <input class="form-control search-input search" id="search-order-csr" type="search" placeholder="Search orders" aria-label="Search" />
                                     <span class="fas fa-search search-box-icon"></span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                         fill="currentColor" class="bi bi-search search-box-icon" viewBox="0 0 16 16">
@@ -51,101 +51,53 @@
                         <div class="col-auto scrollbar overflow-hidden-y flex-grow-1">
                             <div class="btn-group position-static" role="group">
                                 <div class="btn-group position-static text-nowrap" role="group"><button
-                                        class="btn btn-sm btn-oro-secondary px-7 flex-shrink-0" type="button"
-                                        data-bs-toggle="dropdown" data-boundary="window" aria-haspopup="true"
-                                        aria-expanded="false" data-bs-reference="parent">Payment Method<span
-                                            class="fas fa-angle-down ms-2"></span></button>
-                                    <ul class="dropdown-menu dropdown-menu-end">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                        <li>
-                                            <hr class="dropdown-divider" />
-                                        </li>
-                                        <li><a class="dropdown-item" href="#">Separated link</a></li>
-                                    </ul>
-                                </div>
-                                <div class="btn-group position-static text-nowrap" role="group"><button
                                         class="btn btn-oro-secondary px-7 flex-shrink-0" type="button"
                                         data-bs-toggle="dropdown" data-boundary="window" aria-haspopup="true"
                                         aria-expanded="false" data-bs-reference="parent">Payment Status<span
                                             class="fas fa-angle-down ms-2"></span></button>
                                     <ul class="dropdown-menu dropdown-menu-end">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                        <li>
-                                            <hr class="dropdown-divider" />
-                                        </li>
-                                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                        <li><a class="dropdown-item" href="#">Fully Paid</a></li>
+                                        <li><a class="dropdown-item" href="#">Flexi Pay</a></li>
                                     </ul>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-auto">
-                            <button class="btn btn-primary"><span class="fas fa-plus me-2"></span>Add order</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="px-4 px-lg-6 position-relative bg-body-emphasis rounded" id="orderTableInCSR"
-                    data-list='{"valueNames":["name","price","category","poster","date"],"page":10,"pagination":true}'>
-                    <div class="table-responsive scrollbar p-5 my-3">
+                    data-list='{"valueNames":["order","product","customer","payment_status","date"],"page":10,"pagination":true}'>
+                    <div class="table-responsive scrollbar py-5 my-3">
                         <table class="table table-responsive table-hover table-stripe fs-9 mb-0 display">
                             <thead>
                                 <tr>
-                                    <th class="white-space-nowrap fs-9 align-middle ps-0" style="width:26px;">
+                                    <th class="white-space-nowrap fs-9 align-middle ps-0" style="width: 1%;">
                                     </th>
-                                    <th class="sort white-space-nowrap align-middle pe-3" scope="col"
-                                        data-sort="order" style="width:5%;">ORDER</th>
-                                    <th class="sort align-middle text-end" scope="col" data-sort="total"
-                                        style="width:6%;">TOTAL</th>
-                                    <th class="sort align-middle ps-8" scope="col" data-sort="customer"
-                                        style="width:28%; min-width: 250px;">CUSTOMER</th>
-                                    <th class="sort align-middle pe-3" scope="col" data-sort="payment_method"
-                                        style="width:10%;">PAYMENT METHOD</th>
-                                    <th class="sort align-middle text-start pe-3" scope="col"
-                                        data-sort="payment_status" style="width:12%; min-width: 200px;">PAYMENT
-                                        STATUS</th>
-                                    <th class="sort align-middle text-start" scope="col" data-sort="delivery_type"
-                                        style="width:%;">DELIVERY TYPE</th>
-                                    <th class="sort align-middle pe-0" scope="col" data-sort="date">DATE</th>
+                                    <th class="sort white-space-nowrap align-middle pe-3" scope="col" data-sort="order" style="width: 10%;">ORDER</th>
+                                    <th class="sort align-middle" scope="col" data-sort="product" style="width: 15%;"> PRODUCT </th>
+                                    <th class="sort align-middle ps-8" scope="col" data-sort="customer" style="width: 15%;"> CUSTOMER </th>
+                                    <th class="sort align-middle text-start pe-3" scope="col" data-sort="payment_status" style="width: 15%;"> PAYMENT STATUS </th>
+                                    <th class="sort align-middle pe-0" scope="col" data-sort="date" style="width: 15%;"> DATE </th>
                                 </tr>
                             </thead>
                             <tbody class="list" id="products-table-body">
-                                @for ($i = 1; $i <= 150; $i++)
+                                @for ($i = 1; $i <= 15; $i++)
                                     <tr class="hover-actions-trigger btn-reveal-trigger position-static">
                                         <td class="fs-9 align-middle px-0 py-3"></td>
-                                        <td class="align-middle white-space-nowrap py-3 py-0"><a class="fw-semibold"
-                                                href="#!">#2453</a></td>
-                                        <td class="align-middle text-end fw-semibold text-body-highlight">$87</td>
-                                        <td class="align-middle white-space-nowrap ps-8">
-                                            <a class="d-flex align-items-center text-body" type="button"
-                                                data-bs-toggle="modal" data-bs-target="#viewOrderModal">
-                                                <div class="avatar avatar-m"><img class="rounded-circle"
-                                                        src="{{ asset('images/customer-images/user_profile.jpg') }}"
-                                                        alt="" /></div>
-                                                <h6 class="mb-0 ms-3 text-body">
-                                                    Carry Anna <br>
-                                                    <small style="color: #dedede">Customer / Guest</small>
-                                                </h6>
+                                        <td class="align-middle white-space-nowrap py-3 py-0 order"> <a class="fw-semibold" href="#!"> #{{2453 * $i}} </a> </td>
+                                        <td class="align-middle fw-semibold text-body-highlight product"> Silver Ring 1gram silver rightley </td>
+                                        <td class="align-middle white-space-nowrap ps-8 customer">
+                                            <a class="d-flex align-items-center text-body" type="button" data-bs-toggle="modal" data-bs-target="#viewOrderModal">
+                                                <div class="avatar avatar-m">
+                                                    <img class="rounded-circle" src="{{ asset('images/customer-images/user_profile.jpg') }}" alt="" />
+                                                </div>
+                                                <h6 class="mb-0 ms-3 text-body"> Carry Anna <br> <small style="color: #dedede">Customer / Guest</small></h6>
                                             </a>
                                         </td>
-                                        <td
-                                            class="align-middle white-space-nowrap text-start fw-bold text-body-tertiary">
-                                            Flexi Pay
+                                        <td class="align-middle white-space-nowrap text-start fw-bold text-body-tertiary payment_status">
+                                            <span class="badge badge-oro fs-10 badge-oro-primary"><span class="badge-label">Fully Paid</span> <span class="ms-1" data-feather="x" style="height:12.8px;width:12.8px;"></span></span>
                                         </td>
-                                        <td
-                                            class="align-middle white-space-nowrap text-start fw-bold text-body-tertiary">
-                                            <span class="badge badge-oro fs-10 badge-oro-primary"><span
-                                                    class="badge-label">Fully Paid</span><span class="ms-1"
-                                                    data-feather="x"
-                                                    style="height:12.8px;width:12.8px;"></span></span>
-                                        </td>
-                                        <td class="align-middle white-space-nowrap text-body fs-9 text-start">
-                                            Cash on Fully Paid</td>
-                                        <td class="align-middle white-space-nowrap text-body-tertiary fs-9">
-                                            Dec 12, 12:56 PM</td>
+                                        <td class="align-middle white-space-nowrap text-body-tertiary fs-9 date"> Dec 12, 12:56 PM </td>
                                     </tr>
                                 @endfor
                             </tbody>

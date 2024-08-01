@@ -1,157 +1,3 @@
-<nav class="navbar navbar-vertical navbar-expand-lg">
-    <div class="collapse navbar-collapse" id="navbarVerticalCollapse">
-        <div class="navbar-vertical-content">
-            <ul class="navbar-nav flex-column" id="navbarVerticalNav">
-
-                <li class="nav-item my-2">
-                    <div class="nav-item-wrapper">
-                        <a class="nav-link {{ Request::routeIs('admin') ? 'active' : '' }} " href="{{ route('admin') }}">
-                            <div class="d-flex align-items-center">
-                                <div class="dropdown-indicator-icon-wrapper"><span
-                                        class="fas fa-caret-right dropdown-indicator-icon"></span></div><span
-                                    class="nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                        height="16" fill="currentColor" class="bi bi-speedometer"
-                                        viewBox="0 0 16 16">
-                                        <path
-                                            d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2M3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707M2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8m9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5m.754-4.246a.39.39 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.39.39 0 0 0-.029-.518z" />
-                                        <path fill-rule="evenodd"
-                                            d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.95 11.95 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0" />
-                                    </svg></span><span class="nav-link-text">Dashboard</span>
-                            </div>
-                        </a>
-                    </div>
-                </li>
-
-                <li class="nav-item my-2">
-
-                    <div class="nav-item-wrapper">
-                        <a class="nav-link dropdown-indicator label-1 {{ Request::routeIs('product-details') || Request::routeIs('product-add') || Request::routeIs('product-list') || Request::routeIs('product-category') ? 'active' : '' }}"
-                            href="#col-products" role="button" data-bs-toggle="collapse" aria-expanded="false"
-                            aria-controls="col-products">
-                            <div class="d-flex align-items-center">
-                                <div class="dropdown-indicator-icon-wrapper"><span
-                                        class="fas fa-caret-right dropdown-indicator-icon"></span></div><span
-                                    class="nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                        height="16" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z" />
-                                    </svg></span><span class="nav-link-text">Products</span>
-                            </div>
-                        </a>
-                        <div class="parent-wrapper label-1">
-                            <ul class="nav collapse parent" data-bs-parent="#navbarVerticalCollapse" id="col-products">
-                                <li class="nav-item">
-                                    <div class="parent-wrapper">
-                                        <ul class="nav collapse parent show" data-bs-parent="#e-commerce"id="nv-admin">
-                                            <li class="nav-item"><a class="nav-link"
-                                                    href="{{ route('product-list', ['cate' => 'all']) }}">
-                                                    <div class="d-flex align-items-center"><span
-                                                            class="nav-link-text">Products List</span></div>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item"><a class="nav-link" href="{{ route('product-add') }}">
-                                                    <div class="d-flex align-items-center"><span
-                                                            class="nav-link-text">Add product</span></div>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item"><a class="nav-link"
-                                                    href="{{ route('product-category') }}">
-                                                    <div class="d-flex align-items-center"><span
-                                                            class="nav-link-text">Category</span></div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="nav-item my-2">
-
-                    <div class="nav-item-wrapper">
-                        <a class="nav-link dropdown-indicator label-1 {{ Request::routeIs('user-type') || Request::routeIs('user-details') ? 'active' : '' }}"
-                            href="#col-users" role="button" data-bs-toggle="collapse" aria-expanded="false"
-                            aria-controls="col-users">
-                            <div class="d-flex align-items-center">
-                                <div class="dropdown-indicator-icon-wrapper"><span
-                                        class="fas fa-caret-right dropdown-indicator-icon"></span></div><span
-                                    class="nav-link-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                        fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
-                                    </svg></span><span class="nav-link-text">Users</span>
-                            </div>
-                        </a>
-                        <div class="parent-wrapper label-1">
-                            <ul class="nav collapse parent" data-bs-parent="#navbarVerticalCollapse" id="col-users">
-                                <li class="nav-item">
-                                    <div class="parent-wrapper">
-                                        <ul class="nav collapse parent show" data-bs-parent="#e-commerce"
-                                            id="nv-admin">
-
-                                            <li class="nav-item">
-                                                <a class="nav-link"
-                                                    href="{{ route('user-type', ['type' => 'customer']) }}">
-                                                    <div class="d-flex align-items-center">
-                                                        <span class="nav-link-text">Customer</span>
-                                                    </div>
-                                                </a>
-                                            </li>
-
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="{{ route('user-type', ['type' => 'csr']) }}">
-                                                    <div class="d-flex align-items-center">
-                                                        <span class="nav-link-text">CSR</span>
-                                                    </div>
-                                                </a>
-                                            </li>
-
-                                            <li class="nav-item">
-                                                <a class="nav-link"
-                                                    href="{{ route('user-type', ['type' => 'referral']) }}">
-                                                    <div class="d-flex align-items-center">
-                                                        <span class="nav-link-text">Referral</span>
-                                                    </div>
-                                                </a>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="nav-item my-2">
-
-                    <div class="nav-item-wrapper">
-                        <a class="nav-link dropdown-indicator label-1 {{ Request::routeIs('order-list') ? 'active' : '' }}"
-                            href="{{ route('order-list') }}">
-                            <div class="d-flex align-items-center">
-                                <div class="dropdown-indicator-icon-wrapper">
-                                    <span class="fas fa-caret-right dropdown-indicator-icon"></span>
-                                </div>
-                                <span class="nav-link-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                        fill="currentColor" class="bi bi-basket-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0z" />
-                                    </svg>
-                                </span>
-                                <span class="nav-link-text">Orders</span>
-                            </div>
-                        </a>
-                    </div>
-                </li>
-
-            </ul>
-        </div>
-    </div>
-</nav>
 <nav class="navbar navbar-top fixed-top navbar-expand" id="navbarDefault">
     <div class="collapse navbar-collapse justify-content-between">
         <div class="navbar-logo">
@@ -268,33 +114,32 @@
                         </div>
                         <div class="overflow-auto scrollbar border-top shadow-top g-5" style="height: 10rem;">
                             <ul class="nav d-flex flex-column my-2 pb-1">
-                                <li class="nav-item"><a class="nav-link px-3 d-block" href="#!"> <span
-                                            class="me-2 text-body align-bottom"
-                                            data-feather="user"></span><span>Profile</span></a></li>
-                                <li class="nav-item"><a class="nav-link px-3 d-block" href="#!"><span
-                                            class="me-2 text-body align-bottom"
-                                            data-feather="pie-chart"></span>Dashboard</a></li>
-                                <li class="nav-item"><a class="nav-link px-3 d-block" href="#!"> <span
-                                            class="me-2 text-body align-bottom" data-feather="lock"></span>Posts
-                                        &amp; Activity</a></li>
-                                <li class="nav-item"><a class="nav-link px-3 d-block" href="#!"> <span
-                                            class="me-2 text-body align-bottom"
-                                            data-feather="settings"></span>Settings &amp; Privacy </a></li>
-                                <li class="nav-item"><a class="nav-link px-3 d-block" href="#!"> <span
-                                            class="me-2 text-body align-bottom" data-feather="help-circle"></span>Help
-                                        Center</a></li>
+                                <li class="nav-item">
+                                    <a class="nav-link px-3 d-block d-flex align-items-center" href="#!">
+                                        <span class="me-2 text-body align-bottom p-1" data-feather="user"></span>
+                                        <span>Profile</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link px-3 d-block d-flex align-items-center" href="#!">
+                                        <span class="me-2 text-body align-bottom p-1" data-feather="pie-chart"></span>
+                                        Dashboard
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link px-3 d-block d-flex align-items-center" href="#!">
+                                        <span class="me-2 text-body align-bottom p-1" data-feather="log-out"></span>
+                                        Logout
+                                    </a>
+                                </li>
                             </ul>
                         </div>
-                        <div class="card-footer p-0 border-top border-translucent">
-                            <div class="px-3"> <a class="btn btn-oro-secondary mt-2 d-flex flex-center w-100"
-                                    href="#!"> <span class="me-2" data-feather="log-out"> </span>Sign
-                                    out</a></div>
-                            <div class="my-2 text-center fw-bold fs-10 text-body-quaternary"><a
-                                    class="text-body-quaternary me-1" href="#!">Privacy
-                                    policy</a>&bull;<a class="text-body-quaternary mx-1"
-                                    href="#!">Terms</a>&bull;<a class="text-body-quaternary ms-1"
-                                    href="#!">Cookies</a></div>
+                    </div>
+                    <div class="card-footer p-0 border-top border-translucent">
+                        <div class="px-3"> <a class="btn btn-oro-secondary mt-2 d-flex flex-center w-100"
+                                href="#!"> <span class="me-2" data-feather="log-out"> </span>Sign out</a>
                         </div>
+                        <div class="my-2 text-center fw-bold fs-10 text-body-quaternary"></div>
                     </div>
                 </div>
             </li>

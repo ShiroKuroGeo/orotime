@@ -256,7 +256,8 @@
             </div>
             <div class="row gx-6">
                 <div class="col-12">
-                    <div data-list='{"valueNames":["country","users","transactions","revenue","conv-rate"],"page":5}'>
+                    <div data-list='{"valueNames":["country","users","transactions","revenue","conv-rate"],"page":5, "pagination": true}'
+                        id="listHistoryTransaction">
                         <div class="mb-5 mt-7">
                             <h3>History Transaction</h3>
                             <p class="text-body-tertiary">Where you record of financial undertakings</p>
@@ -279,7 +280,7 @@
                                     </tr>
                                 </thead>
                                 <tbody class="list" id="table-regions-by-revenue">
-                                    @for ($i = 1; $i <= 2; $i++)
+                                    @for ($i = 1; $i <= 150; $i++)
                                         <tr>
                                             <td class="white-space-nowrap ps-0">
                                                 <div class="d-flex align-items-center">
@@ -321,20 +322,8 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="row align-items-center py-1">
-                            <div class="pagination d-none"></div>
-                            <div class="col d-flex fs-9">
-                                <p class="mb-0 d-none d-sm-block me-3 fw-semibold text-body"
-                                    data-list-info="data-list-info"></p>
-                            </div>
-                            <div class="col-auto d-flex">
-                                <button class="btn btn-link px-1 me-1" type="button" title="Previous"
-                                    data-list-pagination="prev"><span
-                                        class="fas fa-chevron-left me-2"></span>Previous</button><button
-                                    class="btn btn-link px-1 ms-1" type="button" title="Next"
-                                    data-list-pagination="next">Next<span
-                                        class="fas fa-chevron-right ms-2"></span></button>
-                            </div>
+                        <div class="d-flex justify-content-end py-1">
+                            <div class="pagination"></div>
                         </div>
                     </div>
                 </div>

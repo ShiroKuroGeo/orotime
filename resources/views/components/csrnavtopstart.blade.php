@@ -204,34 +204,32 @@
                                 <span class="text-muted fw-lighter">Customer</span>
                             </div>
                         </div>
-                        <div class="overflow-auto scrollbar border-top shadow-top g-5" style="height: 10rem;">
+                        <div class="overflow-auto scrollbar border-top shadow-top g-5" style="height: 9rem;">
                             <ul class="nav d-flex flex-column my-2 pb-1">
-                                <li class="nav-item"><a class="nav-link px-3 d-block" href="#!"> <span
-                                            class="me-2 text-body align-bottom"
-                                            data-feather="user"></span><span>Profile</span></a></li>
-                                <li class="nav-item"><a class="nav-link px-3 d-block" href="#!"><span
-                                            class="me-2 text-body align-bottom"
-                                            data-feather="pie-chart"></span>Dashboard</a></li>
-                                <li class="nav-item"><a class="nav-link px-3 d-block" href="#!"> <span
-                                            class="me-2 text-body align-bottom" data-feather="lock"></span>Posts
-                                        &amp; Activity</a></li>
-                                <li class="nav-item"><a class="nav-link px-3 d-block" href="#!"> <span
-                                            class="me-2 text-body align-bottom"
-                                            data-feather="settings"></span>Settings &amp; Privacy </a></li>
-                                <li class="nav-item"><a class="nav-link px-3 d-block" href="#!"> <span
-                                            class="me-2 text-body align-bottom" data-feather="help-circle"></span>Help
-                                        Center</a></li>
+                                <li class="nav-item">
+                                    <a class="nav-link px-3 d-block d-flex align-items-center" href="#!">
+                                        <span class="me-2 text-body align-bottom p-1" data-feather="user"></span>
+                                        <span>Profile</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link px-3 d-block d-flex align-items-center" href="#!">
+                                        <span class="me-2 text-body align-bottom p-1" data-feather="pie-chart"></span>
+                                        Dashboard
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link px-3 d-block d-flex align-items-center" href="#!">
+                                        <span class="me-2 text-body align-bottom p-1" data-feather="log-out"></span>
+                                        Logout 
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <div class="card-footer p-0 border-top border-translucent">
                             <div class="px-3"> <a class="btn btn-oro-secondary mt-2 d-flex flex-center w-100"
-                                    href="#!"> <span class="me-2" data-feather="log-out"> </span>Sign
-                                    out</a></div>
-                            <div class="my-2 text-center fw-bold fs-10 text-body-quaternary"><a
-                                    class="text-body-quaternary me-1" href="#!">Privacy
-                                    policy</a>&bull;<a class="text-body-quaternary mx-1"
-                                    href="#!">Terms</a>&bull;<a class="text-body-quaternary ms-1"
-                                    href="#!">Cookies</a></div>
+                                    href="#!"> <span class="me-2" data-feather="log-out"> </span>Sign out</a></div>
+                            <div class="my-2 text-center fw-bold fs-10 text-body-quaternary"></div>
                         </div>
                     </div>
                 </div>

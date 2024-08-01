@@ -1,5 +1,8 @@
 $(document).ready(function () {
+    grindListInit();
+    listCategoryInit();
     listTableOrderInit();
+    listHistoryTransactionInit();
     listTableProductInit();
     totalOrderChartInitCsr();
     totalMainChartInitCsr();
@@ -136,7 +139,7 @@ function listTableProductInit() {
 function listTableOrderInit() {
 
     var options = {
-        valueNames: ["order","total","customer","payment_method","payment_status","delivery_type","date"],
+        valueNames: ["order","product","customer","payment_status","date"],
         page: 10,
         pagination: true
     };
@@ -146,4 +149,53 @@ function listTableOrderInit() {
     $('#search-order-csr').on('keyup', function () {
         orderList.search($(this).val());
     })
+}
+
+function listHistoryTransactionInit() {
+    var options = {
+        valueNames: ["order", "total", "customer", "payment_method", "payment_status", "delivery_type", "date"],
+        page: 5,
+        pagination: true
+    };
+
+    var orderList = new List('listHistoryTransaction', options);
+
+    $('#search-order-csr').on('keyup', function () {
+        orderList.search($(this).val());
+    })
+}
+
+function listCategoryInit() {
+    var options = {
+        valueNames: ["category", "description", "total", "date"],
+        page: 5,
+        pagination: true
+    };
+
+    var categoryList = new List('listCategory', options);
+
+    $('#search-category-csr').on('keyup', function () {
+        categoryList.search($(this).val());
+    })
+}
+
+function grindListInit() {
+
+    $('#matrixFormatList').on('click', function () {
+        addRemoveClass('#listProduct','#gridProduct');
+        $('#paginatedProduct').removeClass('d-none');
+        $('#searchProductOnList').removeClass('d-none');
+    });
+
+    $('#matrixFormatGrid').on('click', function () {
+        addRemoveClass('#gridProduct','#listProduct');
+        $('#paginatedProduct').addClass('d-none');
+        $('#searchProductOnList').addClass('d-none');
+    });
+
+}
+
+function addRemoveClass(addId, removeId) {
+    $(addId ).removeClass('d-none');
+    $(removeId).addClass('d-none');
 }

@@ -12,7 +12,6 @@
     <script src="https://cdn.tiny.cloud/1/rxsffkdjenly82awb597asru9t6wxj98qruof2ilhydd1e72/tinymce/6/tinymce.min.js"
         referrerpolicy="origin"></script>
     <script src="https://unpkg.com/feather-icons"></script>
-    {{-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"> --}}
     <script>
         tinymce.init({
             selector: '#editor'
@@ -32,9 +31,6 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
-{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/2.1.2/js/dataTables.bootstrap5.js"></script> --}}
 <script src="vendors/tinymce/tinymce.min.js"></script>
 <script src="{{ asset('js/csrJuery.js') }}"></script>
 <script>

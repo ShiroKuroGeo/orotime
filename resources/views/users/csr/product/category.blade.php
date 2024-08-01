@@ -1,5 +1,17 @@
 <x-layout.csr>
     @section('title', 'Category');
+    <style>
+        .table-fixed {
+            table-layout: fixed;
+            width: 100%;
+        }
+
+        .text-truncate {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    </style>
     @include('components.csrnavtopstart')
     <div class="content">
         <nav class="mb-3" aria-label="breadcrumb">
@@ -26,8 +38,8 @@
             <div class="col-12 col-sm-auto">
                 <div class="d-flex align-items-center">
                     <div class="search-box me-3">
-                        <form class="position-relative"><input class="form-control search-input search" type="search"
-                                placeholder="Search Category" aria-label="Search" />
+                        <form class="position-relative">
+                            <input class="form-control search-input search" id="search-category-csr" type="search" placeholder="Search Category, Description, Total and Date Created" aria-label="Search" />
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-search search-box-icon" viewBox="0 0 16 16">
                                 <path
@@ -38,79 +50,126 @@
                 </div>
             </div>
         </div>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 row-cols-xxl-4 g-3 mb-9">
-            @for ($i = 1; $i <= 5; $i++)
-                <div class="col">
-                    <div class="card h-100 hover-actions-trigger">
-                        <div class="card-body">
+        <div class="row mb-9">
 
-                            <div class="d-flex align-items-center">
-                                <h4 class="mb-2 line-clamp-1 lh-sm flex-1 me-5">Necklace <small
-                                        class="fw-light text-muted">(100)</small></h4>
-                                <div class="hover-actions top-0 end-0 mt-4 me-4">
-                                    <a class="nav-link lh-1 pe-0" id="navbarDropdownUser" href="#navbarDropdownUser"
-                                        role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                                        aria-haspopup="true" aria-expanded="false">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
-                                            <path
-                                                d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
-                                        </svg>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-end navbar-dropdown-caret py-0 dropdown-profile shadow border"
-                                        aria-labelledby="navbarDropdownUser">
-                                        <div class="position-relative border-0">
-                                            <div class="overflow-auto border-top shadow-top g-5">
-                                                <ul class="nav d-flex flex-column my-2 pb-1">
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-3 d-block py-auto" href="#!">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                                height="16" fill="currentColor"
-                                                                class="bi bi-x-circle" viewBox="0 0 16 16">
-                                                                <path
-                                                                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-                                                                <path
-                                                                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
-                                                            </svg>
-                                                            <span>Remove</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <img src="{{ asset('images/orotime-images/follow' . $i . '.jpg') }}"
-                                class="img-fluid rounded" alt="">
-
-                            <span class="badge badge-oro fs-10 mb-4 badge-oro-success">Active</span>
-
-                            <div class="progress bg-success-subtle">
-                                <div class="progress-bar rounded bg-success" role="progressbar"
-                                    aria-label="Success example" style="width: 100%" aria-valuenow="25"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-
-                            <div class="d-flex align-items-center mt-4">
-                                <p class="mb-0 fw-bold fs-9">Category Description : <br>
-                                    <span class="fw-semibold text-body-tertiary text-opactity-85"> This is flyer in
-                                        instagram. Please follow for follow{{ $i }} </span>
-                                </p>
-                            </div>
-
-                            <div class="d-flex align-items-center mt-4">
-                                <p class="mb-0 fw-bold fs-9">Started :<span
-                                        class="fw-semibold text-body-tertiary text-opactity-85 ms-1"> 17th Nov.
-                                        2020</span>
-                                </p>
-                            </div>
-
+            <div class="col-4">
+                <div class="card mb-4 border-0">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <div class="">
+                            <span class="fw-bold"> Category Statistics </span> <br>
+                            <small>
+                                There are 10k Total Category Statistics
+                            </small>
                         </div>
                     </div>
+                    <div class="list-group list-group-flush">
+                        <a class="list-group-item list-group-item-action border-0 py-2 d-flex justify-content-between align-items-center"
+                            href="#!">
+                            <div class="p-0">
+                                Necklaces
+                            </div>
+                            <h6 class="text-secondary">
+                                152
+                            </h6>
+                        </a>
+                        <a class="list-group-item list-group-item-action border-0 py-2 d-flex justify-content-between align-items-center"
+                            href="#!">
+                            <div class="">
+                                Bracelets
+                            </div>
+                            <h6 class="text-secondary">
+                                152
+                            </h6>
+                        </a>
+                        <a class="list-group-item list-group-item-action border-0 py-2 d-flex justify-content-between align-items-center"
+                            href="#!">
+                            <div class="">
+                                Earrings
+                            </div>
+                            <h6 class="text-secondary">
+                                152
+                            </h6>
+                        </a>
+                        <a class="list-group-item list-group-item-action border-0 py-2 d-flex justify-content-between align-items-center"
+                            href="#!">
+                            <div class="">
+                                Rings
+                            </div>
+                            <h6 class="text-secondary">
+                                152
+                            </h6>
+                        </a>
+                    </div>
                 </div>
-            @endfor
+            </div>
+
+            <div class="col-8">
+                <div data-list='{"valueNames":["category","description","total","date"],"page":5, "pagination": true}'
+                    class="p-5 bg-body-emphasis rounded" id="listCategory">
+                    <div class="mb-5">
+                        <h3>Category Listing</h3>
+                        <p class="text-body-tertiary">List of category on website</p>
+                    </div>
+                    <div class="table-responsive scrollbar">
+                        <table class="table table-hover table-fixed fs-10 mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="sort border-top border-translucent ps-0 align-middle" scope="col" style="width: 10%"
+                                        data-sort="id">ID</th>
+                                    <th class="sort border-top border-translucent ps-0 align-middle" scope="col" style="width: 10%"
+                                        data-sort="category">Category</th>
+                                    <th class="sort border-top border-translucent align-middle" scope="col" style="width: 10%"
+                                        data-sort="description">Description</th>
+                                    <th class="sort border-top border-translucent text-end align-middle" scope="col" style="width: 10%"
+                                        data-sort="total">Total</th>
+                                    <th class="sort border-top border-translucent text-end pe-0 align-middle" scope="col" style="width: 10%"
+                                        data-sort="date">Date</th>
+                                </tr>
+                            </thead>
+                            <tbody class="list" id="table-regions-by-revenue">
+                                @for ($i = 1; $i <= 150; $i++)
+                                    <tr>
+                                        <td class="align-middle pe-0 conv-rate">
+                                            <h6 class="mb-0 me-3">{{ $i }}. </h6>
+                                        </td>
+                                        <td class="white-space-nowrap ps-0">
+                                            <div class="d-flex align-items-center category">
+                                                <a href="#!" class="list-group-item list-group-item-action">
+                                                    <div class="d-flex align-items-center">
+                                                        <p class="mb-0 text-primary fw-bold fs-9">
+                                                            Necklaces
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td class="align-middle users text-truncate description">
+                                            <h6 class="mb-0">
+                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad vel
+                                                expedita ex earum, quod a, praesentium, nesciunt quae animi delectus
+                                                quaerat mollitia vero porro nisi numquam eos! Aliquam, ut eveniet!
+                                            </h6>
+                                        </td>
+                                        <td class="align-middle text-end transactions total">
+                                            <h6 class="mb-0">
+                                                1522
+                                            </h6>
+                                        </td>
+                                        <td class="align-middle text-end pe-0 date">
+                                            <h6>
+                                                November 28, 2009
+                                            </h6>
+                                        </td>
+                                    </tr>
+                                @endfor
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="d-flex justify-content-end py-3">
+                        <div class="pagination"></div>
+                    </div>
+                </div>
+            </div>
 
         </div>
 
