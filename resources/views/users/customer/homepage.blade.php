@@ -145,7 +145,7 @@
                                 <a class="d-block rounded-top overflow-hidden"
                                     href="{{ route('getViewProduct', ['pid' => $i]) }}">
                                     <div class="ratio" style="--c-oro-aspect-ratio: calc(100 / 100 * 100%)">
-                                        <img src="{{ asset('images/orotime-images/product-image.jpg') }}"
+                                        <img src="{{ asset('images/orotime-images/product-image.png') }}"
                                             alt="Ring">
                                     </div>
                                 </a>
@@ -157,14 +157,38 @@
                                     </a>
                                 </h3>
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <div class="lh-1 mb-0">&#8369; 899.00</div>
-                                    <button type="button" class="btn btn-primary ms-2 p-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="white" class="bi bi-cart-fill" viewBox="0 0 16 16">
-                                            <path
-                                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
-                                        </svg>
-                                    </button>
+                                    <div class="fs-md text-dark px-1 px-md-2 px-lg-3 pb-0 pb-md-3">
+                                        &#8369;152.00
+                                    </div>
+
+                                    <div class="dropup fs-xs text-dark px-1 px-md-2 px-lg-3 pb-0 pb-md-3">
+                                        <a class="text-decoration-none" href="#" role="button"
+                                            id="cartWishMore" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i data-feather="more-horizontal" class="p-1"></i>
+                                        </a>
+
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="cartWishMore">
+                                            <li>
+                                                <a class="dropdown-item m-0"
+                                                    href="{{ route('getPurchase', ['pid' => $i]) }}">
+                                                    <i data-feather="shopping-bag" class="p-1"></i>
+                                                    Buy
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item m-0" href="#">
+                                                    <i data-feather="shopping-cart" class="p-1"></i>
+                                                    Add to cart
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item m-0" href="#">
+                                                    <i data-feather="heart" class="p-1"></i>
+                                                    Add to Wish
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -197,10 +221,15 @@
         </section>
         <section class="container my-5 py-5">
             <div class="d-flex justify-content-between align-items-between py-3">
-                <h1 class="fw-bold h1 text-primary" style="font-size: 50px">
-                    FLASH SALE
+                <h1 class="">
+                    <span class="fw-bold h1" style="font-size: 50px">
+                        FLASH SALE
+                    </span>
+                    <span class="position-absolute">
+                        <i data-feather="tag" style="height: 35px; width: 100%; color: red;"></i>
+                    </span>
                 </h1>
-                <h1 class="badge bg-dark text-white fs-6 my-auto py-2 px-4 display-1">
+                <h1 class="text-dark fs-6 my-auto py-2 px-4 display-1">
                     1:00:00
                 </h1>
             </div>
@@ -215,7 +244,7 @@
                                     <a class="d-block rounded-top overflow-hidden"
                                         href="{{ route('getViewProduct', ['pid' => $i]) }}">
                                         <div class="ratio" style="--c-oro-aspect-ratio: calc(100 / 100 * 100%)">
-                                            <img src="{{ asset('images/orotime-images/product-image.jpg') }}"
+                                            <img src="{{ asset('images/orotime-images/product-image.png') }}"
                                                 alt="Ring">
                                         </div>
                                     </a>
@@ -227,14 +256,33 @@
                                         </a>
                                     </h3>
                                     <div class="d-flex align-items-center justify-content-between">
-                                        <div class="lh-1 mb-0">&#8369; 899.00</div>
-                                        <button type="button" class="btn btn-primary ms-2 p-2">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                fill="white" class="bi bi-cart-fill" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
-                                            </svg>
-                                        </button>
+                                        <div class="fs-md text-dark px-1 px-md-2 px-lg-3 pb-0 pb-md-3">
+                                            &#8369;152.00
+                                        </div>
+
+                                        <div class="dropup fs-xs text-dark px-1 px-md-2 px-lg-3 pb-0 pb-md-3">
+                                            <a class="text-decoration-none" href="#" role="button"
+                                                id="cartWishMore" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i data-feather="more-horizontal" class="p-1"></i>
+                                            </a>
+
+                                            <ul class="dropdown-menu dropdown-menu-end"
+                                                aria-labelledby="cartWishMore">
+                                                <li>
+                                                    <a class="dropdown-item m-0"
+                                                        href="{{ route('getPurchase', ['pid' => $i]) }}">
+                                                        <i data-feather="shopping-cart" class="p-1"></i>
+                                                        Add to cart
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item m-0" href="#">
+                                                        <i data-feather="heart" class="p-1"></i>
+                                                        Add to Wish
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

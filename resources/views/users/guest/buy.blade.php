@@ -239,7 +239,7 @@
                                     <a class="d-flex align-items-center gap-2 text-decoration-none"
                                         href="#orderPreview" data-bs-toggle="offcanvas">
                                         <div class="ratio ratio-1x1" style="max-width: 64px">
-                                            <img src="{{ asset('images/orotime-images/product-image.jpg') }}"
+                                            <img src="{{ asset('images/orotime-images/product-image.png') }}"
                                                 class="d-block p-1" alt="iPhone">
                                         </div>
                                         <i class="ci-chevron-right text-body fs-xl p-0 ms-auto"></i>
@@ -263,6 +263,10 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="py-4">
+                        Another way to buy product?
+                        <a href="#" class="text-decoration-none">Click Here!</a>
                     </div>
                 </aside>
 

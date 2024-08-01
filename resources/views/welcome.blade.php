@@ -54,7 +54,7 @@
 
             </div>
         </section>
-        <section class="container my-3 py-lg-5 py-2">
+        <section class="container my-5 py-5">
             <div class="text-center my-5">
                 <h2 class="h2 w-100 fw-bold pb-2 mb-1 text-primary">
                     View Collections
@@ -130,21 +130,21 @@
 
             </div>
         </section>
-        <section class="container my-3 py-lg-5 py-2 border-top">
+        <section class="container my-5 py-5">
             <div class="row my-5">
                 <h2 class="h2 w-100 fw-bold pb-2 mb-1 text-primary">
                     Shop Now
                 </h2>
             </div>
-            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 gy-5">
-                @for ($i = 1; $i <= 8; $i++)
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 gy-5">
+                @for ($i = 1; $i <= 10; $i++)
                     <div class="col" data-aos="fade-up">
                         <div class="product-card animate-underline hover-effect-opacity bg-body">
                             <div class="position-relative">
                                 <a class="d-block rounded-top overflow-hidden"
                                     href="{{ route('viewProduct', ['pid' => '1']) }}">
                                     <div class="ratio" style="--c-oro-aspect-ratio: calc(100 / 100 * 100%)">
-                                        <img src="{{ asset('images/orotime-images/product-image.jpg') }}"
+                                        <img src="{{ asset('images/orotime-images/product-image.png') }}"
                                             alt="Ring">
                                     </div>
                                 </a>
@@ -174,7 +174,7 @@
 
             </div>
         </section>
-        <section class="container my-3 py-lg-5 py-2">
+        <section class="container my-5 py-5">
             <div class="container-lg text-center">
                 <h1 class="h1 fw-bold col-12 px-lg-5 mx-lg-5">
                     Explore our <span class="text-primary">stunning collection</span> of pure <span
@@ -190,30 +190,30 @@
                     <img src="{{ asset('images/orotime-images/Flyer1.jpg') }}" class="img-fluid" alt="Flyers">
                 </div>
             </div>
-            <div class="d-flex justify-content-center my-3">
+            <div class="d-flex justify-content-center my-5">
                 <a href="#" class="nav-link customize-hover">
                     Explore More
                     <i data-feather="chevrons-right" class="pt-1"></i>
                 </a>
             </div>
         </section>
-        <section class="container my-3 py-lg-5 py-2">
+        <section class="container my-5 py-5">
             <div class="d-flex justify-content-between align-items-between py-3">
                 <h1 class="">
                     <span class="fw-bold h1" style="font-size: 50px">
                         FLASH SALE
                     </span>
-                    <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
-                        <span class="visually-hidden">New alerts</span>
+                    <span class="position-absolute">
+                        <i data-feather="tag" style="height: 35px; width: 100%; color: red;" ></i>
                     </span>
                 </h1>
-                <h1 class="badge bg-dark text-white fs-6 my-auto py-2 px-4 display-1">
+                <h1 class="text-dark fs-6 my-auto py-2 px-4 display-1">
                     1:00:00
                 </h1>
             </div>
             <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="30"
                 slides-per-view="2"
-                breakpoints='{"320": {"slidesPerView": 1}, "768": {"slidesPerView": 2}, "1024": {"slidesPerView": 4}}'>
+                breakpoints='{"320": {"slidesPerView": 1}, "768": {"slidesPerView": 2}, "1024": {"slidesPerView": 5}}'>
                 @for ($i = 1; $i < 11; $i++)
                     <swiper-slide>
                         <div class="col" data-aos="fade-up">
@@ -222,7 +222,7 @@
                                     <a class="d-block rounded-top overflow-hidden"
                                         href="{{ route('viewProduct', ['pid' => '1']) }}">
                                         <div class="ratio" style="--c-oro-aspect-ratio: calc(100 / 100 * 100%)">
-                                            <img src="{{ asset('images/orotime-images/product-image.jpg') }}"
+                                            <img src="{{ asset('images/orotime-images/product-image.png') }}"
                                                 alt="Ring">
                                         </div>
                                     </a>

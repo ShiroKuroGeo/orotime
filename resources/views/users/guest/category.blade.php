@@ -5,15 +5,15 @@
 
             <div class="row row-cols-1 row-cols-lg-3 row-cols-md-1 g-4 my-3">
                 <div class="col">
-                    <img src="{{ asset('images/orotime-images/product-image.jpg') }}" alt="{{ request()->route('cat') }}"
+                    <img src="{{ asset('images/orotime-images/product-image.png') }}" alt="{{ request()->route('cat') }}"
                         class="img-fluid" data-aos="zoom-in">
                 </div>
                 <div class="col">
-                    <img src="{{ asset('images/orotime-images/product-image.jpg') }}"
+                    <img src="{{ asset('images/orotime-images/product-image.png') }}"
                         alt="{{ request()->route('cat') }}" class="img-fluid" data-aos="zoom-in">
                 </div>
                 <div class="col">
-                    <img src="{{ asset('images/orotime-images/product-image.jpg') }}"
+                    <img src="{{ asset('images/orotime-images/product-image.png') }}"
                         alt="{{ request()->route('cat') }}" class="img-fluid" data-aos="zoom-in">
                 </div>
             </div>
@@ -115,6 +115,13 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="d-flex mx-2">
+                                    <input class="form-control form-control-sm" type="number" name="minimun"
+                                        id="minimun" placeholder="Min">
+                                    <input class="form-control form-control-sm" type="number" name="maximum"
+                                        id="maximum" placeholder="Max">
+                                    <button class="btn btn-sm">Go</button>
+                                </div>
                             </div>
                         </div>
 
@@ -140,7 +147,8 @@
                                     <div class="col">
                                         <div class="card product-card h-100 bg-transparent border-0 shadow-none">
                                             <div class="position-relative z-2">
-                                                <a class="d-block p-2 p-lg-3" href="shop-product-grocery.html">
+                                                <a class="d-block p-2 p-lg-3"
+                                                    href="{{ route('viewProduct', ['pid' => $i]) }}">
                                                     <img src="{{ asset('images/orotime-images/follow1.jpg') }}"
                                                         alt="Image" class="img-fluid w-100 h-100">
                                                 </a>
@@ -148,12 +156,20 @@
                                             <div class="card-body pt-0 px-1 px-md-2 px-lg-3 pb-0">
                                                 <h3 class="fs-sm lh-base mb-0">
                                                     <a class="text-primary hover-effect-underline fw-normal"
-                                                        href="shop-product-grocery.html">Silver Ring</a>
+                                                        href="{{ route('viewProduct', ['pid' => $i]) }}">Silver
+                                                        Ring</a>
                                                 </h3>
                                                 <div class="h6 mb-2 text-body-secondary">Wedding Ring</div>
                                             </div>
-                                            <div class="fs-xs text-dark px-1 px-md-2 px-lg-3 pb-0 pb-md-3">
-                                                P152.00
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="fs-md text-dark px-1 px-md-2 px-lg-3 pb-0 pb-md-3">
+                                                    &#8369;152.00
+                                                </div>
+                                                <div class="fs-xs text-dark px-1 px-md-2 px-lg-3 pb-0 pb-md-3">
+                                                    <button class="btn btn-sm bg-primary">
+                                                        <i data-feather="shopping-cart" class="p-1"></i>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -167,11 +183,12 @@
                                 id="collapseViewMore">
 
 
-                                @for ($i = 9; $i <= 16; $i++)
+                                @for ($i = 1; $i <= 8; $i++)
                                     <div class="col">
                                         <div class="card product-card h-100 bg-transparent border-0 shadow-none">
                                             <div class="position-relative z-2">
-                                                <a class="d-block p-2 p-lg-3" href="shop-product-grocery.html">
+                                                <a class="d-block p-2 p-lg-3"
+                                                    href="{{ route('viewProduct', ['pid' => $i]) }}">
                                                     <img src="{{ asset('images/orotime-images/follow1.jpg') }}"
                                                         alt="Image" class="img-fluid w-100 h-100">
                                                 </a>
@@ -179,13 +196,20 @@
                                             <div class="card-body pt-0 px-1 px-md-2 px-lg-3 pb-0">
                                                 <h3 class="fs-sm lh-base mb-0">
                                                     <a class="text-primary hover-effect-underline fw-normal"
-                                                        href="shop-product-grocery.html">Silver Ring
-                                                        {{ $i }}</a>
+                                                        href="{{ route('viewProduct', ['pid' => $i]) }}">Silver
+                                                        Ring</a>
                                                 </h3>
                                                 <div class="h6 mb-2 text-body-secondary">Wedding Ring</div>
                                             </div>
-                                            <div class="fs-xs text-dark px-1 px-md-2 px-lg-3 pb-0 pb-md-3">
-                                                P152.00
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="fs-md text-dark px-1 px-md-2 px-lg-3 pb-0 pb-md-3">
+                                                    &#8369;152.00
+                                                </div>
+                                                <div class="fs-xs text-dark px-1 px-md-2 px-lg-3 pb-0 pb-md-3">
+                                                    <button class="btn btn-sm bg-primary">
+                                                        <i data-feather="shopping-cart" class="p-1"></i>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -199,6 +223,6 @@
             </section>
         </div>
         </div>
-        @include('components.bestRating');
+        @include('components.gusrating');
     </main>
 </x-layout.app>

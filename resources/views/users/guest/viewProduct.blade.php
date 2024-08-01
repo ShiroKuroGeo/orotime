@@ -5,7 +5,7 @@
             <div class="row">
 
                 <div class="col-md-6">
-                    <img src="{{ asset('images/orotime-images/product-image.jpg') }}" alt=""
+                    <img src="{{ asset('images/orotime-images/product-image.png') }}" alt=""
                         class="img-fluid w-100 h-100">
                 </div>
 
@@ -28,21 +28,17 @@
                                     order</div>
                             </div>
 
+
                             <div class="d-flex flex-wrap align-items-center mb-3">
                                 <div class="mb-0 me-3 text-oro-color">
-                                    <a href="#" data-bs-toggle="modal" data-bs-target="#askQuestion"
+                                    <a href="https://www.google.com/search?q=faceboook&rlz=1C1FHFK_enPH1112PH1112&oq=faceboook&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDI3MTZqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8"
                                         class="text-decoration-none">
-                                        <span class="link-primary pe-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-                                                <path
-                                                    d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94" />
-                                            </svg>
+                                        <span class="link-primary pe-1 cursor-pointer">
+                                            <i data-feather="help-circle" style="height: 20px; width: 20px"></i>
+                                            Ask Question
                                         </span>
                                     </a>
-                                    <div class="modal fade" id="askQuestion" tabindex="-1"
+                                    {{-- <div class="modal fade" id="askQuestion" tabindex="-1"
                                         aria-labelledby="askQuestionLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered">
                                             <div class="modal-content">
@@ -53,26 +49,24 @@
                                                 </div>
                                                 <div class="modal-body">
                                                     <label for="">Ask about this product.</label>
-                                                    <textarea name="askQuestionCustomer" id="askQuestionCustomer" cols="30" rows="10" class="form-control" placeholder="Enter Question"></textarea>
+                                                    <textarea name="askQuestionCustomer" id="askQuestionCustomer" cols="30" rows="10" class="form-control"
+                                                        placeholder="Enter Question"></textarea>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary"
                                                         data-bs-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary" >Save changes</button>
+                                                    <button type="button" class="btn btn-primary">Save changes</button>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    Ask Question
+                                    </div> --}}
                                 </div>
 
-                                <div class="mb-0 me-3 text-oro-color">
-                                    <span class="link-primary pe-1" data-bs-toggle="modal" data-bs-target="#shareModal">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
-                                            <path
-                                                d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5" />
-                                        </svg>
+                                <div class="mb-0 me-3 text-oro-color d-flex align-items-center">
+                                    <span class="link-primary pe-1 cursor-pointer" data-bs-toggle="modal"
+                                        data-bs-target="#shareModal">
+                                        <i data-feather="share-2" style="height: 20px; width: 20px"></i>
+                                        Share
                                     </span>
                                     <div class="modal fade" id="shareModal" tabindex="-1"
                                         aria-labelledby="shareModalLabel" aria-hidden="true">
@@ -107,7 +101,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    Share
                                 </div>
 
                             </div>
@@ -123,7 +116,7 @@
                                         </svg>
                                     </button>
                                     <input type="number" class="form-control form-control-lg" value="1"
-                                        min="1" max="5" readonly="">
+                                        min="1" max="9999" readonly="">
                                     <button type="button" class="btn btn-icon btn-lg" data-increment=""
                                         aria-label="Increment quantity">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -133,7 +126,7 @@
                                         </svg>
                                     </button>
                                 </div>
-                                <a type="button" href="{{ route('guestPurchaser' , ['pid' => Request::route('pid')]) }}"
+                                <a type="button" href="{{ route('guestPurchaser', ['pid' => Request::route('pid')]) }}"
                                     class="btn btn-lg btn-primary w-100 animate-slide-end order-sm-2 order-md-4 order-lg-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                         fill="currentColor" class="bi bi-bag-fill fs-base animate-target ms-n1 me-2"
@@ -145,7 +138,8 @@
                                 </a>
                             </div>
                             <div class="col-12 mt-5" style="height: 30vh; overflow: auto">
-                                <ul class="nav nav-tabs rounded-0" id="myTab" role="tablist" style="position: sticky;top: 0">
+                                <ul class="nav nav-tabs rounded-0" id="myTab" role="tablist"
+                                    style="position: sticky;top: 0">
                                     <li class="nav-item" role="presentation">
                                         <button class="nav-link active btn-sm rounded-0" id="description-tab"
                                             data-bs-toggle="tab" data-bs-target="#description" type="button"
@@ -283,6 +277,6 @@
             </div>
         </section>
 
-        @include('components.bestRating');
+        @include('components.gusrating');
 
 </x-layout.app>

@@ -251,7 +251,6 @@
         </footer>
     </div>
 </body>
-<script src="{{ asset('js/choices.min.js') }}"></script>
 <script src="{{ asset('js/theme.min.js') }}"></script>
 <script src="{{ asset('js/choices.min.css') }}"></script>
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
