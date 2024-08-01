@@ -1,5 +1,5 @@
 <x-layout.csr>
-    @section('title', 'csr Add Products');
+    @section('title', 'Order List');
     @include('components.csrnavtopstart')
     <div class="content">
         <nav class="mb-3" aria-label="breadcrumb">

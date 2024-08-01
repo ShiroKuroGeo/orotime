@@ -1,4 +1,4 @@
 <x-layout.csr>
-    @section('title', 'csr Products');
+    @section('title', 'Products');
     @include('components.csrnavtopstart')
 </x-layout.csr>
