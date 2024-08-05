@@ -48,7 +48,8 @@ Route::prefix('csr/')->group(function () {
 
 Route::prefix('referral')->group(function () {
     Route::get('dashboard', [referralController::class, 'index'])->name('ref-dashboard');
-    Route::get('product/referral', [referralController::class, 'ProductReferral'])->name('ref-product');
+    Route::get('product', [referralController::class, 'ProductReferral'])->name('ref-product');
+    Route::get('referredProduct/{refId}/{proId}', [referralController::class, 'referredProduct'])->name('refed-Product');
 });
 
 Route::prefix('customer/')->group(function () {

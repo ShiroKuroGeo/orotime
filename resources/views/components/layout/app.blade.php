@@ -61,31 +61,32 @@
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
+                
                 <div class="offcanvas-body pt-3 pb-4 py-lg-0 mx-lg-auto">
                     <ul class="navbar-nav position-relative">
                         <li class="nav-item py-lg-2 me-lg-n2 me-xl-0">
-                            <a class="nav-link text-primary" href="#">All Products</a>
+                            <a class="nav-link text-primary" href="{{ route('CategoryProduct', ['cat' => 'all Collections']) }}">All Products</a>
                         </li>
                         <li class="nav-item py-lg-2 me-lg-n2 me-xl-0">
-                            <a class="nav-link text-primary" href="#">New Arrival</a>
+                            <a class="nav-link text-primary" href="{{ route('CategoryProduct', ['cat' => 'new arrival']) }}">New Arrival</a>
                         </li>
                         <li class="nav-item py-lg-2 me-lg-n2 me-xl-0">
-                            <a class="nav-link text-primary" href="#">Best Seller</a>
+                            <a class="nav-link text-primary" href="{{ route('CategoryProduct', ['cat' => 'best seller']) }}">Best Seller</a>
                         </li>
                         <li class="nav-item py-lg-2 me-lg-n2 me-xl-0">
-                            <a class="nav-link text-primary" href="#">Necklace</a>
+                            <a class="nav-link text-primary" href="{{ route('CategoryProduct', ['cat' => 'necklace']) }}">Necklace</a>
                         </li>
                         <li class="nav-item py-lg-2 me-lg-n2 me-xl-0">
-                            <a class="nav-link text-primary" href="#">Earrings</a>
+                            <a class="nav-link text-primary" href="{{ route('CategoryProduct', ['cat' => 'earring']) }}">Earrings</a>
                         </li>
                         <li class="nav-item py-lg-2 me-lg-n2 me-xl-0">
-                            <a class="nav-link text-primary" href="#">Rings</a>
+                            <a class="nav-link text-primary" href="{{ route('CategoryProduct', ['cat' => 'rings']) }}">Rings</a>
                         </li>
                         <li class="nav-item py-lg-2 me-lg-n2 me-xl-0">
-                            <a class="nav-link text-primary" href="#">All Golds</a>
+                            <a class="nav-link text-primary" href="{{ route('CategoryProduct', ['cat' => 'all golds']) }}">All Golds</a>
                         </li>
                         <li class="nav-item py-lg-2 me-lg-n2 me-xl-0">
-                            <a class="nav-link text-primary" href="#">All Silvers</a>
+                            <a class="nav-link text-primary" href="{{ route('CategoryProduct', ['cat' => 'all silver']) }}">All Silvers</a>
                         </li>
                     </ul>
                 </div>
@@ -109,20 +110,19 @@
                 <div class="col-6 col-md-2 mb-3">
                     <h5 class="text-primary">Collections</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">All
-                                Collection</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">All Gold</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">All Silver</a>
+                        <li class="nav-item mb-2"><a href="{{ route('CategoryProduct', ['cat' => 'all Collections']) }}" class="nav-link p-0 text-muted">All Collection</a></li>
+                        <li class="nav-item mb-2"><a href="{{ route('CategoryProduct', ['cat' => 'all golds']) }}" class="nav-link p-0 text-muted">All Gold</a></li>
+                        <li class="nav-item mb-2"><a href="{{ route('CategoryProduct', ['cat' => 'all silvers']) }}" class="nav-link p-0 text-muted">All Silver</a>
                         </li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Best Seller</a>
+                        <li class="nav-item mb-2"><a href="{{ route('CategoryProduct', ['cat' => 'best sellers']) }}" class="nav-link p-0 text-muted">Best Seller</a>
                         </li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Best Reviews</a>
+                        <li class="nav-item mb-2"><a href="{{ route('CategoryProduct', ['cat' => 'best reviews']) }}" class="nav-link p-0 text-muted">Best Reviews</a>
                         </li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Bracelets</a>
+                        <li class="nav-item mb-2"><a href="{{ route('CategoryProduct', ['cat' => 'bracelets']) }}" class="nav-link p-0 text-muted">Bracelets</a>
                         </li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Earrings</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Rings</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Necklace</a></li>
+                        <li class="nav-item mb-2"><a href="{{ route('CategoryProduct', ['cat' => 'earrings']) }}" class="nav-link p-0 text-muted">Earrings</a></li>
+                        <li class="nav-item mb-2"><a href="{{ route('CategoryProduct', ['cat' => 'rings']) }}" class="nav-link p-0 text-muted">Rings</a></li>
+                        <li class="nav-item mb-2"><a href="{{ route('CategoryProduct', ['cat' => 'necklaces']) }}" class="nav-link p-0 text-muted">Necklace</a></li>
                     </ul>
                 </div>
 

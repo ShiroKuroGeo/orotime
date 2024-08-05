@@ -657,25 +657,17 @@
                                                     <div class="modal-dialog modal-dialog-centered">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="userIdLabel">Save
-                                                                    Referral Link</h5>
-                                                                <button type="button" class="btn-close"
-                                                                    data-bs-dismiss="modal"
-                                                                    aria-label="Close"></button>
+                                                                <h5 class="modal-title" id="userIdLabel">Save Referral Link</h5>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                             </div>
                                                             <div class="modal-body">
-                                                                <small class="text-danger">Note: Copy the link inside
-                                                                    the box.</small>
-                                                                <input type="text" name="referralLink"
-                                                                    id="referralLink" disabled class="form-control"
-                                                                    value="{{ Request::url() }}/{{ 150 * $i }}/{{ 250 * $i }}">
-                                                                <small class="text-danger">Note: You can only get your
-                                                                    commission if someone is buying your
-                                                                    referral.</small>
+                                                                <small class="text-danger">Note: Copy the link inside the box.</small>
+                                                                <input type="text" name="referralLink" id="referralLink" disabled class="form-control" value="{{ Request::url() }}/{{ 150 * $i }}/{{ 250 * $i }}">
+                                                                <small class="text-danger">Note: You can only get your commission if someone is buying your referral.</small><br>
+                                                                <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('refed-Product', ['refId' => 150 * $i, 'proId' => 250 * $i])) }}" target="_blank"><i data-feather="facebook" class="fs-base p-1 txt-primary"></i></a>
                                                             </div>
                                                             <div class="modal-footer">
-                                                                <button type="button" class="btn btn-secondary"
-                                                                    data-bs-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                                             </div>
                                                         </div>
                                                     </div>
