@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    listReferralUserInit();
+    listCustomerUserInit();
+    listCSRUserInit();
     listTableOrderInit();
     listCategoryInit();
     listTableProductInit();
@@ -351,7 +354,7 @@ function addRemoveClass(addId, removeId) {
 function listTableOrderInit() {
 
     var options = {
-        valueNames: ["order","product","customer","payment_status","date"],
+        valueNames: ["order", "product", "customer", "payment_status", "date"],
         page: 10,
         pagination: true
     };
@@ -360,5 +363,47 @@ function listTableOrderInit() {
 
     $('#search-order').on('keyup', function () {
         orderList.search($(this).val());
+    })
+}
+
+function listCSRUserInit() {
+    var options = {
+        valueNames: ["id","name","email","phone","department","status","date"],
+        page: 10,
+        pagination: true
+    };
+
+    var csrlist = new List('csrlistTable', options);
+
+    $('#csr').on('keyup', function () {
+        csrlist.search($(this).val());
+    })
+}
+
+function listReferralUserInit() {
+    var options = {
+        valueNames: ["name","status","date"],
+        page: 10,
+        pagination: true
+    };
+
+    var referrallist = new List('referrallistTable', options);
+
+    $('#referral').on('keyup', function () {
+        referrallist.search($(this).val());
+    })
+}
+
+function listCustomerUserInit() {
+    var options = {
+        valueNames: ["id" ,"name" ,"email" ,"address" ,"phone" ,"status" ,"date" ,"action" ],
+        page: 10,
+        pagination: true
+    };
+
+    var customerlist = new List('customerlistTable', options);
+
+    $('#customerSearch').on('keyup', function () {
+        customerlist.search($(this).val());
     })
 }

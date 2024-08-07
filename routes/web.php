@@ -35,6 +35,7 @@ Route::prefix('admin/orotime/')->group(function () {
     Route::get('users/type/{type}', [adminController::class, 'userType'])->name('user-type');
     Route::get('users/details/{type}/{uid}', [adminController::class, 'userTypeUid'])->name('user-details');
     Route::get('order/', [adminController::class, 'orderList'])->name('order-list');
+    Route::get('order/invoice/{oid}', [adminController::class, 'invoicingOrder'])->name('admin-invoice');
 });
 
 Route::prefix('csr/')->group(function () {

@@ -41,4 +41,8 @@ class adminController extends Controller
     public function dashboard(){
         return view('admin.dashboard');
     }
+
+    public function invoicingOrder($oid){
+        return view('admin.order.invoice', ['oid' => $oid]);
+    }
 }
