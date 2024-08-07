@@ -13,9 +13,11 @@ Route::get('/', function () {
 })->name('back');
 
 Route::prefix('auth')->group(function () {
+    Route::post('/mailToEmail', [Controller::class, 'sentEmailForgotPassword'] )->name('RequestForgot');
     Route::get('/login', [Controller::class, 'login'])->name('login');
     Route::get('/registration', [Controller::class, 'register'])->name('register');
     Route::get('/forgot-password', [Controller::class, 'forgotPassword'])->name('forgotPassword');
+    Route::get('/forgot-password/{id}', [Controller::class, 'forgotPasswordRequest'])->name('forgotPasswordRequest');
     Route::get('/logout', [Controller::class, 'logout'])->name('logout');
 });
 

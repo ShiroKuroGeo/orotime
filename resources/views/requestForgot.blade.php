@@ -23,25 +23,27 @@
                                 <div class="col mx-auto order-md-1">
                                     <div class="auth-form-box">
                                         <div class="text-center">
-                                            <h4 class="text-body-highlight">Forgot your password? </h4>
-                                            <p class="text-body-tertiary mb-5">Enter your email below and we will <br
-                                                    class="d-md-none" />send you <br class="d-none d-xxl-block" />a
-                                                reset link</p>
-                                            <form class="d-flex align-items-center mb-5" method="post"
-                                                action="mailToEmail">
-                                                @csrf
-                                                <input class="form-control flex-1" id="email" name="email" type="email"
-                                                    placeholder="Email" />
-                                                <button class="btn btn-primary ms-2" id="sendEmail" type="submit">
-                                                    Send
+                                            <h4 class="text-body-highlight">Request Forgot Password? Are you
+
+                                                @if (decryptData(Request::route('id')))
+                                                    {{ decryptData(Request::route('id')) }}
+                                                @else
+                                                    aren't you an impostor?
+                                                @endif
+
+                                            </h4>
+                                            <p class="text-body-tertiary mb-5">Enter your code below <br
+                                                    class="d-md-none" />
+                                                send you <br class="d-none d-xxl-block" />a reset link</p>
+                                            <form class="d-flex align-items-center mb-5">
+                                                <input class="form-control flex-1" id="text" type="text"
+                                                    placeholder="Code Sended" />
+                                                <button class="btn btn-primary ms-2" id="sendEmail">
+                                                    Confirm
                                                     <i data-feather="chevron-right" class="ms-2"
                                                         style="height: 15px; width: 15px"></i>
                                                 </button>
-
                                             </form>
-                                            @isset($success)
-                                                Email Sent!
-                                            @endisset
                                             <a class="fs-9 fw-bold" href="#!">Still having problems?</a>
                                         </div>
                                     </div>

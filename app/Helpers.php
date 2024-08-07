@@ -23,7 +23,7 @@ function decryptData($data)
     try {
         return Crypt::decrypt($data);
     } catch (DecryptException $th) {
-        throw $th;
+        return false;
     }
 }
 ?>
