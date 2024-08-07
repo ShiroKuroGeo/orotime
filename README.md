@@ -68,18 +68,22 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## How to clone this
 
-## First Step
+## First Steps
 
 open command prompt and paste the link of this github link
 
-## Seconda Step 
+## Seconda Steps 
 
 In command prompt enter "COMPOSER INSTALL"
 
-## Third Step
+## Third Steps
 
 In command prompt enter "NPM INSTALL"
 
-## Fourth Step
+## Fourth Steps
 
 Copy env by "cp .env.example.env"
+
+## Fifth Steps
+
+composer dump-autoload
