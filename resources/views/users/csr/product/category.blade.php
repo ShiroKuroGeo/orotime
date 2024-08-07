@@ -52,7 +52,7 @@
         </div>
         <div class="row mb-9">
 
-            <div class="col-4">
+            <div class="col-3">
                 <div class="card mb-4 border-0">
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <div class="">
@@ -103,7 +103,7 @@
                 </div>
             </div>
 
-            <div class="col-8">
+            <div class="col-9">
                 <div data-list='{"valueNames":["category","description","total","date"],"page":5, "pagination": true}'
                     class="p-5 bg-body-emphasis rounded" id="listCategory">
                     <div class="mb-5">

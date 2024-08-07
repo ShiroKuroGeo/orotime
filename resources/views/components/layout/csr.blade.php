@@ -31,7 +31,6 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
-<script src="vendors/tinymce/tinymce.min.js"></script>
 <script src="{{ asset('js/csrJuery.js') }}"></script>
 <script>
     feather.replace();

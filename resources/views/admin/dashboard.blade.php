@@ -47,15 +47,17 @@
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between">
                                             <div>
-                                                <h5 class="mb-1">Total Orders<span
-                                                        class="badge badge-oro badge-oro-warning rounded-pill fs-9 ms-2"><span
-                                                            class="badge-label">-6.8%</span></span></h5>
+                                                <h5 class="mb-1">Total Orders
+                                                    <span class="badge badge-oro badge-oro-warning rounded-pill fs-9 ms-2">
+                                                        <span class="badge-label">-6.8%</span>
+                                                    </span>
+                                                </h5>
                                                 <h6 class="text-body-tertiary">Last 7 days</h6>
                                             </div>
                                             <h4>P16,247</h4>
                                         </div>
                                         <div class="d-flex justify-content-center">
-                                            <div id="echart-total-orders" style="height: 20vh; width: 100%"></div>
+                                            <div id="echart-total-orders" class="d-flex" style="height: 20vh; width: 100%"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -65,16 +67,18 @@
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between">
                                             <div>
-                                                <h5 class="mb-1">Customers<span
-                                                        class="badge badge-oro badge-oro-warning rounded-pill fs-9 ms-2">
-                                                        <span class="badge-label">+26.5%</span></span></h5>
+                                                <h5 class="mb-1">
+                                                    Customers
+                                                    <span class="badge badge-oro badge-oro-warning rounded-pill fs-9 ms-2">
+                                                        <span class="badge-label">+26.5%</span>
+                                                    </span>
+                                                </h5>
                                                 <h6 class="text-body-tertiary">Last 30 Days</h6>
                                             </div>
                                             <h4>356</h4>
                                         </div>
                                         <div class="pb-0 pt-4">
-                                            <div class="echarts-new-customers" id="echarts-customers"
-                                                style="height: 20vh; width: 100%"></div>
+                                            <div id="echarts-customers" style="height: 20vh; width: 100%"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -115,7 +119,7 @@
                     </div>
                 </div>
             </div>
-            {{-- <div class="mx-n4 px-4 mx-lg-n6 px-lg-6 bg-body-emphasis pt-7 border-y">
+            <div class="mx-n4 px-4 mx-lg-n6 px-lg-6 bg-body-emphasis pt-7 border-y">
                 <div data-list='{"valueNames":["product","customer","rating","review","time"],"page":6}'>
                     <div class="row align-items-end justify-content-between pb-5 g-3">
                         <div class="col-auto">
@@ -126,10 +130,9 @@
                             <div class="row g-2 gy-3">
                                 <div class="col-auto flex-1">
                                     <div class="search-box">
-                                        <form class="position-relative"><input
-                                                class="form-control search-input search form-control-sm"
-                                                type="search" placeholder="Search" aria-label="Search" />
-                                                <i class="fs-base pe-2 search-box-icon" data-feather="search"></i>
+                                        <form class="position-relative">
+                                            <input class="form-control search-input search form-control-sm" type="search" placeholder="Search" aria-label="Search" />
+                                            <i class="fs-base pe-2 search-box-icon" data-feather="search"></i>
                                         </form>
                                     </div>
                                 </div>
@@ -141,19 +144,14 @@
                             <thead>
                                 <tr>
                                     <th class="white-space-nowrap fs-9 ps-0 align-middle">
-                                        <div class="form-check mb-0 fs-8"><input class="form-check-input"
-                                                id="checkbox-bulk-reviews-select" type="checkbox"
-                                                data-bulk-select='{"body":"table-latest-review-body"}' /></div>
+                                        <div class="form-check mb-0 fs-8">
+                                            <input class="form-check-input" type="checkbox" /></div>
                                     </th>
                                     <th class="sort white-space-nowrap align-middle" scope="col"></th>
-                                    <th class="sort white-space-nowrap align-middle" scope="col"
-                                        style="min-width:360px;" data-sort="product">Product</th>
-                                    <th class="sort align-middle" scope="col" data-sort="customer"
-                                        style="min-width:200px;">CUSTOMER</th>
-                                    <th class="sort align-middle" scope="col" data-sort="rating"
-                                        style="min-width:110px;">RATING</th>
-                                    <th class="sort align-middle" scope="col" style="max-width:350px;"
-                                        data-sort="review">REVIEW</th>
+                                    <th class="sort white-space-nowrap align-middle" scope="col" style="min-width:360px;" data-sort="product">Product</th>
+                                    <th class="sort align-middle" scope="col" data-sort="customer" style="min-width:200px;">CUSTOMER</th>
+                                    <th class="sort align-middle" scope="col" data-sort="rating" style="min-width:110px;">RATING</th>
+                                    <th class="sort align-middle" scope="col" style="max-width:350px;" data-sort="review">REVIEW</th>
                                     <th class="sort text-end pe-0 align-middle" scope="col"></th>
                                 </tr>
                             </thead>
@@ -166,29 +164,31 @@
                                                     data-bulk-select-row='{"product":"Fitbit Sense Advanced Smartwatch with Tools for Heart Health, Stress Management & Skin Temperature Trends, Carbon/Graphite, One Size (S & L Bands)","productImage":"/products/60x60/1.png","customer":{"name":"Richard Dawkins","avatar":""},"rating":5,"review":"This Fitbit is fantastic! I was trying to be in better shape and needed some motivation, so I decided to treat myself to a new Fitbit.","status":{"title":"Approved","badge":"success","icon":"check"},"time":"Just now"}' />
                                             </div>
                                         </td>
-                                        <td class="align-middle product white-space-nowrap py-0"><a
-                                                class="d-block rounded-2 border border-translucent"
-                                                href="#"><img src="assets/img//products/60x60/1.png"
-                                                    alt="" width="53" /></a></td>
-                                        <td class="align-middle product white-space-nowrap"><a class="fw-semibold"
-                                                href="#">Long Gold Necklace Heart 15k Grams</a></td>
-                                        <td class="align-middle customer white-space-nowrap"><a
-                                                class="d-flex align-items-center text-body" href="#">
+                                        <td class="align-middle product white-space-nowrap py-0">
+                                            <a class="d-block rounded-2 border border-translucent" href="#">
+                                                <img src="assets/img//products/60x60/1.png" alt="" width="53" />
+                                            </a>
+                                        </td>
+                                        <td class="align-middle product white-space-nowrap">
+                                            <a class="fw-semibold" href="#">Long Gold Necklace Heart 15k Grams</a>
+                                        </td>
+                                        <td class="align-middle customer white-space-nowrap">
+                                            <a class="d-flex align-items-center text-body" href="#">
                                                 <div class="avatar avatar-l">
                                                     <div class="avatar-name rounded-circle"><span>SG</span></div>
                                                 </div>
                                                 <h6 class="mb-0 ms-3 text-body">Shiro Geo</h6>
-                                            </a></td>
+                                            </a>
+                                        </td>
                                         <td class="align-middle rating white-space-nowrap fs-10">
                                             @for ($i = 1; $i <= 5; $i++)
-                                                <i data-feather="star" class="fs-base pe-2"></i> 
+                                                <i data-feather="star" class="fs-base pe-1"></i> 
                                             @endfor
                                         </td>
                                         <td class="align-middle review" style="min-width:350px;">
-                                            <p class="fs-9 fw-semibold text-body-highlight mb-0">This Fitbit is
-                                                fantastic!
-                                                I was trying to be in better shape and needed some motivation, so I
-                                                decided
+                                            <p class="fs-9 fw-semibold text-body-highlight mb-0">
+                                                This Fitbit is fantastic!
+                                                I was trying to be in better shape and needed some motivation, so I decided
                                                 to treat myself to a new Fitbit.</p>
                                         </td>
                                     </tr>
@@ -199,14 +199,15 @@
                     <div class="row align-items-center py-3">
                         <div class="pagination d-none"></div>
                         <div class="col d-flex fs-9">
-                            <p class="mb-0 d-none d-sm-block me-3 fw-semibold text-body"
-                                data-list-info="data-list-info"></p>
-                            <a class="fw-semibold" href="#!" data-list-view="*">View all<span
-                                    class="fas fa-angle-right ms-1"data-fa-transform="down-1"></span></a>
+                            <p class="mb-0 d-none d-sm-block me-3 fw-semibold text-body" data-list-info="data-list-info"></p>
+                            <a class="fw-semibold" href="#!" data-list-view="*">
+                                View all
+                                <span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div> --}}
+            </div>
             <footer class="footer position-absolute">
                 <div class="row g-0 justify-content-between align-items-center h-100">
                     <div class="col-12 col-sm-auto text-center">

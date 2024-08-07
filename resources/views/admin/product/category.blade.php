@@ -1,6 +1,19 @@
 <x-layout.admin>
+    <style>
+        .table-fixed {
+            table-layout: fixed;
+            width: 100%;
+        }
+
+        .text-truncate {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    </style>
     @section('title', 'Admin Add Products');
     @include('components.navtopstart')
+
     <div class="content">
         <nav class="mb-3" aria-label="breadcrumb">
             <ol class="breadcrumb mb-0">
@@ -8,99 +21,158 @@
                 <li class="breadcrumb-item active">Category</li>
             </ol>
         </nav>
-        <div class="d-flex gy-3 mb-4 align-items-center justify-content-between">
+        <div class="d-flex align-items-between justify-content-between my-3">
             <div class="">
                 <h2 class="mb-0">Category<span class="fw-normal text-body-tertiary ms-3">(5)</span></h2>
             </div>
             <div class="">
-                <a class="btn btn-primary px-3" href="#!" data-bs-toggle="modal" data-bs-target="#addCategory">
-                    <i data-feather="plus" class="fs-base p-1"></i>
-                    Add New Category</a>
+                <a class="btn btn-primary px-5" href="#!" data-bs-toggle="modal" data-bs-target="#addCategory">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-plus" viewBox="0 0 16 16">
+                        <path
+                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                    </svg>
+                    Add new Categoery</a>
             </div>
         </div>
         <div class="row justify-content-between align-items-end mb-4 g-3">
             <div class="col-12 col-sm-auto">
                 <div class="d-flex align-items-center">
                     <div class="search-box me-3">
-                        <form class="position-relative"><input class="form-control search-input search" type="search"
-                                placeholder="Search Category" aria-label="Search" />
-                                <i class="search-box-icon fs-base pe-2" data-feather="search"></i>
+                        <form class="position-relative">
+                            <input class="form-control search-input search" id="search-category" type="search"
+                                placeholder="Search Category, Description, Total and Date Created"
+                                aria-label="Search" />
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-search search-box-icon" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 row-cols-xxl-4 g-3 mb-9">
-            @for ($i = 1; $i <= 5; $i++)
-                <div class="col">
-                    <div class="card h-100 hover-actions-trigger">
-                        <div class="card-body">
+        <div class="row mb-9">
 
-                            <div class="d-flex align-items-center">
-                                <h4 class="mb-2 line-clamp-1 lh-sm flex-1 me-5">Necklace <small
-                                        class="fw-light text-muted">(100)</small></h4>
-                                <div class="hover-actions top-0 end-0 mt-4 me-4">
-                                    <a class="nav-link lh-1 pe-0" id="navbarDropdownUser" href="#navbarDropdownUser"
-                                        role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                                        aria-haspopup="true" aria-expanded="false">
-                                        <i class="fs-base pe-2" data-feather="more-horizontal"></i>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-end navbar-dropdown-caret py-0 dropdown-profile shadow border"
-                                        aria-labelledby="navbarDropdownUser">
-                                        <div class="position-relative border-0">
-                                            <div class="overflow-auto border-top shadow-top g-5">
-                                                <ul class="nav d-flex flex-column my-2 pb-1">
-                                                    <li class="nav-item"><a class="nav-link px-3 d-block"
-                                                            href="#!">
-                                                            <i class="fs-base pe-2" data-feather="edit"></i>
-                                                            <span>Edit</span></a></li>
-                                                    <li class="nav-item"><a class="nav-link px-3 d-block"
-                                                            href="#!">
-                                                            <i class="fs-base pe-2" data-feather="x-circle"></i>
-                                                            <span>Remove</span></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <img src="{{ asset('images/orotime-images/follow' . $i . '.jpg') }}"
-                                class="img-thumbnail img-fluid rounded" alt="">
-
-                            <span class="badge badge-oro fs-10 mb-4 badge-oro-success">completed</span>
-
-                            <div class="progress bg-success-subtle">
-                                <div class="progress-bar rounded bg-success" role="progressbar"
-                                    aria-label="Success example" style="width: 100%" aria-valuenow="25"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-
-                            <div class="d-flex align-items-center mt-4">
-                                <p class="mb-0 fw-bold fs-9">Category Description : <br>
-                                    <span class="fw-semibold text-body-tertiary text-opactity-85"> This is flyer in
-                                        instagram. Please follow for follow{{ $i }} </span>
-                                </p>
-                            </div>
-
-                            <div class="d-flex align-items-center mt-4">
-                                <p class="mb-0 fw-bold fs-9">Started :<span
-                                        class="fw-semibold text-body-tertiary text-opactity-85 ms-1"> 17th Nov.
-                                        2020</span>
-                                </p>
-                            </div>
-
-                            <div class="d-flex align-items-center mt-2">
-                                <p class="mb-0 fw-bold fs-9">Deadline : <span
-                                        class="fw-semibold text-body-tertiary text-opactity-85 ms-1"> 21st May
-                                        2028</span>
-                                </p>
-                            </div>
-
+            <div class="col-3">
+                <div class="card mb-4 border-0">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <div class="">
+                            <span class="fw-bold"> Category Statistics </span> <br>
+                            <small>
+                                There are 10k Total Category Statistics
+                            </small>
                         </div>
                     </div>
+                    <div class="list-group list-group-flush">
+                        <a class="list-group-item list-group-item-action border-0 py-2 d-flex justify-content-between align-items-center"
+                            href="#!">
+                            <div class="p-0">
+                                Necklaces
+                            </div>
+                            <h6 class="text-secondary">
+                                152
+                            </h6>
+                        </a>
+                        <a class="list-group-item list-group-item-action border-0 py-2 d-flex justify-content-between align-items-center"
+                            href="#!">
+                            <div class="">
+                                Bracelets
+                            </div>
+                            <h6 class="text-secondary">
+                                152
+                            </h6>
+                        </a>
+                        <a class="list-group-item list-group-item-action border-0 py-2 d-flex justify-content-between align-items-center"
+                            href="#!">
+                            <div class="">
+                                Earrings
+                            </div>
+                            <h6 class="text-secondary">
+                                152
+                            </h6>
+                        </a>
+                        <a class="list-group-item list-group-item-action border-0 py-2 d-flex justify-content-between align-items-center"
+                            href="#!">
+                            <div class="">
+                                Rings
+                            </div>
+                            <h6 class="text-secondary">
+                                152
+                            </h6>
+                        </a>
+                    </div>
                 </div>
-            @endfor
+            </div>
+
+            <div class="col-9">
+                <div data-list='{"valueNames":["category","description","total","date"],"page":5, "pagination": true}'
+                    class="p-5 bg-body-emphasis rounded" id="listCategory">
+                    <div class="mb-5">
+                        <h3>Category Listing</h3>
+                        <p class="text-body-tertiary">List of category on website</p>
+                    </div>
+                    <div class="table-responsive scrollbar">
+                        <table class="table table-hover table-fixed fs-10 mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="sort border-top border-translucent ps-0 align-middle" scope="col"
+                                        style="width: 10%" data-sort="id">ID</th>
+                                    <th class="sort border-top border-translucent ps-0 align-middle" scope="col"
+                                        style="width: 10%" data-sort="category">Category</th>
+                                    <th class="sort border-top border-translucent align-middle" scope="col"
+                                        style="width: 10%" data-sort="description">Description</th>
+                                    <th class="sort border-top border-translucent text-end align-middle" scope="col"
+                                        style="width: 10%" data-sort="total">Total</th>
+                                    <th class="sort border-top border-translucent text-end pe-0 align-middle"
+                                        scope="col" style="width: 10%" data-sort="date">Date</th>
+                                </tr>
+                            </thead>
+                            <tbody class="list" id="table-regions-by-revenue">
+                                @for ($i = 1; $i <= 150; $i++)
+                                    <tr>
+                                        <td class="align-middle pe-0 conv-rate">
+                                            <h6 class="mb-0 me-3">{{ $i }}. </h6>
+                                        </td>
+                                        <td class="white-space-nowrap ps-0">
+                                            <div class="d-flex align-items-center category">
+                                                <a href="#!" class="list-group-item list-group-item-action">
+                                                    <div class="d-flex align-items-center">
+                                                        <p class="mb-0 text-primary fw-bold fs-9">
+                                                            Necklaces
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td class="align-middle users text-truncate description">
+                                            <h6 class="mb-0">
+                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad vel
+                                                expedita ex earum, quod a, praesentium, nesciunt quae animi delectus
+                                                quaerat mollitia vero porro nisi numquam eos! Aliquam, ut eveniet!
+                                            </h6>
+                                        </td>
+                                        <td class="align-middle text-end transactions total">
+                                            <h6 class="mb-0">
+                                                1522
+                                            </h6>
+                                        </td>
+                                        <td class="align-middle text-end pe-0 date">
+                                            <h6>
+                                                November 28, 2009
+                                            </h6>
+                                        </td>
+                                    </tr>
+                                @endfor
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="d-flex justify-content-end py-3">
+                        <div class="pagination"></div>
+                    </div>
+                </div>
+            </div>
 
         </div>
 
@@ -140,6 +212,4 @@
             </div>
         </div>
     </div>
-
-
 </x-layout.admin>

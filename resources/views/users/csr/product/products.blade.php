@@ -5,13 +5,6 @@
 
     <div class="content py-5">
 
-        {{-- <nav class="mb-3" aria-label="breadcrumb">
-            <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item">Product</li>
-                <li class="breadcrumb-item"><a href="#!">Lists</a></li>
-            </ol>
-        </nav> --}}
-
         <div class="">
 
             <div class="g-3 mt-5 d-flex justify-content-between">

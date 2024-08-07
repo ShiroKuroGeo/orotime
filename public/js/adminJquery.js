@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    listTableOrderInit();
+    listCategoryInit();
+    listTableProductInit();
+    grindListInit();
     set();
     openAndSelectImages();
     previewImageToAdd();
@@ -113,37 +117,20 @@ function totalUsersChartInit() {
     var option;
 
     option = {
+        title: {
+            left: 'center'
+        },
         tooltip: {
             trigger: 'item'
         },
         legend: {
-            top: '5%',
-            left: 'center'
+            orient: 'vertical',
+            left: 'left'
         },
         series: [{
             name: 'Access From',
             type: 'pie',
-            radius: ['40%', '70%'],
-            avoidLabelOverlap: false,
-            itemStyle: {
-                borderRadius: 10,
-                borderColor: '#fff',
-                borderWidth: 2
-            },
-            label: {
-                show: false,
-                position: 'center'
-            },
-            emphasis: {
-                label: {
-                    show: true,
-                    fontSize: 40,
-                    fontWeight: 'bold'
-                }
-            },
-            labelLine: {
-                show: false
-            },
+            radius: '50%',
             data: [{
                 value: 1048,
                 name: 'CSR'
@@ -157,10 +144,10 @@ function totalUsersChartInit() {
                 name: 'Guest'
             },
             {
-                value: 484,
+                value: 580,
                 name: 'Referral'
             },
-            ]
+            ],
         }]
     };
 
@@ -308,4 +295,70 @@ function set() {
             $('#signup').prop('disabled', true);
         }
     });
+}
+
+function listCategoryInit() {
+    var options = {
+        valueNames: ["category", "description", "total", "date"],
+        page: 5,
+        pagination: true
+    };
+
+    var categoryList = new List('listCategory', options);
+
+    $('#search-category').on('keyup', function () {
+        categoryList.search($(this).val());
+    })
+}
+
+function listTableProductInit() {
+
+    var options = {
+        valueNames: ['name', 'price', 'category', 'poster', 'date'],
+        page: 10,
+        pagination: true
+    };
+
+    var userList = new List('productTable', options);
+
+    $('#search-product-csr').on('keyup', function () {
+        userList.search($(this).val());
+    })
+
+}
+
+function grindListInit() {
+
+    $('#matrixFormatList').on('click', function () {
+        addRemoveClass('#listProduct', '#gridProduct');
+        $('#paginatedProduct').removeClass('d-none');
+        $('#searchProductOnList').removeClass('d-none');
+    });
+
+    $('#matrixFormatGrid').on('click', function () {
+        addRemoveClass('#gridProduct', '#listProduct');
+        $('#paginatedProduct').addClass('d-none');
+        $('#searchProductOnList').addClass('d-none');
+    });
+
+}
+
+function addRemoveClass(addId, removeId) {
+    $(addId).removeClass('d-none');
+    $(removeId).addClass('d-none');
+}
+
+function listTableOrderInit() {
+
+    var options = {
+        valueNames: ["order","product","customer","payment_status","date"],
+        page: 10,
+        pagination: true
+    };
+
+    var orderList = new List('orderTable', options);
+
+    $('#search-order').on('keyup', function () {
+        orderList.search($(this).val());
+    })
 }
