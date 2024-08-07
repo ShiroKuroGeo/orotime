@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use NumberToWords\NumberToWords;
 
 class adminController extends Controller
 {
@@ -45,4 +46,6 @@ class adminController extends Controller
     public function invoicingOrder($oid){
         return view('admin.order.invoice', ['oid' => $oid]);
     }
+
+
 }

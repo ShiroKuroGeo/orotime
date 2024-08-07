@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    customerRatingsTableInit();
+    customerWishlistTableInit();
+    customerOrdersTableDetailsInit();
     listReferralUserInit();
     listCustomerUserInit();
     listCSRUserInit();
@@ -16,7 +19,6 @@ $(document).ready(function () {
     totalRefundsChartInit();
     totalOrdersChartInit();
 })
-
 
 function totalOrdersChartInit() {
     var chartDom = document.getElementById('echart-total-orders');
@@ -368,7 +370,7 @@ function listTableOrderInit() {
 
 function listCSRUserInit() {
     var options = {
-        valueNames: ["id","name","email","phone","department","status","date"],
+        valueNames: ["id", "name", "email", "phone", "department", "status", "date"],
         page: 10,
         pagination: true
     };
@@ -382,7 +384,7 @@ function listCSRUserInit() {
 
 function listReferralUserInit() {
     var options = {
-        valueNames: ["name","status","date"],
+        valueNames: ["name", "status", "date"],
         page: 10,
         pagination: true
     };
@@ -396,7 +398,7 @@ function listReferralUserInit() {
 
 function listCustomerUserInit() {
     var options = {
-        valueNames: ["id" ,"name" ,"email" ,"address" ,"phone" ,"status" ,"date" ,"action" ],
+        valueNames: ["id", "name", "email", "address", "phone", "status", "date", "action"],
         page: 10,
         pagination: true
     };
@@ -406,4 +408,37 @@ function listCustomerUserInit() {
     $('#customerSearch').on('keyup', function () {
         customerlist.search($(this).val());
     })
+}
+
+function customerOrdersTableDetailsInit() {
+    var options = {
+        valueNames: ["order", "total", "status", "fulfilment", "delivery_type", "date"],
+        page: 6,
+        pagination: true
+    };
+
+    var customerOrdersTableDetails = new List('customerOrdersTableDetails', options);
+
+}
+
+function customerWishlistTableInit() {
+    var options = {
+        valueNames: ["products","category","size","price","qty","total"],
+        page: 6,
+        pagination: true
+    };
+
+    var customerWishlistTable = new List('customerWishlistTable', options);
+
+}
+
+function customerRatingsTableInit(){
+    var options = {
+        valueNames: ["product","rating","review","status","date"],
+        page: 6,
+        pagination: true
+    };
+
+    var customerRatingsTable = new List('customerRatingsTable',options);
+
 }

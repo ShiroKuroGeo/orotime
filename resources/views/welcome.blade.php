@@ -142,7 +142,7 @@
                         <div class="product-card animate-underline hover-effect-opacity bg-body">
                             <div class="position-relative">
                                 <a class="d-block rounded-top overflow-hidden"
-                                    href="{{ route('viewProduct', ['pid' => '1']) }}">
+                                    href="{{ route('viewProduct', ['pid' => encryptData($i)]) }}">
                                     <div class="ratio" style="--c-oro-aspect-ratio: calc(100 / 100 * 100%)">
                                         <img src="{{ asset('images/orotime-images/product-image.png') }}"
                                             alt="Ring">
@@ -151,13 +151,15 @@
                             </div>
                             <div class="w-100 min-w-0 px-1 py-2 px-sm-3 py-sm-3">
                                 <h3 class="pb-1 mb-2">
-                                    <a class="d-block fs-sm fw-medium text-truncate" href="#">
+                                    <a class="d-block fs-sm fw-medium text-truncate"
+                                        href="{{ route('viewProduct', ['pid' => encryptData($i)]) }}">
                                         <span class="animate-target">Ring handmade 15k grams Japan</span>
                                     </a>
                                 </h3>
                                 <div class="d-flex align-items-center justify-content-between">
                                     <div class="h5 lh-1 mb-0">&#8369; 899.00</div>
-                                    <a type="button" href="{{ route('guestPurchaser', ['pid' => '1']) }}"
+                                    <a type="button"
+                                        href="{{ route('guestPurchaser', ['pid' => encryptData($i)]) }}"
                                         class="product-card-button btn btn-icon btn-primary animate-slide-end ms-2"
                                         aria-label="Add to Cart">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -204,7 +206,7 @@
                         FLASH SALE
                     </span>
                     <span class="position-absolute">
-                        <i data-feather="tag" style="height: 35px; width: 100%; color: red;" ></i>
+                        <i data-feather="tag" style="height: 35px; width: 100%; color: red;"></i>
                     </span>
                 </h1>
                 <h1 class="text-dark fs-6 my-auto py-2 px-4 display-1">
@@ -220,7 +222,7 @@
                             <div class="product-card animate-underline hover-effect-opacity bg-body">
                                 <div class="position-relative">
                                     <a class="d-block rounded-top overflow-hidden"
-                                        href="{{ route('viewProduct', ['pid' => '1']) }}">
+                                        href="{{ route('viewProduct', ['pid' => encryptData($i)]) }}">
                                         <div class="ratio" style="--c-oro-aspect-ratio: calc(100 / 100 * 100%)">
                                             <img src="{{ asset('images/orotime-images/product-image.png') }}"
                                                 alt="Ring">
@@ -229,14 +231,16 @@
                                 </div>
                                 <div class="w-100 min-w-0 px-1 py-2 px-sm-3 py-sm-3">
                                     <h3 class="pb-1 mb-2">
-                                        <a class="d-block fs-sm fw-medium text-truncate" href="#">
+                                        <a class="d-block fs-sm fw-medium text-truncate"
+                                            href="{{ route('viewProduct', ['pid' => encryptData($i)]) }}">
                                             <span class="animate-target">Ring handmade 15k grams Japan</span>
                                         </a>
                                     </h3>
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div class="h5 lh-1 mb-0">&#8369; 899.00</div>
-                                        <a type="button" href="{{ route('guestPurchaser', ['pid' => '1']) }}"
-                                            class="product-card-button btn btn-icon btn-secondary animate-slide-end ms-2"
+                                        <a type="button"
+                                            href="{{ route('guestPurchaser', ['pid' => encryptData($i)]) }}"
+                                            class="product-card-button btn btn-icon btn-primary animate-slide-end ms-2"
                                             aria-label="Add to Cart">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 fill="white" class="bi bi-cart-fill" viewBox="0 0 16 16">

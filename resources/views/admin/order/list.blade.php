@@ -88,7 +88,7 @@
                             </thead>
                             <tbody class="list" id="products-table-body">
                                 @for ($i = 1; $i <= 15; $i++)
-                                    <tr class="hover-actions-trigger btn-reveal-trigger position-static">
+                                    <tr class="hover-actions-trigger btn-reveal-trigger position-static" onclick="window.location.href = '{{ route('admin-invoice', ['oid' => encryptData( 'orzakar ' . $i)]) }}'">
                                         <td class="fs-9 align-middle px-0 py-3"></td>
                                         <td class="align-middle white-space-nowrap py-3 py-0 order"> <a
                                                 class="fw-semibold" href="#!"> #{{ 2453 * $i }} </a> </td>
@@ -102,8 +102,9 @@
                                                         src="{{ asset('images/customer-images/user_profile.jpg') }}"
                                                         alt="" />
                                                 </div>
-                                                <h6 class="mb-0 ms-3 text-body"> Carry Anna <br> <small
-                                                        style="color: #dedede">Customer / Guest</small></h6>
+                                                <h6 class="mb-0 ms-3 text-body"> Carry Anna <br>
+                                                    <small style="color: #dedede">Customer / Guest</small>
+                                                </h6>
                                             </a>
                                         </td>
                                         <td

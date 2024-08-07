@@ -7,11 +7,11 @@
                 <h2 class="mb-0">Invoice</h2>
                 <div>
                     <button class="btn btn-oro-secondary me-2">
-                        <span data-feather="download" class="me-sm-2" style="height: 20px; width: 20px"></span>
+                        <span data-feather="download" class="me-1" style="height: 16px; width: 16px"></span>
                         <span class="d-none d-sm-inline-block">Download Invoice</span>
                     </button>
                     <button class="btn btn-oro-secondary">
-                        <span data-feather="printer" class="me-sm-2" style="height: 20px; width: 20px"></span>
+                        <span data-feather="printer" class="me-1" style="height: 16px; width: 16px"></span>
                         <span class="d-none d-sm-inline-block">Print</span>
                     </button>
                 </div>
@@ -50,7 +50,7 @@
                             </div>
                             <div class="col-12 col-lg-4">
                                 <h6 class="mb-2"> Order No :</h6>
-                                <p class="fs-9 text-body-secondary fw-semibold mb-0">A-8934792734</p>
+                                <p class="fs-9 text-body-secondary fw-semibold mb-0">{{ decryptData(Request::route('oid')) }}</p>
                             </div>
                             <div class="col-12 col-lg-4">
                                 <h6 class="mb-2"> Order Date :</h6>
@@ -90,13 +90,13 @@
                                 <th scope="col" style="width: 24px;"></th>
                                 <th scope="col" style="min-width: 60px;">SL NO.</th>
                                 <th scope="col" style="min-width: 360px;">Products</th>
-                                <th class="ps-5" scope="col" style="min-width: 150px;">Color</th>
+                                <th class="ps-5" scope="col" style="min-width: 150px;">Category</th>
                                 <th scope="col" style="width: 60px;">Size</th>
+                                <th class="text-end" scope="col" style="width: 138px;"></th>
                                 <th class="text-end" scope="col" style="width: 80px;">Quantity</th>
+                                <th class="text-center" scope="col" style="width: 80px;"></th>
                                 <th class="text-end" scope="col" style="width: 100px;">Price</th>
-                                <th class="text-end" scope="col" style="width: 138px;">Tax Rate</th>
-                                <th class="text-center" scope="col" style="width: 80px;">Tax Type</th>
-                                <th class="text-end" scope="col" style="min-width: 92px;">Tax</th>
+                                <th class="text-end" scope="col" style="min-width: 92px;"></th>
                                 <th class="text-end" scope="col" style="min-width: 60px;">Total</th>
                                 <th scope="col" style="width: 24px;"></th>
                             </tr>
@@ -108,16 +108,16 @@
                                 <td class="align-middle">
                                     <p class="line-clamp-1 mb-0 fw-semibold">
                                         Fitbit Sense Advanced Smartwatch with Tools
-                                        for Heart Health, Stress Management &amp; Skin Temperature Trends,
+                                        for Heart Health, Stress Management Skin Temperature Trends,
                                         Carbon/Graphite, One Size (S &amp; L Bands)</p>
                                 </td>
-                                <td class="align-middle ps-5">Glossy black</td>
-                                <td class="align-middle text-body-tertiary fw-semibold">XL</td>
+                                <td class="align-middle ps-5">Necklace</td>
+                                <td class="align-middle text-end fw-semibold">XL</td>
+                                <td class="align-middle text-end fw-semibold"></td>
                                 <td class="align-middle text-end text-body-highlight fw-semibold">2</td>
+                                <td class="align-middle text-end fw-semibold"></td>
                                 <td class="align-middle text-end fw-semibold">$299</td>
-                                <td class="align-middle text-end">2.5%</td>
-                                <td class="align-middle text-center fw-semibold">VAT</td>
-                                <td class="align-middle text-end fw-semibold">$199</td>
+                                <td class="align-middle text-end fw-semibold"></td>
                                 <td class="align-middle text-end fw-semibold">$398</td>
                                 <td class="border-0"></td>
                             </tr>
@@ -142,34 +142,23 @@
                                 <td></td>
                             </tr>
                             <tr class="bg-body-secondary">
-                                <td class="align-middle ps-4 fw-bold text-body-highlight" colspan="3">Grand Total
+                                <td class="align-middle ps-4 fw-bold text-body-highlight" colspan="3"> Grand Total
                                 </td>
-                                <td class="align-middle fw-bold text-body-highlight" colspan="7">One Thousand Two
-                                    Hundred Thirty Six PHP</td>
+                                <td class="align-middle fw-bold text-body-highlight text-capitalize" colspan="7">
+                                    {{ number_to_words(1236) }}
+                                </td>
                                 <td class="align-middle text-end fw-bold">&#8369;1236</td>
                                 <td></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <div class="text-end py-9 border-bottom"><img class="mb-3"
-                        src="../../../assets/img/logos/oro-mart.png" alt="" />
-                    <h4>Authorized Signatory</h4>
-                </div>
-                <div class="text-center py-4 mb-9">
-                    <p class="mb-0">Thank you for buying with Orotime | 2022 © </p>
-                </div>
-            </div>
-            <div class="d-flex justify-content-end">
-                <div>
-                    <button class="btn btn-oro-secondary me-2">
-                        <span class="fa-solid fa-download me-sm-2"></span>
-                        <span class="d-none d-sm-inline-block">Download Invoice</span>
-                    </button>
-                    <button class="btn btn-oro-secondary">
-                        <span class="fa-solid fa-print me-sm-2"></span>
-                        <span class="d-none d-sm-inline-block">Print</span>
-                    </button>
+                <div class="text-end py-2 border-bottom">
+                    <div class="border-0 py-2">
+                        <img src="{{ asset('images/customer-images/user_profile.jpg') }}" class="avatar img-fluid"
+                            alt="shiro" style="width: 100px; height: 100px" /><br>
+                    </div>
+                    <h4>Authorized Profile</h4>
                 </div>
             </div>
         </div>
