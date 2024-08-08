@@ -31,35 +31,77 @@
 
                             <div class="d-flex flex-wrap align-items-center mb-3">
                                 <div class="mb-0 me-3 text-oro-color">
-                                    <a href="https://www.google.com/search?q=faceboook&rlz=1C1FHFK_enPH1112PH1112&oq=faceboook&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDI3MTZqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8"
+                                    <a href="#askQuestion" data-bs-toggle="modal" data-bs-target="#askAssistanceAboutProduct"
                                         class="text-decoration-none">
                                         <span class="link-primary pe-1 cursor-pointer">
                                             <i data-feather="help-circle" style="height: 20px; width: 20px"></i>
                                             Ask Question
                                         </span>
                                     </a>
-                                    {{-- <div class="modal fade" id="askQuestion" tabindex="-1"
-                                        aria-labelledby="askQuestionLabel" aria-hidden="true">
+                                    <div class="modal fade" id="askAssistanceAboutProduct" tabindex="-1" aria-labelledby="askQuestionLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="askQuestionLabel">Ask Question</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
+                                                    <h5 class="modal-title" id="askQuestionLabel">Ask Assistance</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <label for="">Ask about this product.</label>
-                                                    <textarea name="askQuestionCustomer" id="askQuestionCustomer" cols="30" rows="10" class="form-control"
-                                                        placeholder="Enter Question"></textarea>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary"
-                                                        data-bs-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                    <div class="container">
+                                                        <div class="row ">
+                                                            <div class="d-flex justify-content-center align-items-center">
+                                                                <img src="{{ asset('images/orotime-images/welcome.jpg') }}" class="img-fluid w-100 m-0" alt="Welcome Illustration Images">
+                                                            </div>
+                                                            <h4 class="text-center fw-bold">Welcome to Orotime Jewelry!</h4>
+                                                            <span class="my-3">
+                                                                We are glad to help you with the assistance that you need!
+                                                            </span>
+            
+                                                            <form action="#" method="POST">
+                                                                <div class="form-input my-2">
+                                                                    <label for="">Phone Number</label>
+                                                                    <input type="number" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="+639484750030">
+                                                                </div>
+                                                                <div class="form-input my-2">
+                                                                    <label for="">Email Address</label>
+                                                                    <input type="email" class="form-control" name="emaillAddress" id="emaillAddress" placeholder="Enter your Email Address">
+                                                                </div>
+                                                                <div class="form-input my-2">
+                                                                    <label for="">Message</label>
+                                                                    <textarea name="message" id="message" cols="10" rows="6" class="form-control"></textarea>
+                                                                </div>
+                                                                <div class="my-3">
+                                                                    <button type="submit" class="btn btn-md btn-primary col-12">Send!</button>
+                                                                </div>
+
+                                                                <hr class="divider">
+
+                                                                    <span>Another way to contact us.</span><br><br>
+
+                                                                    <div class="my-3">
+                                                                        <a class="text-decoration-none" href="https://www.facebook.com/messenger/" target="_blank" >
+                                                                            <i data-feather="facebook" style="width: 16px: height: 16px"></i>
+                                                                        </a> 
+                                                                        <span> Facebook Orotime 2024</span>
+                                                                    </div>
+                                                                    <div class="my-3">
+                                                                        <a class="text-decoration-none" href="tel:+639484750030">
+                                                                            <i data-feather="phone" style="width: 16px: height: 16px"></i>
+                                                                        </a> 
+                                                                        <span> +63 9484750030</span>
+                                                                    </div>
+                                                                    <div class="my-3">
+                                                                        <a class="text-decoration-none" href="mailto: inocgeorgealfeser@gmail.com">
+                                                                            <i data-feather="mail" style="width: 16px: height: 16px"></i>
+                                                                        </a> 
+                                                                        <span> inocgeorgealfeser@gmail.com</span>
+                                                                    </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div> --}}
+                                    </div>
                                 </div>
 
                                 <div class="mb-0 me-3 text-oro-color d-flex align-items-center">

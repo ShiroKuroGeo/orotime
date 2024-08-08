@@ -186,7 +186,6 @@
                 <div class="col-6 col-md-2 mb-3">
                     <h5 class="text-primary">Customer Policies</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQ</a></li>
                         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Privacy
                                 Policy</a></li>
                         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Refund Policy</a>
@@ -245,8 +244,9 @@
                 </div>
             </div>
 
-            <div class="d-flex flex-column flex-sm-row justify-content-end py-2 border-top">
-                <p>&copy; 2024 Orotime Jewelry. All rights reserved. </p>
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-2 border-top">
+                <p>&copy; 2024 Orotime Jewelry. All rights reserved.</p>
+                <p>{{ version() }}</p>
             </div>
         </footer>
     </div>
@@ -279,23 +279,6 @@
         duration: 1000
     });
 </script>
-{{-- <script>
-    var swiper = new Swiper('.mySwiper', {
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        spaceBetween: 30,
-        breakpoints: {
-            767: {
-                slidesPerView: 1,
-            },
-            992: {
-                slidesPerView: 3,
-            },
-        },
-    });
-</script> --}}
 <script>
     feather.replace();
 </script>

@@ -66,7 +66,7 @@
                     <ul class="navbar-nav position-relative">
                         <li class="nav-item py-lg-2 me-lg-n2 me-xl-0">
                             <a class="nav-link text-primary"
-                                href="{{ route('CategoryProduct', ['cat' => 'all Collections']) }}">All Products</a>
+                                href="{{ route('back') }}">Home</a>
                         </li>
                         <li class="nav-item py-lg-2 me-lg-n2 me-xl-0">
                             <a class="nav-link text-primary"
@@ -147,7 +147,6 @@
                 <div class="col-6 col-md-2 mb-3">
                     <h5 class="text-primary">Customer Policies</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQ</a></li>
                         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Privacy
                                 Policy</a></li>
                         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Refund Policy</a>
@@ -206,8 +205,9 @@
                 </div>
             </div>
 
-            <div class="d-flex flex-column flex-sm-row justify-content-end py-2 border-top">
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-2 border-top">
                 <p>&copy; 2024 Orotime Jewelry. All rights reserved.</p>
+                <p>{{ version() }}</p>
             </div>
         </footer>
     </div>

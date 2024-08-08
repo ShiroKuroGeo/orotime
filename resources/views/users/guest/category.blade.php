@@ -29,7 +29,7 @@
                                     <div class="position-relative d-flex min-w-0 align-items-center">
                                         <div class="min-w-0 ps-3">
                                             <a class="nav-link animate-underline stretched-link fs-base fw-semibold p-0 mb-1"
-                                                href="shop-catalog-grocery.html">
+                                                href="All Collection">
                                                 <span class="animate-target text-truncate">All Collection</span>
                                             </a>
                                         </div>
@@ -39,7 +39,7 @@
                                     <div class="position-relative d-flex min-w-0 align-items-center">
                                         <div class="min-w-0 ps-3">
                                             <a class="nav-link animate-underline stretched-link fs-base fw-semibold p-0 mb-1"
-                                                href="shop-catalog-grocery.html">
+                                                href="All Gold">
                                                 <span class="animate-target text-truncate">All Gold</span>
                                             </a>
                                         </div>
@@ -49,7 +49,7 @@
                                     <div class="position-relative d-flex min-w-0 align-items-center">
                                         <div class="min-w-0 ps-3">
                                             <a class="nav-link animate-underline stretched-link fs-base fw-semibold p-0 mb-1"
-                                                href="shop-catalog-grocery.html">
+                                                href="All Silver">
                                                 <span class="animate-target text-truncate">All Silver</span>
                                             </a>
                                         </div>
@@ -59,7 +59,7 @@
                                     <div class="position-relative d-flex min-w-0 align-items-center">
                                         <div class="min-w-0 ps-3">
                                             <a class="nav-link animate-underline stretched-link fs-base fw-semibold p-0 mb-1"
-                                                href="shop-catalog-grocery.html">
+                                                href="Best Seller">
                                                 <span class="animate-target text-truncate">Best Seller</span>
                                             </a>
                                         </div>
@@ -69,7 +69,7 @@
                                     <div class="position-relative d-flex min-w-0 align-items-center">
                                         <div class="min-w-0 ps-3">
                                             <a class="nav-link animate-underline stretched-link fs-base fw-semibold p-0 mb-1"
-                                                href="shop-catalog-grocery.html">
+                                                href="Best Reviews">
                                                 <span class="animate-target text-truncate">Best Reviews</span>
                                             </a>
                                         </div>
@@ -79,7 +79,7 @@
                                     <div class="position-relative d-flex min-w-0 align-items-center">
                                         <div class="min-w-0 ps-3">
                                             <a class="nav-link animate-underline stretched-link fs-base fw-semibold p-0 mb-1"
-                                                href="shop-catalog-grocery.html">
+                                                href="">
                                                 <span class="animate-target text-truncate">Bracelets</span>
                                             </a>
                                         </div>
@@ -89,7 +89,7 @@
                                     <div class="position-relative d-flex min-w-0 align-items-center">
                                         <div class="min-w-0 ps-3">
                                             <a class="nav-link animate-underline stretched-link fs-base fw-semibold p-0 mb-1"
-                                                href="shop-catalog-grocery.html">
+                                                href="Earrings">
                                                 <span class="animate-target text-truncate">Earrings</span>
                                             </a>
                                         </div>
@@ -99,7 +99,7 @@
                                     <div class="position-relative d-flex min-w-0 align-items-center">
                                         <div class="min-w-0 ps-3">
                                             <a class="nav-link animate-underline stretched-link fs-base fw-semibold p-0 mb-1"
-                                                href="shop-catalog-grocery.html">
+                                                href="Rings">
                                                 <span class="animate-target text-truncate">Rings</span>
                                             </a>
                                         </div>
@@ -109,7 +109,7 @@
                                     <div class="position-relative d-flex min-w-0 align-items-center">
                                         <div class="min-w-0 ps-3">
                                             <a class="nav-link animate-underline stretched-link fs-base fw-semibold p-0 mb-1"
-                                                href="shop-catalog-grocery.html">
+                                                href="Necklace">
                                                 <span class="animate-target text-truncate">Necklace</span>
                                             </a>
                                         </div>
@@ -139,7 +139,6 @@
                                 </div>
                             </div>
 
-                            <!-- Products grid -->
                             <div class="row row-cols-2 row-cols-sm-1 row-cols-md-4 row-cols-lg-3 row-cols-xl-4 g-4">
 
 
@@ -176,8 +175,6 @@
                                 @endfor
 
                             </div>
-
-                            <!-- Products grid -->
 
                             <div class="row row-cols-2 row-cols-sm-1 row-cols-md-4 row-cols-lg-3 row-cols-xl-4 g-4 collapse"
                                 id="collapseViewMore">

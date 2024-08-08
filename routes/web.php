@@ -12,6 +12,8 @@ Route::get('/', function () {
     return view('welcome');
 })->name('back');
 
+Route::get('/notification/{oid}', [Controller::class, 'notification'])->name('notification');
+
 Route::prefix('auth')->group(function () {
     Route::post('/mailToEmail', [Controller::class, 'sentEmailForgotPassword'] )->name('RequestForgot');
     Route::get('/login', [Controller::class, 'login'])->name('login');
@@ -36,7 +38,7 @@ Route::prefix('admin/orotime/')->group(function () {
     Route::get('users/list', [adminController::class, 'userList'])->name('user-list');
     Route::get('users/type/{type}', [adminController::class, 'userType'])->name('user-type');
     Route::get('users/details/{type}/{uid}', [adminController::class, 'userTypeUid'])->name('user-details');
-    Route::get('order/', [adminController::class, 'orderList'])->name('order-list');
+    Route::get('order/', [adminController::class, 'orderList'])->name('order-list-admin');
     Route::get('order/invoice/{oid}', [adminController::class, 'invoicingOrder'])->name('admin-invoice');
 });
 
@@ -46,7 +48,7 @@ Route::prefix('csr/')->group(function () {
     Route::get('category', [csrController::class, 'categoryView'])->name('csr-category');
     Route::get('products/add', [csrController::class, 'addView'])->name('product-csr-add');
     Route::get('details/{pid}', [csrController::class, 'view'])->name('product-csr-details');
-    Route::get('order/{oid}', [csrController::class, 'orders'])->name('csr-order');
+    Route::get('order', [csrController::class, 'orders'])->name('order-list');
 });
 
 Route::prefix('referral')->group(function () {

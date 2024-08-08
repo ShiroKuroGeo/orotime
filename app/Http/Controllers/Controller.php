@@ -13,6 +13,10 @@ class Controller
         return view("login");
     }
 
+    public function notification($id){
+        return view("notification.notification", ['oid' => $id]);
+    }
+
     public function register()
     {
         return view("register");

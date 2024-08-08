@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    dropdownOnHover();
     grindListInit();
     listCategoryInit();
     listTableOrderInit();
@@ -140,7 +141,7 @@ function listTableProductInit() {
 function listTableOrderInit() {
 
     var options = {
-        valueNames: ["order", "product", "customer", "payment_status", "date"],
+        valueNames: ["order", "product", "customer", "payment_status", "fulfillment_status", "date"],
         page: 10,
         pagination: true
     };
@@ -182,7 +183,7 @@ function listCategoryInit() {
 
 function grindListInit() {
 
-    $('#matrixFormatList').on('click', function () {
+    $('.matrixFormatList').on('click', function () {
         addRemoveClass('#listProduct', '#gridProduct');
         $('#paginatedProduct').removeClass('d-none');
         $('#searchProductOnList').removeClass('d-none');
@@ -193,7 +194,6 @@ function grindListInit() {
         $('#paginatedProduct').addClass('d-none');
         $('#searchProductOnList').addClass('d-none');
     });
-
 }
 
 function addRemoveClass(addId, removeId) {
@@ -201,4 +201,18 @@ function addRemoveClass(addId, removeId) {
     $(removeId).addClass('d-none');
 }
 
-// function dataDropdownOnHover () { const e = document.querySelector("[data-dropdown-on-hover]"); e && e.addEventListener("mouseover", (e => { if (e.target?.classList.contains("dropdown-toggle") && !e.target.parentNode.className.includes("dropdown-inside") && window.innerWidth > 992) { const o = new window.bootstrap.Dropdown(e.target); o._element.classList.add("show"), o._menu.classList.add("show"), o._menu.setAttribute("data-bs-popper", "none"), e.target.parentNode.addEventListener("mouseleave", (() => { window.innerWidth > 992 && o.hide(); })); } })); };
+function dropdownOnHover () {
+    const e = document.querySelector("[data-dropdown-on-hover]");
+    e &&
+        e.addEventListener("mouseover", (e) => {
+            if (e.target?.classList.contains("dropdown-toggle") && !e.target.parentNode.className.includes("dropdown-inside") && window.innerWidth > 992) {
+                const o = new window.bootstrap.Dropdown(e.target);
+                o._element.classList.add("show"),
+                    o._menu.classList.add("show"),
+                    o._menu.setAttribute("data-bs-popper", "none"),
+                    e.target.parentNode.addEventListener("mouseleave", () => {
+                        window.innerWidth > 992 && o.hide();
+                    });
+            }
+        });
+};

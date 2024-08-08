@@ -31,4 +31,8 @@ function decryptData($data)
     }
 }
 
+function version(){
+    echo "v1.0.0";
+}
+
 ?>

@@ -121,8 +121,8 @@
                 <li class="nav-item my-2">
 
                     <div class="nav-item-wrapper">
-                        <a class="nav-link dropdown-indicator label-1 {{ Request::routeIs('order-list') ? 'active' : '' }}"
-                            href="{{ route('order-list') }}">
+                        <a class="nav-link dropdown-indicator label-1 {{ Request::routeIs('order-list-admin') ? 'active' : '' }}"
+                            href="{{ route('order-list-admin') }}">
                             <div class="d-flex align-items-center">
                                 <div class="dropdown-indicator-icon-wrapper">
                                     <span class="fas fa-caret-right dropdown-indicator-icon"></span>

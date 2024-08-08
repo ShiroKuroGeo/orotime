@@ -21,7 +21,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item d-flex align-items-center" href="#">
+                            <a class="dropdown-item d-flex align-items-center matrixFormatList" href="#list">
                                 <i data-feather="search" class="me-2"></i>
                                 Search Product
                             </a>
@@ -30,7 +30,7 @@
                 </div>
                 <div class="search-item d-flex align-items-center">
                     <div class="d-flex justify-content-end gap-3">
-                        <a href="#list" class="text-dark" id="matrixFormatList">
+                        <a href="#list" class="text-dark matrixFormatList">
                             <i data-feather="list"></i>
                         </a>
                         <a href="#grid" class="text-dark" id="matrixFormatGrid">

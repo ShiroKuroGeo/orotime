@@ -72,7 +72,7 @@
                                     <div
                                         class="d-flex flex-column justify-content-center flex-between-end d-sm-block text-end text-sm-start">
                                         <span class="badge badge-oro badge-oro-success fs-10 mb-2">+24.5%</span>
-                                        <p class="mb-0 fs-9 text-body-tertiary">This Week</p>
+                                        <p class="mb-0 fs-9 text-body-tertiary">Last Week</p>
                                     </div>
                                 </div>
                             </div>
@@ -320,7 +320,7 @@
                             class="d-none d-sm-inline-block mx-1">|</span><br class="d-sm-none" />2024 &copy;
                 </div>
                 <div class="col-12 col-sm-auto text-center">
-                    <p class="mb-0 text-body-tertiary text-opacity-85">v1.0.0</p>
+                    <p class="mb-0 text-body-tertiary text-opacity-85">{{ version() }} </p>
                 </div>
             </div>
         </footer>

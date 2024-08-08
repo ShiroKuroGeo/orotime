@@ -389,7 +389,7 @@
                                         </td>
                                         <td class="name align-middle white-space-nowrap pe-5 py-3">
                                             <a class="d-flex align-items-center text-body-emphasis"
-                                                href="../../../apps/e-commerce/admin/customer-details.html">
+                                                href="{{ route('user-details', ['type' => encryptData(Request::route('type')), 'uid' => encryptData($i) ]) }}">
                                                 <div class="avatar avatar-m">
                                                     <img class="rounded-circle"
                                                     src="{{ asset('images/customer-images/user_profile.jpg') }}"
@@ -401,12 +401,10 @@
                                         <td class="email align-middle white-space-nowrap pe-5"><a class="fw-semibold"
                                                 href="mailto:inocgeorgealfeser@gmail.com">inocgeorgealfeser@gmail.com</a>
                                         </td>
-                                        <td
-                                            class="address align-middle white-space-nowrap fw-semibold text-body-highlight">
+                                        <td class="address align-middle white-space-nowrap fw-semibold text-body-highlight">
                                             Poblacion Cordova Cebu
                                         </td>
-                                        <td
-                                            class="phone align-middle white-space-nowrap fw-semibold text-body-highlight">
+                                        <td class="phone align-middle white-space-nowrap fw-semibold text-body-highlight">
                                             +63 912 3456 789
                                         </td>
                                         <td class="date align-middle white-space-nowrap fw-bold text-body-emphasis">
@@ -416,9 +414,8 @@
                                         <td class="date align-middle white-space-nowrap fw-bold text-body-emphasis">
                                             November 29, 2001
                                         </td>
-                                        <td
-                                            class="update align-middle text-center white-space-nowrap fw-bold text-body-emphasis">
-                                            <a href="#!" class="badge bg-light">
+                                        <td class="update align-middle text-center white-space-nowrap fw-bold text-body-emphasis">
+                                            <a href="#!" class="badge bg-light" data-bs-toggle="modal" data-bs-target="#deleteUser{{$i}}">
                                                 <i data-feather="trash-2" class="fs-base text-danger" style="width: 16px; height: 16px"></i>
                                             </a>
                                             <a href="#!" class="badge bg-light">
@@ -429,6 +426,36 @@
                                             </a>
                                         </td>
                                     </tr>
+                                    <div class="modal fade" id="deleteUser{{$i}}" tabindex="-1" aria-labelledby="deleteUserLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="deleteUserLabel">Delete User</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body text-center">
+                                                    <div class="badge badge-secondary">
+                                                        <i data-feather="alert-triangle" style="width: 25px; height: 25px; color: red"></i>
+                                                    </div>
+                                                    <div class="row">
+                                                        <label class="my-3 text-dark fw-bold">Are you sure want to delete this user?</label>
+                                                        <label class="my-3 text-muted">
+                                                            This action cannot be undone. This item will go in the trash and only a developer can restore it or will be lost forever.
+                                                        </label>
+                                                    </div>
+                                                    <form action="#!">
+                                                        <button type="submit" class="btn btn-danger col-12">
+                                                            <i data-feather="trash-2" style="width: 16px; height: 16px"></i>
+                                                            Delete User
+                                                        </button>
+                                                    </form>
+                                                    <button type="button" class="btn btn-white col-12 mt-2 border" data-bs-dismiss="modal">
+                                                        Cancel
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 @endfor
                             </tbody>
                         </table>
@@ -458,7 +485,7 @@
                             <br class="d-sm-none" />2024 &copy;<a class="mx-1" href="#!">Orotime</a></p>
                         </div>
                         <div class="col-12 col-sm-auto text-center">
-                            <p class="mb-0 text-body-tertiary text-opacity-85">v1.0.0</p>
+                            <p class="mb-0 text-body-tertiary text-opacity-85">{{ version() }}</p>
                         </div>
                     </div>
                 </footer>

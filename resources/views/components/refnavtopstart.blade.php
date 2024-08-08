@@ -112,7 +112,7 @@
                                 <span class="text-muted fw-lighter">Customer</span>
                             </div>
                         </div>
-                        <div class="overflow-auto scrollbar border-top shadow-top g-5" style="height: 10rem;">
+                        <div class="overflow-auto scrollbar border-top shadow-top g-5" style="height: 7rem;">
                             <ul class="nav d-flex flex-column my-2 pb-1">
                                 <li class="nav-item">
                                     <a class="nav-link px-3 d-block d-flex align-items-center" href="#!">
@@ -126,18 +126,15 @@
                                         Dashboard
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-3 d-block d-flex align-items-center" href="#!">
-                                        <span class="me-2 text-body align-bottom p-1" data-feather="log-out"></span>
-                                        Logout
-                                    </a>
-                                </li>
                             </ul>
                         </div>
                     </div>
                     <div class="card-footer p-0 border-top border-translucent">
-                        <div class="px-3"> <a class="btn btn-oro-secondary mt-2 d-flex flex-center w-100"
-                                href="#!"> <span class="me-2" data-feather="log-out"> </span>Sign out</a>
+                        <div class="px-3"> 
+                            <a class="btn btn-oro-secondary mt-2 d-flex flex-center w-100" href="#!"> 
+                                <span class="me-2" data-feather="log-out" style="width: 16px; height: 16px"> </span>
+                                Sign out
+                            </a>
                         </div>
                         <div class="my-2 text-center fw-bold fs-10 text-body-quaternary"></div>
                     </div>

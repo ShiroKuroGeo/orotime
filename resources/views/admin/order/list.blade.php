@@ -50,6 +50,7 @@
                             </div>
                         </div>
                         <div class="col-auto scrollbar overflow-hidden-y flex-grow-1">
+
                             <div class="btn-group position-static" role="group">
                                 <div class="btn-group position-static text-nowrap" role="group"><button
                                         class="btn btn-oro-secondary px-7 flex-shrink-0" type="button"
@@ -62,6 +63,22 @@
                                     </ul>
                                 </div>
                             </div>
+
+                            <div class="btn-group position-static" role="group">
+                                <div class="btn-group position-static text-nowrap" role="group"><button
+                                        class="btn btn-oro-secondary px-7 flex-shrink-0" type="button"
+                                        data-bs-toggle="dropdown" data-boundary="window" aria-haspopup="true"
+                                        aria-expanded="false" data-bs-reference="parent">Fulfillment Status<span
+                                            class="fas fa-angle-down ms-2"></span></button>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li><a class="dropdown-item" href="#">Completed</a></li>
+                                        <li><a class="dropdown-item" href="#">Done</a></li>
+                                        <li><a class="dropdown-item" href="#">Pending</a></li>
+                                        <li><a class="dropdown-item" href="#">Ongoing</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -69,7 +86,7 @@
                 <div class="px-4 px-lg-6 position-relative bg-body-emphasis rounded" id="orderTable"
                     data-list='{"valueNames":["order","product","customer","payment_status","date"],"page":10,"pagination":true}'>
                     <div class="table-responsive scrollbar py-5 my-3">
-                        <table class="table table-responsive table-hover table-stripe fs-9 mb-0 display">
+                        <table class="table table-responsive table-stripe fs-9 mb-0 display">
                             <thead>
                                 <tr>
                                     <th class="white-space-nowrap fs-9 align-middle ps-0" style="width: 1%;">
@@ -84,16 +101,19 @@
                                         data-sort="payment_status" style="width: 15%;"> PAYMENT STATUS </th>
                                     <th class="sort align-middle pe-0" scope="col" data-sort="date"
                                         style="width: 15%;"> DATE </th>
+                                    <th class="sort align-middle pe-0" scope="col" data-sort="action"
+                                        style="width: 5%;"> Action </th>
                                 </tr>
                             </thead>
                             <tbody class="list" id="products-table-body">
                                 @for ($i = 1; $i <= 15; $i++)
-                                    <tr class="hover-actions-trigger btn-reveal-trigger position-static" onclick="window.location.href = '{{ route('admin-invoice', ['oid' => encryptData( 'orzakar ' . $i)]) }}'">
+                                    <tr class="hover-actions-trigger btn-reveal-trigger position-static">
                                         <td class="fs-9 align-middle px-0 py-3"></td>
                                         <td class="align-middle white-space-nowrap py-3 py-0 order"> <a
                                                 class="fw-semibold" href="#!"> #{{ 2453 * $i }} </a> </td>
-                                        <td class="align-middle fw-semibold text-body-highlight product"> Silver Ring
-                                            1gram silver rightley </td>
+                                        <td class="align-middle fw-semibold text-body-highlight product"> 
+                                            Silver Ring 1gram silver rightley 
+                                        </td>
                                         <td class="align-middle white-space-nowrap ps-8 customer">
                                             <a class="d-flex align-items-center text-body" type="button"
                                                 data-bs-toggle="modal" data-bs-target="#viewOrderModal">
@@ -116,7 +136,103 @@
                                         </td>
                                         <td class="align-middle white-space-nowrap text-body-tertiary fs-9 date"> Dec
                                             12, 12:56 PM </td>
+                                        <td class="align-middle white-space-nowrap text-body-tertiary fs-9 action">
+                                            <div class="dropdown text-center">
+                                                <a class="text-decoration-none text-dark" id="moreActionOrders" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i data-feather="more-horizontal" style="width: 20px; height: 20px"></i>
+                                                </a>
+                                                <ul class="dropdown-menu" aria-labelledby="moreActionOrders">
+                                                    <li>
+                                                        <a class="dropdown-item" href="{{ route('admin-invoice', ['oid' => encryptData('orzakar ' . $i)]) }}">
+                                                            <i data-feather="eye" style="width: 16px; height: 16px"></i>
+                                                            View
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#!" data-bs-toggle="modal" data-bs-target="#deleteOrder{{$i}}">
+                                                            <i data-feather="trash-2" style="width: 16px; height: 16px"></i>
+                                                            Delete
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#updateOrders">
+                                                            <i data-feather="edit" style="width: 16px; height: 16px"></i>
+                                                            Update
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
                                     </tr>
+                                    <div class="modal fade" id="updateOrders" tabindex="-1" aria-labelledby="updateOrdersLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="updateOrdersLabel">Update Status</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form action="#!" method="POST">
+                                                        <div class="form-input">
+                                                            <label for="">Payment Status</label>
+                                                            <select name="paymentStatusUpdate" id="paymentStatusUpdate" class="form-select">
+                                                                <option value="1">Fully Paid</option>
+                                                                <option value="2">Not Fully Paid</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-input pt-3">
+                                                            <label for="">Payment Status</label>
+                                                            <select name="fulfillmentStatusUpdate" id="fulfillmentStatusUpdate" class="form-select">
+                                                                <option value="1">Ongoing</option>
+                                                                <option value="2">Done</option>
+                                                                <option value="3">Pending</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-btn mt-3">
+                                                            <button class="btn btn-primary my-1 col-12" type="submit">
+                                                                <i data-feather="edit" style="width: 16px; height: 16px"></i>
+                                                                Update
+                                                            </button>
+                                                            <button class="btn border my-1 col-12" type="button" data-bs-dismiss="modal" aria-label="Close">
+                                                                <i data-feather="x" style="width: 16px; height: 16px"></i>
+                                                                Close
+                                                            </button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal fade" id="deleteOrder{{$i}}" tabindex="-1" aria-labelledby="deleteOrderLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="deleteOrderLabel">Delete Product</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body text-center">
+                                                    <div class="badge badge-secondary">
+                                                        <i data-feather="alert-triangle" style="width: 25px; height: 25px; color: red"></i>
+                                                    </div>
+                                                    <div class="row">
+                                                        <label class="my-3 text-dark fw-bold">Are you sure want to delete this product?</label>
+                                                        <label class="my-3 text-muted">
+                                                            This action cannot be undone. This item will go in the trash and only a developer can restore it or will be lost forever.
+                                                        </label>
+                                                    </div>
+                                                    <form action="#!">
+                                                        <button type="submit" class="btn btn-danger col-12">
+                                                            <i data-feather="trash-2" style="width: 16px; height: 16px"></i>
+                                                            Delete Product
+                                                        </button>
+                                                    </form>
+                                                    <button type="button" class="btn btn-white col-12 mt-2 border" data-bs-dismiss="modal">
+                                                        Cancel
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 @endfor
                             </tbody>
                         </table>
@@ -134,7 +250,7 @@
                     </p>
                 </div>
                 <div class="col-12 col-sm-auto text-center">
-                    <p class="mb-0 text-body-tertiary text-opacity-85">v1.0.0</p>
+                    <p class="mb-0 text-body-tertiary text-opacity-85">{{ version() }}</p>
                 </div>
             </div>
         </footer>

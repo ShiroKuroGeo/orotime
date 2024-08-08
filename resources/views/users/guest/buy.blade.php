@@ -90,7 +90,6 @@
                             </div>
                         </div>
 
-                        {{-- Shipping Address --}}
                         <div class="d-flex align-items-start">
                             <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle fs-sm fw-semibold lh-1 flex-shrink-0"
                                 style="width: 2rem; height: 2rem; margin-top: -.125rem">2</div>
@@ -100,7 +99,6 @@
                                     <div class="row g-3 g-sm-4 mb-4">
                                         <div class="col-12">
                                             <label for="shipping-email" class="form-label">Country</label>
-                                            {{-- <textarea name="streetAddress" id="streetAddress" class="form-control" cols="10" rows="1"></textarea> --}}
                                             <input type="text" name="countryAddress" id="countryAddress"
                                                 class="form-control">
                                         </div>
@@ -140,7 +138,6 @@
                             </div>
                         </div>
 
-                        {{-- Payment Method --}}
                         <div class="d-flex align-items-start">
                             <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle fs-sm fw-semibold lh-1 flex-shrink-0"
                                 style="width: 2rem; height: 2rem; margin-top: -.125rem">3</div>
@@ -206,9 +203,9 @@
                                     </div>
                                 </div>
 
-                                <select name="paymentMethod" id="paymentMethod">
-                                    <option value="">Flexi Pay</option>
-                                    <option value=""></option>
+                                <select name="paymentMethod" id="paymentMethod" class="form-select">
+                                    <option value="Flexi Pay">Flexi Pay</option>
+                                    <option value="Other Pay">Other Pay</option>
                                 </select>
 
                                 <textarea class="form-control form-control-lg mb-4" rows="3" placeholder="Additional comments"></textarea>
@@ -218,7 +215,7 @@
                                     <label for="accept-terms" class="form-check-label nav align-items-center">
                                         I accept the
                                         <a class="nav-link text-decoration-underline fw-normal ms-1 p-0"
-                                            href="terms-and-conditions.html" target="_blank">Terms and Conditions</a>
+                                            href="#termandConditionBuyAsGuest" target="_blank">Terms and Conditions on buying as Guest</a>
                                     </label>
                                 </div>
 
@@ -263,11 +260,56 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="py-4">
+                            Another way to buy product?
+                            
+                            <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#anotherWayToPurchase"> Click Here ! </a>
+    
+                            <div class="modal fade" id="anotherWayToPurchase" tabindex="-1" aria-labelledby="anotherWayToPurchaseLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="anotherWayToPurchaseLabel">Another Way to Purchase Product</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container">
+                                                <div class="row ">
+                                                    <div class="d-flex justify-content-center align-items-center">
+                                                        <img src="{{ asset('images/orotime-images/welcome.jpg') }}" class="img-fluid w-100 p-0" alt="Welcome Images">
+                                                    </div>
+                                                    <h4 class="text-center fw-bold">Welcome to Orotime Jewelry!</h4>
+                                                    <span class="my-3">
+                                                        We are glad to help you with the assistance that you need!
+                                                    </span>
+    
+                                                    <form action="#" method="POST">
+                                                        <div class="form-input">
+                                                            <label for="">Phone Number</label>
+                                                            <input type="number" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="+639484750030">
+                                                        </div>
+                                                        <div class="form-input">
+                                                            <label for="">Message</label>
+                                                            <textarea name="message" id="message" cols="10" rows="6" class="form-control"></textarea>
+                                                        </div>
+                                                        <div class="my-3">
+                                                            <button type="submit" class="btn btn-md btn-primary col-12">Send!</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-4">
+                            <span class="text-danger">
+                                Note: If you are a guest and don't have an account, Please read this before buying!
+                            </span>
+                        </div>
                     </div>
-                    <div class="py-4">
-                        Another way to buy product?
-                        <a href="#" class="text-decoration-none">Click Here!</a>
-                    </div>
+                    
                 </aside>
 
             </div>

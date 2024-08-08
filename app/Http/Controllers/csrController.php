@@ -27,7 +27,7 @@ class csrController extends Controller
         return view('users.csr.product.category');
     }
 
-    public function orders($oid){
-        return view('users.csr.order.list', ['oid' => $oid]);
+    public function orders(){
+        return view('users.csr.order.list');
     }
 }

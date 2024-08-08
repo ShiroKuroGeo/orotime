@@ -214,7 +214,7 @@
                         <br class="d-sm-none" />2024 &copy;<a class="mx-1" href="#!">Orotime</a></p>
                     </div>
                     <div class="col-12 col-sm-auto text-center">
-                        <p class="mb-0 text-body-tertiary text-opacity-85">v1.0.0</p>
+                        <p class="mb-0 text-body-tertiary text-opacity-85">{{ version() }}</p>
                     </div>
                 </div>
             </footer>
