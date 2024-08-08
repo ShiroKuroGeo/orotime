@@ -6,6 +6,7 @@ $(document).ready(function () {
     listTableProductInit();
     totalOrderChartInitCsr();
     totalMainChartInitCsr();
+    dataDropdownOnHover();
 })
 
 function totalOrderChartInitCsr() {
@@ -139,7 +140,7 @@ function listTableProductInit() {
 function listTableOrderInit() {
 
     var options = {
-        valueNames: ["order","product","customer","payment_status","date"],
+        valueNames: ["order", "product", "customer", "payment_status", "date"],
         page: 10,
         pagination: true
     };
@@ -182,13 +183,13 @@ function listCategoryInit() {
 function grindListInit() {
 
     $('#matrixFormatList').on('click', function () {
-        addRemoveClass('#listProduct','#gridProduct');
+        addRemoveClass('#listProduct', '#gridProduct');
         $('#paginatedProduct').removeClass('d-none');
         $('#searchProductOnList').removeClass('d-none');
     });
 
     $('#matrixFormatGrid').on('click', function () {
-        addRemoveClass('#gridProduct','#listProduct');
+        addRemoveClass('#gridProduct', '#listProduct');
         $('#paginatedProduct').addClass('d-none');
         $('#searchProductOnList').addClass('d-none');
     });
@@ -196,6 +197,8 @@ function grindListInit() {
 }
 
 function addRemoveClass(addId, removeId) {
-    $(addId ).removeClass('d-none');
+    $(addId).removeClass('d-none');
     $(removeId).addClass('d-none');
 }
+
+// function dataDropdownOnHover () { const e = document.querySelector("[data-dropdown-on-hover]"); e && e.addEventListener("mouseover", (e => { if (e.target?.classList.contains("dropdown-toggle") && !e.target.parentNode.className.includes("dropdown-inside") && window.innerWidth > 992) { const o = new window.bootstrap.Dropdown(e.target); o._element.classList.add("show"), o._menu.classList.add("show"), o._menu.setAttribute("data-bs-popper", "none"), e.target.parentNode.addEventListener("mouseleave", (() => { window.innerWidth > 992 && o.hide(); })); } })); };

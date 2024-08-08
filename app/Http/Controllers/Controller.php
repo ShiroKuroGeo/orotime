@@ -45,4 +45,5 @@ class Controller
 
         return redirect()->back()->with('success', 'Email Sent!');
     }
+    
 }

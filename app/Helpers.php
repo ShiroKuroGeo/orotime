@@ -21,9 +21,14 @@ function encryptData($data)
 function decryptData($data)
 {
     try {
+
         return Crypt::decrypt($data);
+
     } catch (DecryptException $th) {
+
         return false;
+        
     }
 }
+
 ?>

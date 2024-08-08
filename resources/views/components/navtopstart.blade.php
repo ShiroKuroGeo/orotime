@@ -27,7 +27,7 @@
                                 <div class="dropdown-indicator-icon-wrapper"><span
                                         class="fas fa-caret-right dropdown-indicator-icon"></span></div><span
                                     class="nav-link-icon">
-                                <i data-feather="package" class="fs-base pe-2"></i>
+                                    <i data-feather="package" class="fs-base pe-2"></i>
                                 </span><span class="nav-link-text">Products</span>
                             </div>
                         </a>
@@ -155,7 +155,7 @@
                 </div>
             </a>
         </div>
-        <div class="search-box navbar-top-search-box d-none d-lg-block" data-list='{"valueNames":["title"]}'
+        {{-- <div class="search-box navbar-top-search-box d-none d-lg-block" data-list='{"valueNames":["title"]}'
             style="width:25rem;">
             <form class="position-relative" data-bs-toggle="search" data-bs-display="static"><input
                     class="form-control search-input fuzzy-search rounded-pill form-control-sm" type="search"
@@ -164,7 +164,7 @@
             </form>
             <div class="btn-close position-absolute end-0 top-50 translate-middle cursor-pointer shadow-none"
                 data-bs-dismiss="search"><button class="btn btn-link p-0" aria-label="Close"></button></div>
-        </div>
+        </div> --}}
         <ul class="navbar-nav navbar-nav-icons flex-row">
             <li class="nav-item dropdown">
                 <a class="nav-link" href="#" style="min-width: 2.25rem" role="button"
