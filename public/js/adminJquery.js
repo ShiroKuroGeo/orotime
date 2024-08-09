@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    hideShowPassword();
     customerRatingsTableInit();
     customerWishlistTableInit();
     customerOrdersTableDetailsInit();
@@ -442,3 +443,15 @@ function customerRatingsTableInit(){
     var customerRatingsTable = new List('customerRatingsTable',options);
 
 }
+
+function hideShowPassword () {
+    const t = document.querySelectorAll("[data-password]");
+    t &&
+        t.forEach((t) => {
+            const s = t.querySelector("[data-password-input]"),
+                e = t.querySelector("[data-password-toggle]");
+            e.addEventListener("click", () => {
+                "password" === s.type ? (s.setAttribute("type", "text"), e.classList.add("show-password")) : (s.setAttribute("type", "password"), e.classList.remove("show-password"));
+            });
+        });
+};
