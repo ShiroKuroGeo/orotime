@@ -5397,6 +5397,12 @@ fieldset:disabled .btn {
   white-space: nowrap
 }
 
+.badge-oro-primary {
+  --oro-badge-bg: var(--c-oro-primary-bg-subtle);
+  --oro-badge-color: var(--c-oro-primary-text-emphasis);
+  --oro-badge-border-color: var(--c-oro-primary-border-subtle)
+}
+
 .badge:empty {
   display: none
 }

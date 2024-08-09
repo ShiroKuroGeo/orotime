@@ -34,6 +34,9 @@
                             <thead>
                                 <tr>
                                     <th scope="col" class="py-3 ps-0">
+                                        <input type="checkbox" class="form-check" disabled>
+                                    </th>
+                                    <th scope="col" class="py-3 ps-0">
                                         <span class="text-body fw-normal">Order <span
                                                 class="d-none d-md-inline">#</span></span>
                                     </th>
@@ -48,58 +51,112 @@
                                         <button type="button" class="btn orders-sort fw-normal text-body p-0"
                                             data-sort="total">Total</button>
                                     </th>
-                                    <th scope="col" class="py-3">&nbsp;</th>
+                                    <th scope="col" class="py-3 text-end">
+                                        <div class="dropstart">
+                                            <a class="text-decoration-none text-dark d-none" href="#actionMoreSelectedActionOrders" id="actionMoreSelectedActionOrders" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fs-base" data-feather="more-horizontal" style="width: 16px; height: 16px"></i>
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="actionMoreSelectedActionOrders">
+                                                <li>
+                                                    <a class="dropdown-item" href="#viewInvoice">
+                                                        <i class="fs-base me-2" data-feather="eye" style="width: 16px; height: 16px"></i>
+                                                        View Invoice
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="{{ route('cus-refund') }}">
+                                                        <i class="fs-base me-2" data-feather="corner-down-left" style="width: 16px; height: 16px"></i>
+                                                        Refund
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#moveToTrash">
+                                                        <i class="fs-base me-2" data-feather="trash-2" style="width: 16px; height: 16px"></i>
+                                                        More to Trash
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody class="text-body-emphasis orders-list">
-                                <tr>
-                                    <td class="fw-medium pt-2 pb-3 py-md-2 ps-0">
-                                        <a class="d-inline-block animate-underline text-body-emphasis text-decoration-none py-2"
-                                            href="#orderDetails" data-bs-toggle="offcanvas" aria-controls="orderDetails"
-                                            aria-label="Show order details">
-                                            <span class="animate-target">78A6431D409</span>
-                                        </a>
-                                        <ul class="list-unstyled fw-normal text-body m-0 d-md-none">
-                                            <li>Feb 6, 2025</li>
-                                            <li class="d-flex align-items-center">
+                                @for ($i = 1; $i <= 3; $i++)  
+                                    <tr>
+                                        <td class="fw-medium py-3 d-none d-md-table-cell">
+                                            <input type="checkbox" name="oid" id="oid1" class="form-check" value="{{ $i }}">
+                                        </td>
+                                        <td class="fw-medium pt-2 pb-3 py-md-2 ps-0">
+                                            <a class="d-inline-block animate-underline text-body-emphasis text-decoration-none py-2"
+                                                href="#orderDetails" data-bs-toggle="offcanvas" aria-controls="orderDetails"
+                                                aria-label="Show order details">
+                                                <span class="animate-target">78A6431D409</span>
+                                            </a>
+                                            <ul class="list-unstyled fw-normal text-body m-0 d-md-none">
+                                                <li>Feb 6, 2025</li>
+                                                <li class="d-flex align-items-center">
+                                                    <span class="bg-info rounded-circle p-1 me-2"></span>
+                                                    In progress
+                                                </li>
+                                                <li class="fw-medium text-body-emphasis">$2,105.90</li>
+                                            </ul>
+                                        </td>
+                                        <td class="fw-medium py-3 d-none d-md-table-cell">
+                                            February 6, 2025
+                                            <span class="date d-none">25-02-06</span>
+                                        </td>
+                                        <td class="fw-medium py-3 d-none d-md-table-cell">
+                                            <span class="d-flex align-items-center">
                                                 <span class="bg-info rounded-circle p-1 me-2"></span>
                                                 In progress
-                                            </li>
-                                            <li class="fw-medium text-body-emphasis">$2,105.90</li>
-                                        </ul>
-                                    </td>
-                                    <td class="fw-medium py-3 d-none d-md-table-cell">
-                                        February 6, 2025
-                                        <span class="date d-none">25-02-06</span>
-                                    </td>
-                                    <td class="fw-medium py-3 d-none d-md-table-cell">
-                                        <span class="d-flex align-items-center">
-                                            <span class="bg-info rounded-circle p-1 me-2"></span>
-                                            In progress
-                                        </span>
-                                    </td>
-                                    <td class="fw-medium py-3 d-none d-md-table-cell">
-                                        $2,105.90
-                                        <span class="total d-none">210590</span>
-                                    </td>
-                                    <td class="py-3 pe-0">
-                                        <span class="d-flex align-items-center justify-content-end position-relative gap-1 gap-sm-2 ms-n2 ms-sm-0">
-                                            <span>
-                                                <img src="{{ asset('images/orotime-images/Flyer1.jpg') }}" width="50" alt="Thumbnail">
+                                            </span>
+                                        </td>
+                                        <td class="fw-medium py-3 d-none d-md-table-cell">
+                                            $2,105.90
+                                            <span class="total d-none">210590</span>
+                                        </td>
+                                        <td class="py-3 pe-0">
+                                            <span class="d-flex align-items-center justify-content-end position-relative gap-1 gap-sm-2 ms-n2 ms-sm-0">
+                                                <span>
+                                                    <img src="{{ asset('images/orotime-images/Flyer1.jpg') }}" width="50" alt="Thumbnail">
                                                 </span>
-                                            <span>
-                                                <img src="{{ asset('images/orotime-images/Flyer1.jpg') }}" width="50" alt="Thumbnail">
+                                                <span>
+                                                    <img src="{{ asset('images/orotime-images/Flyer1.jpg') }}" width="50" alt="Thumbnail">
                                                 </span>
-                                            <span>
-                                                <img src="{{ asset('images/orotime-images/Flyer1.jpg') }}" width="50" alt="Thumbnail">
+                                                <span>
+                                                    <img src="{{ asset('images/orotime-images/Flyer1.jpg') }}" width="50" alt="Thumbnail">
                                                 </span>
-                                            <a class="text-decoration-none text-dark" href="#">
-                                                <i class="fs-base" data-feather="eye"></i>
-                                            </a>
-                                        </span>
-                                    </td>
-                                </tr>
-                                
+                                                <a class="text-decoration-none text-dark" href="#">
+                                                    <div class="dropstart">
+                                                        <a class="text-decoration-none text-dark" href="#actionCustomersOrder" id="actionCustomersOrder" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="fs-base" data-feather="more-horizontal" style="width: 16px; height: 16px"></i>
+                                                        </a>
+                                                        <ul class="dropdown-menu" aria-labelledby="actionCustomersOrder">
+                                                            <li>
+                                                                <a class="dropdown-item" href="#viewInvoice">
+                                                                    <i class="fs-base me-2" data-feather="eye" style="width: 16px; height: 16px"></i>
+                                                                    View Invoice
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="dropdown-item" href="{{ route('cus-refund') }}">
+                                                                    <i class="fs-base me-2" data-feather="corner-down-left" style="width: 16px; height: 16px"></i>
+                                                                    Refund
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="dropdown-item" href="#moveToTrash">
+                                                                    <i class="fs-base me-2" data-feather="trash-2" style="width: 16px; height: 16px"></i>
+                                                                    More to Trash
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </a>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                @endfor
                             </tbody>
                         </table>
                     </div>

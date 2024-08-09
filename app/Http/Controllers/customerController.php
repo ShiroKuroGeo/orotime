@@ -46,4 +46,16 @@ class customerController extends Controller
     public function personsViewcart(){
         return view('users.customer.viewcart');
     }
+
+    public function refund(){
+        return view('users.customer.refund');
+    }
+
+    public function exploreMore(){
+        return view('users.customer.explore');
+    }
+
+    public function pointsDashboard(){
+        return view('users.customer.points');
+    }
 }

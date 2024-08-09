@@ -27,6 +27,7 @@ Route::prefix('guest/')->group(function () {
     Route::get('order/product/{pid}', [guestController::class, 'buy'])->name('guestPurchaser');
     Route::get('product/view/{pid}', [guestController::class, 'viewProduct'])->name('viewProduct');
     Route::get('product/category/{cat}', [guestController::class, 'category'])->name('CategoryProduct');
+    Route::get('exploration', [guestController::class, 'exploreMore'])->name('guest-explore');
 });
 
 Route::prefix('admin/orotime/')->group(function () {
@@ -68,4 +69,7 @@ Route::prefix('customer/')->group(function () {
     Route::get('information', [customerController::class, 'personsInformation'])->name('cus-info');
     Route::get('Cart', [customerController::class, 'personsCart'])->name('cus-cart');
     Route::get('cart/viewcart', [customerController::class, 'personsViewcart'])->name('cus-viewcart');
+    Route::get('refund', [customerController::class, 'refund'])->name('cus-refund');
+    Route::get('exploration', [customerController::class, 'exploreMore'])->name('cus-explore');
+    Route::get('points', [customerController::class, 'pointsDashboard'])->name('cus-point');
 });

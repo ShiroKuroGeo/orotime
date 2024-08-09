@@ -134,7 +134,7 @@
         <section class="container my-5 py-5">
             <div class="row my-5">
                 <h2 class="h1 w-100 fw-bold pb-2 mb-1 text-primary">
-                    <span id="mainTyped"></span>
+                    <span class="text-dark"><small>Shop Now </small> with </span><span id="mainTyped"></span>
                 </h2>
             </div>
             <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4">

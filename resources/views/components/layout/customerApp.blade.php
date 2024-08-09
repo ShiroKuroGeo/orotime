@@ -257,28 +257,9 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-<script>
-    var typed = new Typed('#mainTyped', {
-        strings: ['<i>Top Price</i>', '<i>High Quality</i>', '<i>High Value</i>', '<i>Shop Now</i>'],
-        typeSpeed: 100,
-        loop: true,
-    });
-</script>
-<script>
-    hljs.initHighlightingOnLoad();
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+<script src="{{ asset('js/customer.js') }}"></script>
 
-    $('.hero__scroll').on('click', function(e) {
-        $('html, body').animate({
-            scrollTop: $(window).height()
-        }, 1200);
-    });
-</script>
-<script>
-    AOS.init({
-        easing: 'ease-out-back',
-        duration: 1000
-    });
-</script>
 <script>
     feather.replace();
 </script>

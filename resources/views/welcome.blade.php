@@ -2,7 +2,7 @@
     @section('title', 'Orotime Jewelry')
     <main class="container">
         <section class="position-relative">
-            <div class="container pt-md-5 py-xl-0" data-aos="zoom-in">
+            <div class="pt-md-5 py-0" data-aos="zoom-in">
                 <div class="row align-items-center">
                     <video class="w-100 h-100" autoplay loop muted>
                         <source src="{{ asset('video/jewelryvideo.mp4') }}" type="video/mp4" />
@@ -193,7 +193,7 @@
                 </div>
             </div>
             <div class="d-flex justify-content-center my-5">
-                <a href="#" class="nav-link customize-hover">
+                <a href="{{ route('guest-explore') }}" class="nav-link customize-hover">
                     Explore More
                     <i data-feather="chevrons-right" class="pt-1"></i>
                 </a>

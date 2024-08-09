@@ -56,6 +56,13 @@
                 Personal Information
             </a>
         </nav>
+        <nav class="list-group list-group-borderless">
+            <a class="list-group-item list-group-item-action d-flex align-items-center {{ Request::routeIs('cus-point') ? 'active pe-none' : '' }}"
+                href="{{ route('cus-point') }}">
+                <i data-feather="gift" class="fs-base pe-2"></i>
+                Your Points
+            </a>
+        </nav>
     </div>
 </div>
 
@@ -117,6 +124,13 @@
                 href="{{ route('cus-info') }}">
                 <i data-feather="user" class="fs-base pe-2"></i>
                 Personal info
+            </a>
+        </nav>
+        <nav class="list-group list-group-borderless">
+            <a class="list-group-item list-group-item-action d-flex align-items-center {{ Request::routeIs('cus-point') ? 'active pe-none' : '' }}"
+                href="{{ route('cus-point') }}">
+                <i data-feather="gift" class="fs-base pe-2"></i>
+                Your Points
             </a>
         </nav>
     </div>

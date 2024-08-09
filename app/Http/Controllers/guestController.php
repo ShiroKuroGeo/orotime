@@ -18,4 +18,8 @@ class guestController extends Controller
         return view('users.guest.category', ['cat'=> $cat]);
     }
 
+    public function exploreMore(){
+        return view('users.guest.explore');
+    }
+
 }
