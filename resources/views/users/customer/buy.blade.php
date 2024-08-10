@@ -1,4 +1,7 @@
 <x-layout.customerApp>
+
+    @include('components.customerChatAssistance');
+
     <main class="content-wrapper">
         <section class="pt-5 pb-9">
             <div class="container">
@@ -99,10 +102,11 @@
                                 </div>
                                 <div class="col-12 col-md-6 mb-3">
                                     <div class="d-flex flex-wrap align-items-center mb-1">
-                                        <div class="form-check mb-0"><input class="form-check-input" type="radio"
-                                                name="shippingRadio" checked="checked" id="one_day_shipping" /><label
-                                                class="form-check-label fs-8 text-body" for="one_day_shipping">One day
-                                                Shipping</label></div><span
+                                        <div class="form-check mb-0">
+                                            <input class="form-check-input" type="radio" name="shippingRadio" checked="checked" id="one_day_shipping" />
+                                            <label class="form-check-label fs-8 text-body" for="one_day_shipping">One day Shipping</label>
+                                        </div>
+                                        <span
                                             class="d-inline-block text-body-emphasis fw-bold ms-2">$30.00</span>
                                         <span class="badge bg-warning ms-2 ms-lg-4 ms-xl-2">Popular</span>
                                     </div>
@@ -119,27 +123,24 @@
                                     <div class="row gx-lg-11">
                                         <div class="col-md-auto">
                                             <div class="form-check">
-                                                <input class="form-check-input" id="creditCard" type="radio"
-                                                    name="paymentMethod" checked="checked"/>
-                                                    Cash On Delivery
+                                                <input class="form-check-input" id="gcash" type="radio" name="paymentMethod"/>
+                                                Gcash
                                             </div>
                                         </div>
                                         <div class="col-md-auto">
                                             <div class="form-check">
-                                                <input class="form-check-input" id="creditCard" type="radio"
-                                                    name="paymentMethod" checked="checked"/>
-                                                <label class="form-check-label fs-8 text-body text-nowrap d-flex gap-2"
-                                                    for="creditCard">
+                                                <input class="form-check-input" id="creditCard" type="radio" name="paymentMethod"/>
+                                                Cash On Delivery
+                                            </div>
+                                        </div>
+                                        <div class="col-md-auto">
+                                            <div class="form-check">
+                                                <input class="form-check-input" id="creditCard" type="radio" name="paymentMethod"/>
+                                                <label class="form-check-label fs-8 text-body text-nowrap d-flex gap-2" for="creditCard">
                                                     Credit card
-                                                    <img class="h-100"
-                                                        src="{{ asset('images/orotime-images/visa.png') }}"
-                                                        alt="visa" />
-                                                    <img class="h-100"
-                                                        src="{{ asset('images/orotime-images/discover.png') }}"
-                                                        alt="discover" />
-                                                    <img class="h-100"
-                                                        src="{{ asset('images/orotime-images/mastercard.png') }}"
-                                                        alt="mastercard" />
+                                                    <img class="h-100" src="{{ asset('images/orotime-images/visa.png') }}" alt="visa" />
+                                                    <img class="h-100" src="{{ asset('images/orotime-images/discover.png') }}" alt="discover" />
+                                                    <img class="h-100" src="{{ asset('images/orotime-images/mastercard.png') }}" alt="mastercard" />
                                                 </label>
                                             </div>
                                         </div>
@@ -147,28 +148,25 @@
                                 </div>
 
                                 <div class="col-md-6">
-                                    <label class="form-label fs-8 text-body-highlight ps-0 text-transform-none"
-                                        for="selectCard">Select card</label>
+                                    <label class="form-label fs-8 text-body-highlight ps-0 text-transform-none" for="selectCard">Select card</label>
                                     <select class="form-select text-body-emphasis" id="selectCard">
-                                        <option selected="selected">Select a card</option>
+                                        <option selected hidden>Select a card</option>
                                         <option value="visa">Visa</option>
                                         <option value="discover">Discover</option>
                                         <option value="mastercard">Mastercard</option>
                                     </select>
                                 </div>
-                                <div class="col-md-6"><label
-                                        class="form-label fs-8 text-body-highlight ps-0 text-transform-none"
-                                        for="inputCardNumber">Card number</label><input class="form-control"
-                                        id="inputCardNumber" type="number" placeholder="Enter card number"
-                                        aria-label="Card number" /></div>
-                                <div class="col-12"><label
-                                        class="form-label fs-8 text-body-highlight ps-0 text-transform-none"
-                                        for="inputName">Full name</label><input class="form-control" id="inputName"
-                                        type="text" placeholder="Juan Dela Cruz" aria-label="Full name" /></div>
-                                <div class="col-md-6"><label
-                                        class="form-label fs-8 text-body-highlight ps-0 text-transform-none">Expires
-                                        on</label>
-                                    <div class="d-flex"><select class="form-select text-body-emphasis me-3">
+                                <div class="col-md-6">
+                                    <label class="form-label fs-8 text-body-highlight ps-0 text-transform-none" for="inputCardNumber">Card number</label>
+                                    <input class="form-control" id="inputCardNumber" type="number" placeholder="Enter card number" aria-label="Card number" /></div>
+                                <div class="col-12">
+                                    <label class="form-label fs-8 text-body-highlight ps-0 text-transform-none" for="inputName">Full name</label>
+                                    <input class="form-control" id="inputName" type="text" placeholder="Juan Dela Cruz" aria-label="Full name" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fs-8 text-body-highlight ps-0 text-transform-none">Expires on</label>
+                                    <div class="d-flex">
+                                        <select class="form-select text-body-emphasis me-3">
                                             <option selected="selected">Month</option>
                                             <option>January</option>
                                             <option>February</option>
@@ -212,17 +210,18 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-6"><label
-                                        class="form-label fs-8 text-body-highlight ps-0 text-transform-none"
-                                        for="inputCardCVC">CVC</label><input class="form-control" id="inputCardCVC"
-                                        type="number" placeholder="Enter a valid CVC" aria-label="CVC" /></div>
+                                <div class="col-md-6">
+                                    <label class="form-label fs-8 text-body-highlight ps-0 text-transform-none" for="inputCardCVC">CVC</label>
+                                    <input class="form-control" id="inputCardCVC" type="number" placeholder="Enter a valid CVC" aria-label="CVC" />
+                                </div>
                             </div>
                             <div class="row g-2 my-3 mb-lg-0">
-                                <div class="col-md-8 col-lg-9 d-grid"><button class="btn btn-primary"
-                                        type="submit">Pay $695.20</button></div>
-                                <div class="col-md-4 col-lg-3 d-grid"><button class="btn btn text-nowrap"
-                                        type="submit">Save Order and
-                                        Exit</button></div>
+                                <div class="col-md-8 col-lg-9 d-grid">
+                                    <button class="btn btn-primary" type="submit">Pay $695.20</button>
+                                </div>
+                                <div class="col-md-4 col-lg-3 d-grid">
+                                    <button class="btn btn text-nowrap" type="submit">Save Order and Exit</button>
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -239,11 +238,10 @@
                                         <div class="row align-items-center mb-2 g-3">
                                             <div class="col-8 col-md-7 col-lg-8">
                                                 <div class="d-flex align-items-center">
-                                                    <img class="me-2 ms-1"
-                                                        src="{{ asset('images/orotime-images/Flyer1.jpg') }}"
-                                                        width="40" alt="" />
-                                                    <h6 class="text-body-highlight lh-base text-truncate">Pure Silver
-                                                        Ring 5 Grams</h6>
+                                                    <img class="me-2 ms-1" src="{{ asset('images/orotime-images/Flyer1.jpg') }}" width="40" alt="" />
+                                                    <h6 class="text-body-highlight lh-base text-truncate">
+                                                        Pure Silver Ring 5 Grams
+                                                    </h6>
                                                 </div>
                                             </div>
                                             <div class="col-2 col-md-3 col-lg-2">

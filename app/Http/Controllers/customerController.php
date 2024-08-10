@@ -58,4 +58,8 @@ class customerController extends Controller
     public function pointsDashboard(){
         return view('users.customer.points');
     }
+
+    public function notFound(){
+        return view('users.customer.404');
+    }
 }

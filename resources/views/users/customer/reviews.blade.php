@@ -1,4 +1,7 @@
 <x-layout.customerApp>
+    
+    @include('components.customerChatAssistance');
+    
     <div class="container my-3">
         <div class="row pt-md-2 pt-lg-3 pb-sm-2 pb-md-3 pb-lg-4 pb-xl-5">
 

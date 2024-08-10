@@ -18,6 +18,9 @@
 </head>
 
 <body>
+    
+    @include('components.customerChatAssistance');
+    
     <div style="background-color: #C5AE7C">
         <div class="container-fluid ps-lg-5 ps-4 py-1">
             <span class="pe-2">
@@ -318,7 +321,7 @@
                     <div class="col-md-5 offset-md-1 mb-3">
                         <form>
                             <h5>Join Us</h5>
-                            <p>Sing up for our newsletter and receive discounts and offers.</p>
+                            <p>Sign up for our newsletter and receive discounts and offers.</p>
                             <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                                 <label for="newsletter1" class="visually-hidden">Email address</label>
                                 <input id="newsletter1" type="text" class="form-control" placeholder="Email address">

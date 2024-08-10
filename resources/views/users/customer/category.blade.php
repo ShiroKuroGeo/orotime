@@ -1,4 +1,7 @@
 <x-layout.customerApp>
+
+    @include('components.customerChatAssistance');
+    
     <main class="my-5">
         <div class="container px-5">
             <h1 class="text-capitalize text-center">{{ request()->route('cat') }}</h1>

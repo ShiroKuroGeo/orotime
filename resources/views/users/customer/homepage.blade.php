@@ -1,5 +1,8 @@
 <x-layout.customerApp>
     @section('title', 'Orotime Home')
+    
+    @include('components.customerChatAssistance');
+    
     <main class="container">
         <section class="position-relative">
             <div class="container pt-md-5 py-xl-0" data-aos="zoom-in">

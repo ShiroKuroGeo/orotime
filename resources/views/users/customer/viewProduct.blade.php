@@ -1,4 +1,7 @@
 <x-layout.customerApp>
+    
+    @include('components.customerChatAssistance');
+    
     <main class="content-wrapper">
 
         <section class="container pb-5 mb-1 mb-sm-2 mb-md-3 mb-lg-4 mb-xl-5 my-5">

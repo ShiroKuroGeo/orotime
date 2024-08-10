@@ -1,4 +1,6 @@
 <x-layout.customerApp>
+    
+    @include('components.customerChatAssistance');
 
     <main class="content-wrapper">
 

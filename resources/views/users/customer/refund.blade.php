@@ -1,6 +1,9 @@
 <x-layout.customerApp>
-    <div class="container-fluid">
-        <div class="content my-5">
+    
+    @include('components.customerChatAssistance');
+    
+    <div class="container">
+        <div class="content my-3">
             <div class="mb-9">
                 <h2 class="mb-2">Refund</h2>
                 <div class="row align-items-center mb-3 gx-3 gy-2">
@@ -27,7 +30,7 @@
                     </div>
             </div>
                 <div class="row gx-5">
-                    <div class="col-12 col-xl-8 col-xxl-9">
+                    <div class="col-12 col-xl-7 col-xxl-8">
                         <div id="orderTable" data-list='{"valueNames":["products","color","size","price","quantity","total"],"page":10}'>
                             <div class="table-responsive scrollbar">
                                 <table class="table position-relative z-2 mb-4">
@@ -41,7 +44,7 @@
                                         </tr>
                                     </thead>
                                     <tbody class="align-middle">
-                                        @for ($i = 1; $i <= 5; $i++) 
+                                        @for ($i = 1; $i <= 3; $i++) 
                                             <tr>
                                                 <td class="py-3 ps-0">
                                                     <div class="d-flex align-items-center">
@@ -77,7 +80,7 @@
                             <p class="text-body-emphasis fw-bold lh-sm mb-0">$1690</p>
                         </div>
                     </div>
-                    <div class="col-12 col-xl-4 col-xxl-3">
+                    <div class="col-12 col-xl-5 col-xxl-4">
                         <div class="row">
                             <div class="col-12">
                                 <div class="card mb-3">
@@ -89,20 +92,8 @@
                                                 <p class="text-body-emphasis fw-semibold">$691</p>
                                             </div>
                                             <div class="d-flex justify-content-between">
-                                                <p class="text-body fw-semibold">Discount :</p>
-                                                <p class="text-danger fw-semibold">-$59</p>
-                                            </div>
-                                            <div class="d-flex justify-content-between">
-                                                <p class="text-body fw-semibold">Tax :</p>
-                                                <p class="text-body-emphasis fw-semibold">$126.20</p>
-                                            </div>
-                                            <div class="d-flex justify-content-between">
                                                 <p class="text-body fw-semibold">Subtotal :</p>
                                                 <p class="text-body-emphasis fw-semibold">$665</p>
-                                            </div>
-                                            <div class="d-flex justify-content-between">
-                                                <p class="text-body fw-semibold">Shipping Cost :</p>
-                                                <p class="text-body-emphasis fw-semibold">$30</p>
                                             </div>
                                         </div>
                                         <div class="d-flex justify-content-between border-top border-translucent border-dashed pt-4">

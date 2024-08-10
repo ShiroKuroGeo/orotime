@@ -158,6 +158,7 @@
         </div>
 
     </header>
+
     {{ $slot }}
 
     <div class="container px-5 pt-lg-5 pt-3">
@@ -208,7 +209,7 @@
                 <div class="col-md-5 offset-md-1 mb-3">
                     <form>
                         <h5>Join Us</h5>
-                        <p>Sing up for our newsletter and receive discounts and offers.</p>
+                        <p>Sign up for our newsletter and receive discounts and offers.</p>
                         <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                             <label for="newsletter1" class="visually-hidden">Email address</label>
                             <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
@@ -262,6 +263,21 @@
 
 <script>
     feather.replace();
+</script>
+
+<script>
+    AOS.init({
+        easing: 'ease-out-back',
+        duration: 1000
+    });
+</script>
+
+<script>
+    var typed = new Typed('#mainTyped', {
+        strings: ['<i>Affordable Price</i>', '<i>High Quality</i>', '<i>High Value</i>', 'Pawnedable Jewels'],
+        typeSpeed: 100,
+        loop: true,
+    });
 </script>
 
 </html>

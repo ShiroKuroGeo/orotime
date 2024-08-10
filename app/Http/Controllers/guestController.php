@@ -22,4 +22,8 @@ class guestController extends Controller
         return view('users.guest.explore');
     }
 
+    public function notFound(){
+        return view('404');
+    }
+
 }

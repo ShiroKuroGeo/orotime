@@ -7,6 +7,7 @@ use App\Http\Controllers\referralController;
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\customerController;
 use App\Http\Controllers\guestController;
+use App\Http\Controllers\IpAddressController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -28,6 +29,7 @@ Route::prefix('guest/')->group(function () {
     Route::get('product/view/{pid}', [guestController::class, 'viewProduct'])->name('viewProduct');
     Route::get('product/category/{cat}', [guestController::class, 'category'])->name('CategoryProduct');
     Route::get('exploration', [guestController::class, 'exploreMore'])->name('guest-explore');
+    Route::get('/Not Found', [guestController::class, 'notFound'])->name('notFound');
 });
 
 Route::prefix('admin/orotime/')->group(function () {
@@ -50,6 +52,8 @@ Route::prefix('csr/')->group(function () {
     Route::get('products/add', [csrController::class, 'addView'])->name('product-csr-add');
     Route::get('details/{pid}', [csrController::class, 'view'])->name('product-csr-details');
     Route::get('order', [csrController::class, 'orders'])->name('order-list');
+    Route::get('chat/inbox', [csrController::class, 'chatMessageInbox'])->name('inbox');
+    Route::get('chat/sent', [csrController::class, 'chatMessageSent'])->name('sent');
 });
 
 Route::prefix('referral')->group(function () {
@@ -72,4 +76,5 @@ Route::prefix('customer/')->group(function () {
     Route::get('refund', [customerController::class, 'refund'])->name('cus-refund');
     Route::get('exploration', [customerController::class, 'exploreMore'])->name('cus-explore');
     Route::get('points', [customerController::class, 'pointsDashboard'])->name('cus-point');
+    Route::get('Not Found', [customerController::class, 'notFound'])->name('cus-notfound');
 });

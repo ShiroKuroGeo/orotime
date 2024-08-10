@@ -1,4 +1,7 @@
 <x-layout.customerApp>
+    
+    @include('components.customerChatAssistance');
+    
     <div class="container my-3">
         <div class="row pt-md-2 pt-lg-3 pb-sm-2 pb-md-3 pb-lg-4 pb-xl-5">
 
@@ -67,6 +70,12 @@
                                                     <a class="dropdown-item" href="{{ route('cus-refund') }}">
                                                         <i class="fs-base me-2" data-feather="corner-down-left" style="width: 16px; height: 16px"></i>
                                                         Refund
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#moveToTrash">
+                                                        <i class="fs-base me-2" data-feather="refresh-cw" style="width: 16px; height: 16px"></i>
+                                                        Change Item
                                                     </a>
                                                 </li>
                                                 <li>
@@ -142,6 +151,12 @@
                                                                 <a class="dropdown-item" href="{{ route('cus-refund') }}">
                                                                     <i class="fs-base me-2" data-feather="corner-down-left" style="width: 16px; height: 16px"></i>
                                                                     Refund
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="dropdown-item" href="#moveToTrash">
+                                                                    <i class="fs-base me-2" data-feather="refresh-cw" style="width: 16px; height: 16px"></i>
+                                                                    Change Item
                                                                 </a>
                                                             </li>
                                                             <li>

@@ -10,11 +10,7 @@
                     </div>
                     <div class="col text-end">
                         <a class="btn btn-primary" href=" {{ route('ref-product') }} ">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-                                <path
-                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
-                            </svg>
+                            <i data-feather="plus" style="width: 16px; height: 16px"></i>
                             Get Commission
                         </a>
                     </div>
@@ -34,7 +30,8 @@
                                             <p class="text-body-tertiary fs-9 mb-0 ms-2 mt-3">Today's Earning</p>
                                         </div>
                                         <p class="text-primary mt-2 fs-6 fw-bold mb-0 mb-sm-4">
-                                            &#8369; 1153.00
+                                            <i data-feather="gift" style="width: 16px; height: 16px"></i>
+                                            1153
                                         </p>
                                     </div>
                                     <div
@@ -66,7 +63,8 @@
                                             <p class="text-body-tertiary fs-9 mb-0 ms-2 mt-3">Week Earning</p>
                                         </div>
                                         <p class="text-primary mt-2 fs-6 fw-bold mb-0 mb-sm-4">
-                                            &#8369; 1153.00
+                                            <i data-feather="gift" style="width: 16px; height: 16px"></i>
+                                            1153
                                         </p>
                                     </div>
                                     <div
@@ -98,7 +96,8 @@
                                             <p class="text-body-tertiary fs-9 mb-0 ms-2 mt-3">Last Month</p>
                                         </div>
                                         <p class="text-info mt-2 fs-6 fw-bold mb-0 mb-sm-4">
-                                            &#8369; 11530.00
+                                            <i data-feather="gift" style="width: 16px; height: 16px"></i>
+                                            11530
                                         </p>
                                     </div>
                                     <div
@@ -217,8 +216,8 @@
             <div class="col-12 col-xxl-6 mb-6 gy-0 gy-xxl-3">
                 <div class="row align-items-start justify-content-between mb-4 g-3">
                     <div class="col-auto">
-                        <h3>History<span class="fw-semibold"> - Total &#8369;
-                                {{ 150 * (1 + 2 + 3 + 4 + 5 + 6) * 0.05 }}</span>
+                        <h3><i data-feather="gift" style="width: 16px; height: 16px"></i>History<span class="fw-semibold"> - Total 
+                                                            {{ 150 * (1 + 2 + 3 + 4 + 5 + 6) * 0.05 }}</span>
                         </h3>
                         <p class="text-body-tertiary mb-1">Show what your history checkout here</p>
                     </div>
@@ -277,10 +276,11 @@
                                             Shiro Geo {{ $i }}</td>
                                         <td
                                             class="qualified border-end border-translucent align-middle white-space-nowrap text-end fw-semibold text-body py-2 px-3">
-                                            &#8369; {{ 150 * $i }}</td>
+                                            &#8369;
+                                            {{ 150 * $i }}</td>
                                         <td
                                             class="closed-won border-end border-translucent align-middle white-space-nowrap text-end fw-semibold text-body py-2 px-3">
-                                            &#8369; {{ 150 * $i * 0.05 }}</td>
+                                            {{ 150 * $i * 0.05 }}</td>
                                         <td
                                             class="contact-sent border-end-0 align-middle white-space-nowrap text-end fw-semibold text-body ps-3 py-2">
                                             November 2{{ $i }}, 2024</td>
@@ -296,10 +296,12 @@
                                     4,744</td>
                                 <td
                                     class="align-middle border-bottom-0 border-end border-translucent white-space-nowrap text-end fw-bold text-body-emphasis pt-2 lh-sm pb-0 px-3">
-                                    &#8369; {{ 150 * (1 + 2 + 3 + 4 + 5 + 6) }}</td>
+                                    &#8369;
+                                    {{ 150 * (1 + 2 + 3 + 4 + 5 + 6) }}</td>
                                 <td
                                     class="align-middle border-bottom-0 border-end border-translucent white-space-nowrap text-end fw-bold text-body-emphasis pt-2 lh-sm pb-0 px-3">
-                                    &#8369; {{ 150 * (1 + 2 + 3 + 4 + 5 + 6) * 0.05 }}</td>
+                                    <i data-feather="gift" style="width: 16px; height: 16px"></i>
+                                    {{ 150 * (1 + 2 + 3 + 4 + 5 + 6) * 0.05 }}</td>
                                 <td
                                     class="border-bottom-0 align-middle white-space-nowrap text-end fw-bold text-body-emphasis pt-2 pb-0 ps-3">
                                 </td>

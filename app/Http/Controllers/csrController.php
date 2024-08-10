@@ -30,4 +30,12 @@ class csrController extends Controller
     public function orders(){
         return view('users.csr.order.list');
     }
+
+    public function chatMessageInbox(){
+        return view('users.csr.chat.inbox');
+    }
+
+    public function chatMessageSent(){
+        return view('users.csr.chat.sent');
+    }
 }

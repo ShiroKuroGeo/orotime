@@ -161,37 +161,35 @@
                                 <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="30" slides-per-view="2" breakpoints='{"320": {"slidesPerView": 1}, "768": {"slidesPerView": 2}, "1024": {"slidesPerView": 4}}'>
                                     @for ($i = 1; $i < 11; $i++)
                                         <swiper-slide>
-                                            <div class="col">
-                                                <div class="card card-img-shift border-0 mx-auto">
-                                                    <div class="rounded-3 overflow-hidden w-100 position-relative">
-                                                        <img class="w-100" src="{{ asset('images/orotime-images/japan.jpg') }}" alt="" height="250" />
-                                                        <button class="btn btn-wish position-absolute top-0 end-0 mt-3 me-3">
-                                                            <span data-feather="heart" style="width: 16px; height: 16px"></span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="card-body p-0">
-                                                        <div class="card-content text-start">
-                                                            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4">
-                                                                <div>
-                                                                    <span class="badge badge-oro px-1 me-2 badge-oro-warning">Sales Fales</span>
-                                                                </div>
-                                                                <h6>
-                                                                    <span class="fa-solid fa-star text-warning me-1"></span>
-                                                                    &#8369; 4.8k
-                                                                </h6>
-                                                            </div>
-                                                            <h5 class="fw-normal text-body-emphasis mb-2 text-primary-hover">Golden Ring 18k Japan</h5>
-                                                            <h5 class="fw-normal text-body-tertiary mb-3 d-block">
-                                                                <span class="me-1" data-feather="map-pin"></span>
-                                                                Japan
-                                                            </h5>
-                                                            <h6 class="fe-normal text-body-tertiary d-flex align-items-center gap-1 mb-4">
-                                                                Installment <span class="fw-bolder text-body-highlight"> $60.00 </span> / per every 15 days 
-                                                            </h6>
-                                                            <div class="text-end">
-                                                                <button class="btn btn-primary px-5">Buy</button>
-                                                            </div>
+                                            <div class="position-relative text-decoration-none product-card bg-muted h-100">
+                                                <div class="d-flex flex-column justify-content-between h-100">
+                                                    <div class="text-start">
+                                                        <div class="rounded-3 position-relative mb-3">
+                                                            <button class="btn btn-wish btn-wish-primary z-2 d-toggle-container" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to wishlist">
+                                                                <span data-feather="heart" style="width: 16px; height: 16px" class="d-block-hover" data-fa-transform="down-1"></span>
+                                                                <span data-feather="heart" style="width: 16px; height: 16px" class="d-none-hover" data-fa-transform="down-1"></span>
+                                                            </button>
+                                                            <img class="img-fluid" src="{{ asset('images/orotime-images/bracelet.jpg') }}" alt="" />
                                                         </div>
+                                                        <a class="stretched-link" href="#">
+                                                            <h6 class="mb-2 lh-sm line-clamp-3 product-name ps-3">Golder Ring</h6>
+                                                        </a>
+                                                        <p class="fs-9 ps-3">
+                                                            <span data-feather="star" class="text-warning"></span>
+                                                            <span data-feather="star" class="text-warning"></span>
+                                                            <span data-feather="star" class="text-warning"></span>
+                                                            <span data-feather="star" class="text-warning text-warning-light"></span>
+                                                            <span data-feather="star" class="text-warning text-warning-light"></span>
+                                                            <span class="text-body-quaternary fw-semibold ms-1">(67 people rated)</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="text-start ps-3">
+                                                        <p class="fs-9 fw-bold mb-2">Necklace</p>
+                                                        <div class="d-flex align-items-center mb-1">
+                                                            <p class="me-2 text-body text-decoration-line-through mb-0">$125.00</p>
+                                                            <h3 class="text-body-emphasis mb-0">$89.00</h3>
+                                                        </div>
+                                                        <p class="text-body-tertiary fw-semibold fs-9 lh-1 mb-0">2 Available</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -214,7 +212,7 @@
                 <div class="d-xl-flex justify-content-between mb-5 text-center">
                     <p class="mb-0 text-body-tertiary">Maximize your savings by increasing your purchase quantity and enjoy even greater discounts on every item.</p>
                     <button class="btn btn-link p-0 fs-8"> 
-                        View all 
+                        View all
                         <span class="fa-solid fa-chevron-right ms-2" data-fa-transform="shrink-3"> </span> 
                     </button>
                 </div>
@@ -318,7 +316,7 @@
                     <div class="col-md-5 offset-md-1 mb-3">
                         <form>
                             <h5>Join Us</h5>
-                            <p>Sing up for our newsletter and receive discounts and offers.</p>
+                            <p>Sign up for our newsletter and receive discounts and offers.</p>
                             <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                                 <label for="newsletter1" class="visually-hidden">Email address</label>
                                 <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
@@ -363,7 +361,9 @@
     </main>
 </body>
 
-<script src="{{ asset('js/oro.min.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

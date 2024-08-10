@@ -96,12 +96,10 @@
 [data-bs-theme=light] {
   --c-oro-text-color: #666666;
   --c-oro-primary: #C5AE7C;
-
   --oro-primary-lighter: #ffeb99;
   --oro-primary-light: #ffe373;
   --oro-primary-dark: #ffdc4d;
   --oro-primary-darker: #ffd426;
-
   --c-oro-secondary: #6c727f;
   --c-oro-success: #33b36b;
   --c-oro-info: #2f6ed5;
@@ -112,13 +110,10 @@
   --c-oro-light: #fff;
   --c-oro-dark: #222934;
   --c-oro-primary-rgb: 197, 174, 124;
-
-
   --oro-primary-lighter-rgb: 255, 235, 153;
   --oro-primary-light-rgb: 255, 227, 115;
   --oro-primary-dark-rgb: 255, 220, 77;
   --oro-primary-darker-rgb: 255, 212, 38;
-
   --c-oro-secondary-rgb: 108, 114, 127;
   --c-oro-success-rgb: 51, 179, 107;
   --c-oro-info-rgb: 47, 110, 213;
@@ -262,6 +257,16 @@ h6 {
   line-height: 1.2;
   margin-bottom: 1rem;
   margin-top: 0
+}
+
+#chatSupport {
+  width: 21%;
+}
+
+@media (max-width: 991.98px) {
+  #chatSupport {
+      width: 100%;
+  }
 }
 
 .h1,
@@ -8186,6 +8191,12 @@ fieldset:disabled .btn {
 .border-primary {
   --c-oro-border-opacity: 1;
   border-color: rgba(var(--c-oro-primary-rgb), var(--c-oro-border-opacity)) !important
+}
+
+/* helloe */
+.border-primary-chat {
+  --c-oro-border-opacity: 1;
+  border-color: rgba(var(--c-oro-info-rgb), var(--c-oro-border-opacity)) !important
 }
 
 .border-secondary {

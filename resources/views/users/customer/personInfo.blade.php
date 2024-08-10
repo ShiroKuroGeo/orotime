@@ -1,4 +1,7 @@
 <x-layout.customerApp>
+    
+    @include('components.customerChatAssistance');
+    
     <div class="container my-3">
         <div class="row pt-md-2 pt-lg-3 pb-sm-2 pb-md-3 pb-lg-4 pb-xl-5">
 
@@ -12,7 +15,7 @@
                     <div class="col-lg-9">
                         <div class="ps-lg-3 ps-xl-0">
 
-                            <h1 class="h2 mb-1 mb-sm-2">User Information</h1>
+                            <h1 class="h2 mb-1 mb-sm-2"> User Information </h1>
 
                             <div class="border-bottom py-4">
                                 <div class="nav flex-nowrap align-items-center justify-content-between pb-1 mb-3">
@@ -233,41 +236,9 @@
             </div>
         </div>
     </div>
-    <button type="button"
-        class="fixed-bottom z-sticky w-100 btn btn-lg btn-primary border-0 border-top border-light border-opacity-10 rounded-0 pb-4 d-lg-none"
-        data-bs-toggle="offcanvas" data-bs-target="#accountSidebar" aria-controls="accountSidebar"
-        data-bs-theme="light">
+    <button type="button" class="fixed-bottom z-sticky w-100 btn btn-lg btn-primary border-0 border-top border-light border-opacity-10 rounded-0 pb-4 d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#accountSidebar" aria-controls="accountSidebar" data-bs-theme="light">
         <i data-feather="user"></i>
         Account menu
     </button>
 
 </x-layout.customerApp>
-    <script>
-        $('#profileImage').on('change', function(e) {
-            var files = e.target.files;
-
-            $('#previewSelectedImage').empty();
-
-            for (var i = 0; i < files.length; i++) {
-                var file = files[i];
-
-                if (!file.type.startsWith('image/')) {
-                    continue
-                }
-
-
-
-                var reader = new FileReader();
-
-                reader.onload = function(e) {
-                    var img = `
-                        <img class="h5 d-flex justify-content-center align-items-center flex-shrink-0 text-primary bg-primary-subtle lh-1 rounded-circle mb-0" style="width: 3rem; height: 3rem"  src="` + e.target.result + `" alt="..." onclick="document.getElementById('profileImage').click()"  />
-                `;
-
-                    $('#previewSelectedImage').empty().append(img);
-                };
-
-                reader.readAsDataURL(file);
-            }
-        });
-    </script>

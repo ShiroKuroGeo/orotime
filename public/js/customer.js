@@ -1,14 +1,15 @@
 $(document).ready(function () {
-    thisMonthChartInit();
     selectedMore();
+    thisMonthChartInit();
     typedText();
     aosFadeInit();
     heroScroll();
+    userProfileReview();
 });
 
 function selectedMore() {
 
-    $('[name="oid"]').on('change', function() {
+    $('[name="oid"]').on('change', function () {
         const anyChecked = $('[name="oid"]:checked').length > 0;
 
         if (anyChecked) {
@@ -20,14 +21,6 @@ function selectedMore() {
 
 }
 
-function typedText() {
-    var typed = new Typed('#mainTyped', {
-        strings: ['<i>Affordable Price</i>', '<i>High Quality</i>', '<i>High Value</i>', 'Pawnedable Jewels'],
-        typeSpeed: 100,
-        loop: true,
-    });
-}
-
 function addRemoveClass(addId, removeId) {
 
     $(addId).removeClass('d-none');
@@ -36,42 +29,62 @@ function addRemoveClass(addId, removeId) {
 
 }
 
-function aosFadeInit(){
-    AOS.init({
-        easing: 'ease-out-back',
-        duration: 1000
-    });
-}
-
-function thisMonthChartInit(){
+function thisMonthChartInit() {
     var chartDom = document.getElementById('thisMonthChart');
     var myChart = echarts.init(chartDom);
     var option;
 
     option = {
         xAxis: {
-          type: 'category',
-          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            type: 'category',
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
         },
         yAxis: {
-          type: 'value'
+            type: 'value'
         },
         series: [
-          {
-            data: [120, 200, 150, 80, 70, 110, 130],
-            type: 'bar',
-            color: "rgba(197, 174, 124. 1)",
-          }
+            {
+                data: [120, 200, 150, 80, 70, 110, 130],
+                type: 'bar',
+                color: "rgba(197, 174, 124. 1)",
+            }
         ]
-      };
-      
-      option && myChart.setOption(option);
+    };
+
+    option && myChart.setOption(option);
 }
 
-function heroScroll(){
-    $('.hero__scroll').on('click', function(e) {
+function heroScroll() {
+    $('.hero__scroll').on('click', function (e) {
         $('html, body').animate({
             scrollTop: $(window).height()
         }, 1200);
+    });
+}
+
+function userProfileReview() {
+    $('#profileImage').on('change', function (e) {
+        var files = e.target.files;
+
+        $('#previewSelectedImage').empty();
+
+        for (var i = 0; i < files.length; i++) {
+            var file = files[i];
+
+            if (!file.type.startsWith('image/')) {
+                continue
+            }
+
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                var img =
+                    `<img class="h5 d-flex justify-content-center align-items-center flex-shrink-0 text-primary bg-primary-subtle lh-1 rounded-circle mb-0" style="width: 3rem; height: 3rem"  src="` + e.target.result + `" alt="..." onclick="document.getElementById('profileImage').click()"  />`;
+
+                $('#previewSelectedImage').empty().append(img);
+            };
+
+            reader.readAsDataURL(file);
+        }
     });
 }

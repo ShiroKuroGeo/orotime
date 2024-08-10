@@ -275,6 +275,12 @@
                     Orders
                 </a>
             </li>
+            <li class="dropdown mx-4">
+                <a class="nav-link lh-1" href="{{ route('inbox') }}">
+                    <i data-feather="message-square" class="me-2" style="width: 16px; height: 16px"></i>
+                    Chat Assistance
+                </a>
+            </li>
         </ul>
     </div>
 

@@ -1,4 +1,7 @@
-<x-layout.app>
+<x-layout.customerApp>
+
+    @include('components.customerChatAssistance');
+
     <main class="content-wrapper">
 
         <section class="container py-5">
@@ -62,6 +65,5 @@
                 <span class="position-absolute top-0 start-0 w-100 h-100 rounded-5 d-none d-block-dark rtl-flip" style="background: linear-gradient(124deg, #37343b -29.7%, #222a36 65.5%)"></span>
             </div>
         </section>
-
     </main>
-</x-layout.app>
+</x-layout.customerApp>

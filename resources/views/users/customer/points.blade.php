@@ -1,4 +1,7 @@
 <x-layout.customerApp>
+    
+    @include('components.customerChatAssistance');
+    
     <div class="container my-3">
         <div class="row pt-md-2 pt-lg-3 pb-sm-2 pb-md-3 pb-lg-4 pb-xl-5">
 
@@ -7,7 +10,13 @@
             </div>
 
             <div class="col-lg-9">
+                <div class="my-3" >
+                    <button class="btn btn-primary btn-sm" type="button">
+                        Redeem Points
+                    </button>
+                </div>
                 <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-3 g-3 mb-3">
+
 
                     <div class="col">
                         <div class="card h-100">
@@ -22,7 +31,8 @@
                                             <p class="text-body-tertiary fs-9 mb-0 ms-2 mt-3">Today's Points</p>
                                         </div>
                                         <p class="text-primary mt-2 fs-6 fw-bold mb-0 mb-sm-4">
-                                            &#8369; 1153.00
+                                            <i data-feather="gift" style="width: 16px; height: 16px"></i>
+                                            1153
                                         </p>
                                     </div>
                                     <div
@@ -54,7 +64,8 @@
                                             <p class="text-body-tertiary fs-9 mb-0 ms-2 mt-3">Week Points</p>
                                         </div>
                                         <p class="text-primary mt-2 fs-6 fw-bold mb-0 mb-sm-4">
-                                            &#8369; 1153.00
+                                            <i data-feather="gift" style="width: 16px; height: 16px"></i>
+                                            1153
                                         </p>
                                     </div>
                                     <div
@@ -80,7 +91,8 @@
                                             <p class="text-body-tertiary fs-9 mb-0 ms-2 mt-3">Month Points</p>
                                         </div>
                                         <p class="text-primary mt-2 fs-6 fw-bold mb-0 mb-sm-4">
-                                            &#8369; 1153.00
+                                            <i data-feather="gift" style="width: 16px; height: 16px"></i>
+                                            1153
                                         </p>
                                     </div>
                                     <div class="d-flex flex-column justify-content-center flex-between-end d-sm-block text-end text-sm-start">
