@@ -103,13 +103,13 @@
                     <div class="card position-relative border-0">
                         <div class="card-body p-0">
                             <div class="text-center pt-4 pb-3">
-                                <div class="avatar avatar-xl ">
+                                <div class="avatar avatar-xl">
                                     <img class="rounded-circle "
                                         src="{{ asset('images/customer-images/user_profile.jpg') }}"
-                                        alt="" />
-                                </div>
-                                <span class="mt-2 pb-0 text-body-emphasis">Shiro George Alfeser</span><br>
-                                <span class="text-muted fw-lighter">Customer</span>
+                                        style="width: 45px" alt="" />
+                                </div><br>
+                                <span class="mt-2 pb-0 text-body-emphasis">{{ $user->fullname }}</span><br>
+                                <span class="text-muted fw-lighter">{{ $user->type == 1 ? 'Referral' : 'Unknown' }}</span>
                             </div>
                         </div>
                         <div class="overflow-auto scrollbar border-top shadow-top g-5" style="height: 7rem;">
@@ -131,10 +131,13 @@
                     </div>
                     <div class="card-footer p-0 border-top border-translucent">
                         <div class="px-3"> 
-                            <a class="btn btn-oro-secondary mt-2 d-flex flex-center w-100" href="#!"> 
-                                <span class="me-2" data-feather="log-out" style="width: 16px; height: 16px"> </span>
-                                Sign out
-                            </a>
+                            <form action="{{ route('logout') }}">
+                                @csrf
+                                <button class="btn btn-oro-secondary mt-2 d-flex flex-center w-100" type="submit"> 
+                                    <span class="me-2" data-feather="log-out" style="width: 16px; height: 16px"> </span>
+                                    Sign out
+                                </button>
+                            </form>
                         </div>
                         <div class="my-2 text-center fw-bold fs-10 text-body-quaternary"></div>
                     </div>

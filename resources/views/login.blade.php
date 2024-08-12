@@ -4,15 +4,22 @@
         <div class="container">
             <div class="row flex-center min-vh-100 py-5">
                 <div class="col-sm-10 col-md-8 col-lg-5 col-xl-5 col-xxl-3">
-                    <a class="d-flex flex-center text-decoration-none mb-4" href="{{ route('back') }}">
+                    {{-- <a class="d-flex flex-center text-decoration-none mb-4" href="{{ route('back') }}">
                         <div class="d-flex align-items-center fw-bolder fs-3 d-inline-block">
-                            <img src="{{ asset('images/orotime-images/orologo.png') }}" alt="oro" class="img-fluid w-100" />
+                            <img src="{{ asset('images/orotime-images/orologo.png') }}" alt="oro" class="img-fluid w-25" />
                         </div>
-                    </a>
+                    </a> --}}
                     <div class="text-center mb-7">
                         <h3 class="text-body-highlight">Sign In</h3>
                         <p class="text-body-tertiary">Get access to your account</p>
                     </div>
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </div>
+                    @endif
                     <form action="{{ route('loginAccount') }}" method="POST">
                         @csrf
                         <div class="mb-3 text-start">
@@ -45,7 +52,7 @@
                                 </div>
                             </div>
                             <div class="col-auto">
-                                <a class="fs-9 fw-semibold" href="{{ route('forgotPassword') }}">Forgot Password?</a>
+                                <a class="fs-9 fw-semibold" href="{{ route('passwordRequest') }}">Forgot Password?</a>
                             </div>
                         </div>
                         <button class="btn btn-primary w-100 mb-3">Sign In</button>
@@ -58,3 +65,15 @@
         </div>
     </main>
 </x-layout.admin>
+
+@if (session('success'))
+    <script>
+        toastr.info('Registration has been successfully completed.');
+    </script>
+@endif
+
+@if (session('status'))
+    <script>
+        toastr.info('Password reset successfully!');
+    </script>
+@endif

@@ -3,12 +3,12 @@
     <main class="main" id="top">
         <div class="container">
             <div class="row flex-center min-vh-100 py-5">
-                <div class="col-sm-10 col-md-8 col-lg-5 col-xl-5 col-xxl-3"><a
-                        class="d-flex flex-center text-decoration-none mb-4" href="{{ route('back') }}">
+                <div class="col-sm-10 col-md-8 col-lg-5 col-xl-5 col-xxl-3">
+                    {{-- <a class="d-flex flex-center text-decoration-none mb-4" href="{{ route('back') }}">
                         <div class="d-flex align-items-center fw-bolder fs-3 d-inline-block">
                             <img src="{{ asset('images/orotime-images/orologo.png') }}" alt="oro" class="img-fluid w-100" />
                         </div>
-                    </a>
+                    </a> --}}
                     <div class="text-center mb-7">
                         <h3 class="text-body-highlight">Sign Up</h3>
                         <p class="text-body-tertiary">Register, verify, access granted swiftly</p>
@@ -22,7 +22,7 @@
                             </ul>
                         </div>
                     @endif
-                    <form action="registrationAccount" method="POST">
+                    <form action="{{ route('registerAccount') }}" method="POST">
                         @csrf
                         <div class="mb-3">
                             <label class="form-label ps-0" for="name">

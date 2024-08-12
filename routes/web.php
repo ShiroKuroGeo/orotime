@@ -7,6 +7,7 @@ use App\Http\Controllers\referralController;
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\customerController;
 use App\Http\Controllers\guestController;
+use App\Http\Controllers\passwordResetController;
 use App\Http\Controllers\IpAddressController;
 
 Route::get('/', function () {
@@ -14,16 +15,26 @@ Route::get('/', function () {
 })->name('back');
 
 Route::get('/notification/{oid}', [Controller::class, 'notification'])->name('notification');
+Route::post('/logout', [Controller::class, 'logout'])->name('logout');
+
+Route::get('/gmailDesign', function(){
+    return view('vendor.notifications.email');
+});
 
 Route::prefix('auth')->group(function () {
     Route::post('/mailToEmail', [Controller::class, 'sentEmailForgotPassword'] )->name('RequestForgot');
     Route::get('/login', [Controller::class, 'login'])->name('login');
     Route::get('/registration', [Controller::class, 'register'])->name('register');
-    Route::get('/forgot-password', [Controller::class, 'forgotPassword'])->name('forgotPassword');
-    Route::get('/forgot-password/{id}', [Controller::class, 'forgotPasswordRequest'])->name('forgotPasswordRequest');
     Route::get('/logout', [Controller::class, 'logout'])->name('logout');
-    Route::post('/registrationAccount', [Controller::class,'registerAccount']);
+    Route::post('/registrationAccount', [Controller::class,'registerAccount'])->name('registerAccount');
     Route::post('/loginAccount', [Controller::class,'loginAccount'])->name('loginAccount');
+
+
+
+    Route::get('password/reset', [passwordResetController::class, 'requestFormForgotPassword'])->name('passwordRequest');
+    Route::post('password/email', [passwordResetController::class, 'sendResetLinkEmail'])->name('passwordEmail');
+    Route::get('password/reset/{token}', [passwordResetController::class, 'showResetForm'])->name('passwordReset');
+    Route::post('password/reset', [passwordResetController::class, 'reset'])->name('passwordUpdate');
 });
 
 Route::prefix('guest/')->group(function () {

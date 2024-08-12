@@ -5,7 +5,7 @@
         <div class="container">
             <div class="d-flex justify-content-between align-items-sm-center flex-column flex-sm-row mb-4">
                 <div class="me-4 mb-3 mb-sm-0">
-                    <h2 class="mb-0">Shiro George Alfeser</h2>
+                    <h2 class="mb-0"> Shiro George Alfeser Inoc </h2>
                     <div class="small">
                         <span class="fw-500 text-primary">
                             {{ Carbon\Carbon::now()->format('l') }}

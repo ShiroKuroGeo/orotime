@@ -4,14 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Mail\testingForgotEmail;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
-use App\Models\User;
+use App\Http\Services\Services;
 use Illuminate\Support\Facades\Auth;
 
 class Controller
 {
+
+    protected $services;
+
+    public function __construct(Services $services){
+        $this->services = $services;
+    }
+
     public function login()
     {
         return view("login");
@@ -27,81 +31,28 @@ class Controller
         return view("register");
     }
 
-    public function forgotPassword()
+    public function changePassword()
     {
-        return view('fpassword');
+        return view('requestForgot');
     }
-
-    public function logout()
-    {
-        return view('');
-    }
-
-    public function forgotPasswordRequest($id)
-    {
-        return view('requestForgot', ['id' => $id]);
-    }
-
-    public function sentEmailForgotPassword(Request $request)
-    {
-        $request->validate([
-            'email' => 'required|email',
-        ]);
-
-        $email = $request->input('email');
-
-        Mail::to($email)->send(new testingForgotEmail($email, encryptData($email)));
-
-        return redirect()->back()->with('success', 'Email Sent!');
-    }
-
+    
     public function registerAccount(Request $request)
     {
-
-        $validator = Validator::make($request->all(), [
-            'fullname' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'phone_number' => 'required',
-            'type' => 'required|string|max:3',
-            'password' => 'required|string|min:8',
-        ]);
-
-        if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator)->withInput();
-        }
-
-        User::create([
-            'fullname' => $request->input('fullname'),
-            'email' => $request->input('email'),
-            'phone_number' => $request->input('phone_number'),
-            'type' => $request->input('type'),
-            'password' => $request->input('password'),
-            'status' => 1,
-        ]);
-
-        return redirect()->back()->with("success", "Registration Successful!");
+        return $this->services->registerAccount($request);
     }
 
     public function loginAccount(Request $request)
     {
-
-        $request->validate([
-            'email' => 'required',
-            'password' => 'required'
-        ]);
-
-        $credential = $request->only('email', 'password');
-
-        if (Auth::attempt($credential)) {
-            $user = Auth::user();
-
-            return $this->authenticated($request, $user);
-        }
-
+        return $this->services->loginAccount($request);
     }
 
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('back');
+    }
 
-    protected function authenticated(Request $request, $user)
+    protected function authenticated($user)
     {
         if ($user->type == 0) {
             return redirect()->route('admin');
@@ -113,5 +64,5 @@ class Controller
             return redirect()->route('notFound');
         }
     }
-
+    
 }

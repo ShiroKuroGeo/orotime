@@ -1,11 +1,11 @@
 <x-layout.ref>
-    @include('components.refnavtopstart')
+    @include('components.refnavtopstart', ['user' => Auth::User()])
     <div class="content">
         <div class="row gy-3 mb-4 justify-content-between">
             <div class="col-xxl-6">
                 <div class="d-flex justify-content-between row ">
                     <div class="col">
-                        <h2 class="mb-2 text-body-emphasis">Shiro George Alfeser Inoc</h2>
+                        <h2 class="mb-2 text-body-emphasis">{{ Auth::User()->fullname }}</h2>
                         <h5 class="text-body-tertiary fw-semibold mb-4">Check your business growth in one place</h5>
                     </div>
                     <div class="col text-end">

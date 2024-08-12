@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ asset('css/oro.min.css') }}" type="text/css">
     <script src="https://cdn.tiny.cloud/1/rxsffkdjenly82awb597asru9t6wxj98qruof2ilhydd1e72/tinymce/6/tinymce.min.js"
         referrerpolicy="origin"></script>
+    <link rel="stylesheet" href="{{ asset('css/toastr.css') }}">
     <script src="https://unpkg.com/feather-icons"></script>
     <script>
         tinymce.init({
@@ -29,6 +30,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
 <script src="{{ asset('js/adminJquery.js') }}"></script>
+<script src="{{ asset('js/toastr.min.js') }}"></script>
 <script>
     feather.replace()
 </script>
