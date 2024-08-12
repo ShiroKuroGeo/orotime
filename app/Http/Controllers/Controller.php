@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class Controller
 {
@@ -16,7 +17,8 @@ class Controller
         return view("login");
     }
 
-    public function notification($id){
+    public function notification($id)
+    {
         return view("notification.notification", ['oid' => $id]);
     }
 
@@ -37,7 +39,7 @@ class Controller
 
     public function forgotPasswordRequest($id)
     {
-        return view('requestForgot', ['id' => $id ]);
+        return view('requestForgot', ['id' => $id]);
     }
 
     public function sentEmailForgotPassword(Request $request)
@@ -48,12 +50,13 @@ class Controller
 
         $email = $request->input('email');
 
-        Mail::to($email)->send(new testingForgotEmail($email, encryptData($email) ));
+        Mail::to($email)->send(new testingForgotEmail($email, encryptData($email)));
 
         return redirect()->back()->with('success', 'Email Sent!');
     }
 
-    public function registerAccount(Request $request){
+    public function registerAccount(Request $request)
+    {
 
         $validator = Validator::make($request->all(), [
             'fullname' => 'required|string|max:255',
@@ -66,7 +69,7 @@ class Controller
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
         }
-        
+
         User::create([
             'fullname' => $request->input('fullname'),
             'email' => $request->input('email'),
@@ -76,8 +79,39 @@ class Controller
             'status' => 1,
         ]);
 
-        return redirect()->back()->with("success","Registration Successful!");
+        return redirect()->back()->with("success", "Registration Successful!");
     }
 
+    public function loginAccount(Request $request)
+    {
+
+        $request->validate([
+            'email' => 'required',
+            'password' => 'required'
+        ]);
+
+        $credential = $request->only('email', 'password');
+
+        if (Auth::attempt($credential)) {
+            $user = Auth::user();
+
+            return $this->authenticated($request, $user);
+        }
+
+    }
+
+
+    protected function authenticated(Request $request, $user)
+    {
+        if ($user->type == 0) {
+            return redirect()->route('admin');
+        } else if ($user->type == 1) {
+            return redirect()->route('ref-dashboard');
+        } else if ($user->type == 2) {
+            return redirect()->route('homepage');
+        } else {
+            return redirect()->route('notFound');
+        }
+    }
 
 }
