@@ -22,6 +22,7 @@ Route::prefix('auth')->group(function () {
     Route::get('/forgot-password', [Controller::class, 'forgotPassword'])->name('forgotPassword');
     Route::get('/forgot-password/{id}', [Controller::class, 'forgotPasswordRequest'])->name('forgotPasswordRequest');
     Route::get('/logout', [Controller::class, 'logout'])->name('logout');
+    Route::post('/registrationAccount', [Controller::class,'registerAccount']);
 });
 
 Route::prefix('guest/')->group(function () {

@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Mail\testingForgotEmail;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+use App\Models\User;
 
 class Controller
 {
@@ -49,5 +52,32 @@ class Controller
 
         return redirect()->back()->with('success', 'Email Sent!');
     }
+
+    public function registerAccount(Request $request){
+
+        $validator = Validator::make($request->all(), [
+            'fullname' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'phone_number' => 'required',
+            'type' => 'required|string|max:3',
+            'password' => 'required|string|min:8',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+        
+        User::create([
+            'fullname' => $request->input('fullname'),
+            'email' => $request->input('email'),
+            'phone_number' => $request->input('phone_number'),
+            'type' => $request->input('type'),
+            'password' => $request->input('password'),
+            'status' => 1,
+        ]);
+
+        return redirect()->back()->with("success","Registration Successful!");
+    }
+
 
 }

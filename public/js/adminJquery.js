@@ -291,7 +291,7 @@ function openAndSelectImages() {
 
 function set() {
     $('#termsService').on('change', function () {
-        if ($('#fullname').val() != null && $('#email').val() != null && $('#phNumber').val() != null && $('#type').val() != null && $('#confirmPassword').val() != null) {
+        if ($('#fullname').val() != null && $('#email').val() != null && $('#phone_number').val() != null && $('#type').val() != null && $('#confirmPassword').val() != null) {
             if ($(this).is(':checked')) {
                 $('#signup').prop('disabled', false);
             } else {

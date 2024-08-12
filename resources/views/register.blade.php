@@ -13,7 +13,17 @@
                         <h3 class="text-body-highlight">Sign Up</h3>
                         <p class="text-body-tertiary">Register, verify, access granted swiftly</p>
                     </div>
-                    <form>
+                    @if ($errors->any())
+                        <div>
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li class="text-danger">{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    <form action="registrationAccount" method="POST">
+                        @csrf
                         <div class="mb-3">
                             <label class="form-label ps-0" for="name">
                                 <i style="height: 15px; width: 15px" data-feather="user"></i>
@@ -33,7 +43,7 @@
                                 <i style="height: 15px; width: 15px" data-feather="phone"></i>
                                 Phone Number
                             </label>
-                            <input class="form-control" name="phNumber" id="phNumber" type="number" placeholder="+" />
+                            <input class="form-control" name="phone_number" id="phone_number" type="number" placeholder="+" />
                         </div>
                         <div class="mb-3 text-start">
                             <label class="form-label ps-0" for="type">
@@ -53,7 +63,7 @@
                                     Password
                                 </label>
                                 <div class="position-relative" data-password="data-password">
-                                    <input class="form-control form-icon-input pe-6" id="password" type="password" placeholder="Password" data-password-input="data-password-input" />
+                                    <input class="form-control form-icon-input pe-6" name="password" id="password" type="password" placeholder="Password" data-password-input="data-password-input" />
                                     <button class="btn px-3 py-0 h-100 position-absolute top-0 end-0 fs-7 text-body-tertiary" data-password-toggle="data-password-toggle" type="button">
                                         <i data-feather="eye" class="show" style="width: 16px; height: 16px"></i>
                                         <i data-feather="eye-off" class="hide" style="width: 16px; height: 16px"></i>
